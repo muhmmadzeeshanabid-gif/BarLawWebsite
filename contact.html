@@ -25,6 +25,7 @@
 
     <!-- CSS FILES -->
     <link rel="stylesheet" href="css/contactnav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
 
     <style>
       /* --- LAW FIRM HERO SECTION STYLES --- */
@@ -107,5 +108,170 @@
         </div>
       </div>
     </section>
+
+    <div class="container py-5">
+      <div class="row justify-content-center g-4">
+        <!-- Contact Info Box -->
+        <div class="col-md-5">
+          <div class="contact-info">
+            <h4>Contact Info</h4>
+
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              +92 322 4217137
+            </p>
+
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              info@BarLawGroup.com
+            </p>
+
+            <p>
+              <i class="fa-solid fa-location-dot"></i>
+              Bar Law Group, Syed<br />
+              27/28-4B, Martib Ali Road<br />
+              Gulberg, Lahore, Pakistan
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form Box -->
+        <div class="col-md-7">
+          <div class="contact-form">
+            <h3>Let’s Grow Your Business Together – Reach Out Now</h3>
+            <p>
+              Hire experienced business law experts in Pakistan to guide,
+              protect, and grow your company.
+            </p>
+            <form>
+              <div class="row mb-3">
+                <div class="col">
+                  <label for="name" class="same-id">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder=""
+                    required
+                  />
+                </div>
+                <div class="col">
+                  <label for="lastname" class="same-id">LastName</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder=""
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <label for="email" class="same-id">Email</label>
+                  <input type="" class="form-control" placeholder="" required />
+                </div>
+                <div class="col">
+                  <label for="phone" class="same-id">Phone</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder=""
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="same-id"
+                  >Brief Summary of your Project and How You Found Us.</label
+                >
+                <textarea
+                  class="form-control"
+                  rows="2"
+                  placeholder=""
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-submit w-100">SUBMIT</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <!-- Column 1 -->
+        <div class="column-1">
+          <div class="footer-logo">
+            <img src="" alt="logo" loading="lazy" />
+          </div>
+
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">We're Hiring</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <h4>PRACTICE AREAS</h4>
+          <ul>
+            <li><a href="#">General Counsel</a></li>
+            <li><a href="#">Funding and Investment</a></li>
+            <li><a href="#">Mergers & Acquisitions</a></li>
+            <li><a href="#">Intellectual Property</a></li>
+            <li><a href="#">Employment Law</a></li>
+            <li><a href="#">Business Dispute Services</a></li>
+            <li><a href="#">Real Estate Law</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <h4>SUBSCRIBE FOR UPDATES</h4>
+          <div class="subscribe-box">
+            <input type="email" placeholder="name@email.com" />
+            <button><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+
+          <h4>FOLLOW US:</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Copyright Bar Law Group ©. Website by Behwal Asad.</div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const navbar = document.querySelector(".main-navbar");
+      const heroSection = document.querySelector(".hero-sections");
+
+      if (navbar && heroSection) {
+        window.addEventListener("scroll", function () {
+          const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+
+          if (window.scrollY > heroBottom - 100) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+        });
+      }
+    </script>
   </body>
 </html>

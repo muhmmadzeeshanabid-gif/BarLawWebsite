@@ -1,21 +1,7 @@
-/* ===============================
-   BLOG SECTION
-================================ */
-
 .blog-section {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 60px 0 80px;
 }
-
-.blog-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ===============================
-   HEADING
-================================ */
 
 .blog-heading {
   text-align: center;
@@ -26,9 +12,11 @@
   letter-spacing: 2px;
 }
 
-/* ===============================
-   ROW
-================================ */
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 .blog-row {
   display: flex;
@@ -37,27 +25,23 @@
   flex-wrap: wrap;
 }
 
-/* ===============================
-   CARD
-================================ */
-
 .blog-card {
   background-color: #05456a;
   padding: 25px 20px;
-
   flex: 0 1 250px;
   max-width: 250px;
   min-width: 230px;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.4s ease;
 }
 
-/* Hover disabled */
+/* Hover completely disabled */
 .blog-card:hover {
   transform: translateY(0);
   box-shadow: none;
@@ -68,20 +52,11 @@
   transform: translateY(0);
 }
 
-/* ===============================
-   CARD CONTENT (IMPORTANT FIX)
-================================ */
-
-.card-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
 .blog-title {
   color: #f1f1f1;
   font-family: "Avenir Next", sans-serif;
-  font-size: 18px;
+
+  font-size: 18px; /* size kam kiya */
   font-weight: 600;
   line-height: 1.4;
   margin-bottom: 10px;
@@ -92,26 +67,21 @@
 .blog-description {
   color: #a8c4d4;
   font-size: 12px;
+  max-width: 400px;
   line-height: 1.6;
   margin-bottom: 15px;
-  flex-grow: 1;
 }
 
-/* ===============================
-   READ MORE
-================================ */
-
+/* Read More alignment fix */
 .read-more {
   color: #f1f1f1;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
-  margin-top: auto;
+  margin-top: auto; /* important */
   transition: all 0.3s ease;
 }
 
@@ -129,45 +99,19 @@
   transform: translateX(5px);
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
-
-/* Large tablets */
-@media (max-width: 1200px) {
-  .blog-container {
-    padding: 0 24px;
-  }
-}
-
-/* Tablets */
 @media (max-width: 992px) {
-  .blog-container {
-    padding: 0 20px;
-  }
-
   .blog-row {
     gap: 25px;
   }
 
   .blog-card {
     max-width: 320px;
-    min-height: 420px;
-  }
-
-  .blog-card[data-card="third"] {
-    min-height: 580px;
   }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .blog-section {
     padding: 50px 0 60px;
-  }
-
-  .blog-container {
-    padding: 0 16px;
   }
 
   .blog-heading {
@@ -181,22 +125,12 @@
   }
 
   .blog-card {
-    width: 100%;
     max-width: 100%;
-    min-height: 460px;
-  }
-
-  .blog-card[data-card="third"] {
-    min-height: 620px;
+    width: 100%;
   }
 }
 
-/* Small mobile */
 @media (max-width: 480px) {
-  .blog-container {
-    padding: 0 14px;
-  }
-
   .blog-heading {
     font-size: 22px;
   }

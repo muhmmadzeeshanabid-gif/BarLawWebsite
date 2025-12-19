@@ -140,8 +140,151 @@ body {
 .hero-headings {
   font-family: "Avenir Next", sans-serif;
   color: #e6e2e0;
-  font-size: 44px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
   margin: 70px 0px 10px;
+}
+
+/* / */ /* / */
+/* / */
+/* / */
+/* / */
+/* / */
+/* / */
+/* / */
+/* / */
+/* / */
+/* / */
+/* / */
+/* / */
+/* / */
+/* / */
+/* / */
+/* / */
+
+/* Center content and set max width */
+.container {
+  max-width: 900px;
+}
+
+/* Contact Info box */
+.contact-info {
+  padding: 30px;
+}
+
+.contact-info h4 {
+  color: #c0382c;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.contact-info p {
+  color: #555555;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: flex-start; /* 🔥 icon top se start hoga */
+  gap: 12px;
+  font-size: 16px;
+}
+
+.contact-info i {
+  color: #c0382c; /* 🔴 sab icons red */
+  font-size: 18px;
+  line-height: 1; /* extra vertical shift remove */
+  margin-top: 3px; /* perfect alignment */
+}
+
+/* Contact Form adjustments */
+.contact-form {
+  margin-top: -100px;
+  background-color: #fff;
+  border-radius: 0; /* removed border radius */
+  padding: 50px; /* padding on all 4 sides */
+  min-height: 540px; /* reduced by 30px */
+  width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.same-id {
+  display: block;
+  margin-bottom: 6px; /* spacing between label and input */
+  font-weight: 600;
+  color: #777777;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 13px;
+}
+
+.contact-form h3 {
+  font-family: "Avenir Next" sans-serif;
+  color: #05456a;
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.contact-form p {
+  color: #555555;
+  font-family: Arial, "Montserrat", sans-serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   Inputs & Select
+================================ */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 12px 18px;
+  border: 1px solid none;
+  border-radius: 0; /* straight edges */
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: #c0392b; /* border red on select/focus */
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-submit {
+  background-color: #c0382c;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 0; /* straight button */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  color: #fff;
+  background-color: #122448;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .contact-form {
+    min-height: 460px;
+    padding: 30px;
+    width: 100%;
+  }
+
+  .contact-info img {
+    width: 10px; /* reduce 4px for mobile */
+  }
 }

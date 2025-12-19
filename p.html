@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: #f8f9fa; /* simple light background instead of image */
+      }
+
+      /* Center content and set max width */
+      .container {
+        max-width: 900px;
+      }
+
+      /* Contact Info box */
+      .contact-info {
+        padding: 30px;
+      }
+
+      .contact-info h4 {
+        color: #c0392b;
+        margin-bottom: 20px;
+      }
+
+      .contact-info p {
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .contact-info img {
+        width: 14px; /* smaller icons */
+        height: auto;
+      }
+
+      /* Contact Form adjustments */
+      .contact-form {
+        background-color: #fff;
+        border-radius: 0; /* removed border radius */
+        padding: 40px; /* padding on all 4 sides */
+        min-height: 490px; /* reduced by 30px */
+        width: 100%;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-form h3 {
+        color: #1c3d5a;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .contact-form p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+
+      .btn-submit {
+        background-color: #c0392b;
+        color: #fff;
+      }
+
+      /* Responsive tweaks */
+      @media (max-width: 768px) {
+        .contact-form {
+          min-height: 460px;
+          padding: 30px;
+          width: 100%;
+        }
+
+        .contact-info img {
+          width: 10px; /* reduce 4px for mobile */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="row justify-content-center g-4">
+        <!-- Contact Info Box -->
+        <div class="col-md-5">
+          <div class="contact-info">
+            <h4>Contact Info</h4>
+            <p>
+              <img
+                src="https://cdn.prod.website-files.com/66df668bb4bddf2553c9bb42/66df668bb4bddf2553c9bbb2_Phone%20Notch.svg"
+                alt="Phone"
+              />
+              (415) 633-6841
+            </p>
+            <p>
+              <img
+                src="https://cdn.prod.website-files.com/66df668bb4bddf2553c9bb42/66df668bb4bddf2553c9bbaf_Mail.svg"
+                alt="Email"
+              />
+              info@BendLawGroup.com
+            </p>
+            <p>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/684/684908.png"
+                alt="Location"
+              />
+              Bend Law Group, PC<br />
+              2181 Greenwich Street<br />
+              San Francisco, CA 94123
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form Box -->
+        <div class="col-md-7">
+          <div class="contact-form">
+            <h3>Let’s Succeed Together - Reach Out Now</h3>
+            <p>
+              Get a top-tier California business law firm on your side today.
+            </p>
+            <form>
+              <div class="row mb-3">
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First Name"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last Name"
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <input type="" class="form-control" placeholder="Email" />
+                </div>
+                <div class="col">
+                  <input type="tel" class="form-control" placeholder="Phone" />
+                </div>
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  placeholder="Brief Summary of Your Project and How You Found Us"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-submit w-100">SUBMIT</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

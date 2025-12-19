@@ -1,0 +1,134 @@
+.footer {
+  background: #122448;
+  color: #ffffff;
+  padding: 70px 80px 30px;
+}
+
+/* Make footer stick to bottom when page content is short */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.footer {
+  margin-top: auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.2fr;
+  gap: 80px;
+}
+.column-1 {
+  margin-left: 60px;
+}
+.footer-logo {
+  margin-bottom: 25px;
+}
+
+.footer h4 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-bottom: 12px;
+}
+
+.footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.footer ul li a:hover {
+  color: #c0392b;
+  opacity: 1;
+}
+
+/* Subscribe */
+.subscribe-box {
+  display: flex;
+  margin: 15px 0 25px;
+  max-width: 320px;
+}
+
+.subscribe-box input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+
+.subscribe-box button {
+  background: #c0392b;
+  border: none;
+  color: #fff;
+  padding: 0 18px;
+  cursor: pointer;
+}
+
+.subscribe-box button i {
+  font-size: 16px;
+}
+
+/* Social */
+.social-icons a {
+  color: #ffffff;
+  margin-right: 14px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #c0392b;
+  opacity: 1;
+}
+
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 50px;
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+@media (max-width: 900px) {
+  .footer {
+    padding: 60px 30px 30px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* 👇 column-1 ko wapas left par lao */
+  .column-1 {
+    margin-left: 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

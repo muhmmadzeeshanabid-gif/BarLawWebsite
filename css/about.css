@@ -1,0 +1,364 @@
+body {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.law-firm-hero {
+  padding: 60px 0;
+  min-height: 100vh;
+
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.container.law-firm-container {
+  max-width: 970px;
+}
+
+.image-column {
+  position: relative;
+  z-index: 1;
+}
+
+.image-wrapper {
+  height: 100%;
+}
+
+.lawyer-image {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.content-column {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.content-card {
+  background-color: #ffffffff;
+  padding: 50px 40px;
+  margin-left: -90px;
+  width: calc(100% - 30px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.content-heading {
+  color: #122448;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  margin-bottom: 20px;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.content-description {
+  color: #272727;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.learn-more-btn {
+  background-color: #c0382c;
+  color: #ffffff !important;
+  border: none;
+  padding: 12px 30px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  border-radius: 0;
+}
+
+.learn-more-btn:hover {
+  background-color: #222448;
+  color: #ffffff !important;
+}
+/* =================================
+   TABLET & SMALL LAPTOP (≤ 991px)
+================================= */
+@media (max-width: 991px) {
+  /* Hero section reset */
+  .law-firm-hero {
+    padding: 40px 0;
+    margin-top: 20px;
+  }
+
+  /* Image column – no extra bootstrap gap */
+  .image-column {
+    padding: 0;
+  }
+
+  /* Lawyer Image – equal left & right gap */
+  .lawyer-image {
+    width: calc(100% - 30px); /* 15px left + 15px right */
+    height: 450px;
+    display: block;
+    margin: 0 auto; /* center image */
+    object-fit: cover;
+  }
+
+  /* Content card */
+  .content-card {
+    margin: -40px 15px 0 15px;
+    padding: 35px 30px;
+  }
+
+  /* Heading */
+  .content-heading {
+    font-size: 20px;
+  }
+}
+
+/* =================================
+   MOBILE (≤ 576px)
+================================= */
+@media (max-width: 576px) {
+  /* Hero spacing */
+  .law-firm-hero {
+    padding: 30px 0;
+  }
+
+  /* Lawyer Image – tighter but equal gap */
+  .lawyer-image {
+    width: calc(100% - 24px); /* 12px left + 12px right */
+    height: 400px;
+  }
+
+  /* Content card */
+  .content-card {
+    margin: -30px 12px 0 12px;
+    padding: 25px;
+    transform: translateX(2px); /* card ko 6px right shift */
+  }
+
+  /* Heading */
+  .content-heading {
+    font-size: 18px;
+  }
+}
+
+/* ================= VIDEO SECTION ================= */
+/* ================= RESET ================= */
+
+/* ================= VIDEO SECTION ================= */
+.shan-content-description {
+  padding: 60px 20px;
+}
+
+/* Heading */
+.shan-section-headings {
+  font-family: "Avenir Next", sans-serif;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #122448;
+}
+
+/* Video Background Section */
+.shan-video-section {
+  position: relative;
+  background-image: url("https://cdn.prod.website-files.com/66df668bb4bddf2553c9bb42%2F68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 115%;
+  min-height: 520px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: shanSubtleMove 35s ease-in-out infinite;
+  overflow: hidden;
+}
+
+/* Background Motion Animation */
+@keyframes shanSubtleMove {
+  0% {
+    background-position: center left;
+    background-size: 120%;
+  }
+  50% {
+    background-position: center right;
+    background-size: 110%;
+  }
+  100% {
+    background-position: center left;
+    background-size: 120%;
+  }
+}
+
+/* Play Button */
+.shan-play-button {
+  width: 55px;
+  height: 55px;
+  background-color: #b22222;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shan-play-button:hover {
+  background-color: #8b1a1a;
+}
+
+.shan-play-button i {
+  color: #b9994c;
+  font-size: 22px;
+}
+
+/* Contact Button */
+.shan-contact-wrapper {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.shan-video-contact-btn {
+  background-color: #c0382c;
+  color: #ffffff;
+  padding: 14px 30px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.shan-video-contact-btn:hover {
+  background-color: #122448;
+  color: #ffffff;
+}
+
+/* ================= VIDEO MODAL ================= */
+.shan-video-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.shan-video-modal.active {
+  display: flex;
+}
+
+.shan-video-wrapper {
+  width: 90%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+}
+
+.shan-video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Close Button */
+.shan-close-btn {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.shan-close-btn:hover {
+  transform: rotate(90deg);
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 991px) {
+  .shan-section-headings {
+    font-size: 26px;
+  }
+
+  .shan-video-section {
+    min-height: 440px;
+    background-size: 120%;
+  }
+
+  .shan-play-button {
+    width: 48px;
+    height: 48px;
+  }
+
+  .shan-play-button i {
+    font-size: 20px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+  .shan-content-description {
+    padding: 40px 15px;
+  }
+
+  .shan-section-headings {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: -18px;
+  }
+
+  .shan-video-section {
+    min-height: 330px;
+    background-size: 130%;
+    animation: shanSubtleMove 35s ease-in-out infinite;
+  }
+
+  .shan-play-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .shan-play-button i {
+    font-size: 18px;
+  }
+
+  .shan-video-contact-btn {
+    width: 100%;
+    max-width: 260px;
+    padding: 12px 20px;
+    font-size: 13px;
+    margin-top: -20px;
+  }
+
+  .shan-close-btn {
+    top: 15px;
+    right: 15px;
+    font-size: 26px;
+  }
+}

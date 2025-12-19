@@ -1,0 +1,228 @@
+/* ---------------- BODY ---------------- */
+body {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* ---------------- SERVICES SECTION ---------------- */
+.zee-services-section {
+  padding: 60px 15px;
+  margin-top: 40px;
+}
+
+.zee-services-container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.zee-section-heading {
+  font-family: "Avenir Next", sans-serif;
+  color: #122448;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.zee-section-description {
+  font-family: "Montserrat", sans-serif;
+  color: #272727;
+  font-size: 14px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+/* ---------------- GRID ---------------- */
+.row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* ---------------- CARD ---------------- */
+.zee-service-card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  height: 320px; /* increased by 10px */
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column; /* column layout */
+}
+
+.zee-service-icon {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 12px;
+  display: block;
+  color: #b9994c;
+}
+
+.zee-service-title {
+  color: #b9994c;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.zee-service-description {
+  color: #272727;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.zee-explore-link {
+  font-family: "Montserrat", sans-serif;
+  color: #555;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+
+  margin-top: auto; /* keeps Explore link at bottom */
+}
+
+.zee-explore-link:hover {
+  color: #b9994c;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (min-width: 992px) {
+  .col-lg-4 {
+    flex: 0 0 28.5%; /* reduced width by ~7px */
+    max-width: 28.5%;
+  }
+  .zee-service-card {
+    height: 290px; /* increased by 10px */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-lg-4 {
+    flex: 0 0 47%; /* slightly reduced width */
+    max-width: 47%;
+  }
+  .zee-service-card {
+    height: 330px; /* increased by 10px */
+    padding: 25px 22px;
+  }
+  .zee-service-title {
+    font-size: 22px;
+  }
+  .zee-service-description {
+    font-size: 14px;
+  }
+  .zee-explore-link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .zee-section-heading {
+    font-size: 26px;
+  }
+  .row.g-4 {
+    gap: 20px;
+  }
+  .col-lg-4 {
+    flex: 0 0 46%; /* slight reduction */
+    max-width: 46%;
+  }
+  .zee-service-card {
+    height: auto; /* keep auto for smaller screens */
+    padding: 20px;
+  }
+  .zee-service-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 575px) {
+  .zee-section-heading {
+    font-size: 24px;
+  }
+  .zee-section-description {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  .row.g-4 {
+    gap: 15px;
+  }
+  .col-lg-4 {
+    flex: 0 0 88%; /* reduced width slightly */
+    max-width: 88%;
+  }
+  .zee-service-card {
+    height: auto;
+    padding: 18px;
+  }
+  .zee-service-title {
+    font-size: 20px;
+  }
+  .zee-service-description {
+    font-size: 13px;
+  }
+  .zee-explore-link {
+    font-size: 15px;
+  }
+}
+
+/*  */
+/*  */
+/*  */
+
+/*  */
+/*  */
+/*  */
+/* ---------------- BODY ---------------- */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #272727; /* Default text color */
+}
+
+/* ---------------- CLIENTS SECTION ---------------- */
+.clients-section {
+  background-color: #f1f1f1; /* Section background color */
+  padding: 100px 0; /* Top and bottom spacing */
+  text-align: center;
+}
+
+.clients-section h1 {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #122448; /* Updated heading color */
+}
+
+.clients-section p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px; /* Updated paragraph size */
+  margin-bottom: 40px;
+  color: #272727; /* Updated paragraph color */
+}
+
+.client-logo {
+  width: 120px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.owl-carousel .owl-item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}

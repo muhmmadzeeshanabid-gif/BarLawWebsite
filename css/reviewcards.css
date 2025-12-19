@@ -1,0 +1,240 @@
+.reviews-section {
+  background: #f1f1f1;
+  padding: 70px 0;
+  overflow: hidden;
+}
+
+.reviews-container {
+  padding-left: 180px;
+}
+
+.reviews-heading {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #122448;
+  letter-spacing: 1px;
+}
+
+.review-nav {
+  display: flex;
+  gap: 13px;
+  margin-right: 40px;
+}
+
+.review-nav button {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #222;
+  font-size: 18px;
+}
+
+.review-nav button:hover {
+  background-color: #c0382c;
+  color: #fff;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  margin-top: 45px;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.6s ease;
+}
+
+.review-card {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card:nth-child(odd) .review-box {
+  margin-top: 0;
+}
+
+.review-card:nth-child(even) .review-box {
+  margin-top: 30px;
+}
+
+.review-box {
+  background: #ffffff;
+  padding: 20px 24px 30px;
+  min-height: 180px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.review-box::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 45px;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 18px solid #fff;
+}
+
+.quote {
+  width: 24px;
+  height: 18px;
+  background: url("https://cdn.prod.website-files.com/66df668bb4bddf2553c9bb42/66df668bb4bddf2553c9bbe7_Vector%20(3).png")
+    no-repeat center / contain;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.review-text {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #272727;
+}
+
+.user {
+  margin-top: 25px;
+}
+
+.user h5 {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #b9994c;
+  margin: 0;
+}
+
+.user span {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  color: #05456a;
+}
+
+@media (max-width: 1200px) {
+  .reviews-container {
+    padding-left: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-container {
+    padding-left: 20px;
+  }
+  .review-nav {
+    justify-content: center;
+    margin-top: 15px;
+    order: 2;
+  }
+  .reviews-heading {
+    text-align: center;
+  }
+}
+
+/*  */
+/*  */
+/*  */ /*  */ /*  */
+/*  */
+/*  */
+/*  */
+/*  */ /*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* ================= RESET (REMOVE ALL GAPS) ================= */
+
+/* ================= BAR HERO SECTION ================= */
+.bar-hero {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  background-image: url("../66df668bb4bddf2553c9bb42_68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay */
+.bar-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.bar-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* ================= HEADING ================= */
+.bar-hero-title {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* ================= TEXT ================= */
+.bar-hero-text {
+  font-size: 16px;
+  color: #ffffff;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+/* ================= BUTTON ================= */
+.bar-hero-btn {
+  background-color: #c0382c;
+  padding: 14px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.bar-arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.bar-hero-btn:hover {
+  background-color: white;
+  color: #000;
+}
+
+.bar-hero-btn:hover .bar-arrow {
+  transform: translateX(4px);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .bar-hero {
+    min-height: 100vh;
+    background-attachment: scroll; /* mobile fix */
+  }
+
+  .bar-hero-title {
+    font-size: 26px;
+  }
+
+  .bar-hero-text {
+    font-size: 15px;
+  }
+}

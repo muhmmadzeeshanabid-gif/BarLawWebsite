@@ -1,5 +1,5 @@
 .reviews-section {
-  background: #f1f1f1;
+  background: var(--bg-light);
   padding: 70px 0;
   overflow: hidden;
 }
@@ -9,11 +9,12 @@
 }
 
 .reviews-heading {
-  font-family: "Avenir Next", sans-serif;
-  font-size: 34px;
-  font-weight: 700;
-  color: #122448;
-  letter-spacing: 1px;
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-blue);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .review-nav {
@@ -25,14 +26,25 @@
 .review-nav button {
   width: 40px;
   height: 40px;
-  background: #fff;
+  background: var(--text-white);
   border: 1px solid #222;
   font-size: 18px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.review-nav button:hover {
-  background-color: #c0382c;
-  color: #fff;
+@media (hover: hover) {
+  .review-nav button:hover {
+    background-color: var(--primary-red);
+    color: var(--text-white);
+    border-color: var(--primary-red);
+  }
+}
+
+.review-nav button:active {
+  background-color: var(--primary-red);
+  color: var(--text-white);
+  border-color: var(--primary-red);
 }
 
 .slider-wrapper {
@@ -61,7 +73,7 @@
 }
 
 .review-box {
-  background: #ffffff;
+  background: var(--bg-white);
   padding: 20px 24px 30px;
   min-height: 180px;
   position: relative;
@@ -75,23 +87,22 @@
   left: 45px;
   border-left: 18px solid transparent;
   border-right: 18px solid transparent;
-  border-top: 18px solid #fff;
+  border-top: 18px solid var(--text-white);
 }
 
 .quote {
   width: 24px;
   height: 18px;
-  background: url("https://cdn.prod.website-files.com/66df668bb4bddf2553c9bb42/66df668bb4bddf2553c9bbe7_Vector%20(3).png")
-    no-repeat center / contain;
+  background: url("https://cdn.prod.website-files.com/66df668bb4bddf2553c9bb42/66df668bb4bddf2553c9bbe7_Vector%20(3).png") no-repeat center / contain;
   display: block;
   margin-bottom: 12px;
 }
 
 .review-text {
-  font-family: Montserrat, sans-serif;
+  font-family: var(--font-main);
   font-size: 14px;
   line-height: 1.5;
-  color: #272727;
+  color: var(--text-dark);
 }
 
 .user {
@@ -99,20 +110,25 @@
 }
 
 .user h5 {
-  font-family: "Avenir Next", sans-serif;
+  font-family: var(--font-heading);
   font-size: 22px;
-  font-weight: 700;
-  color: #b9994c;
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-gold);
   margin: 0;
 }
 
 .user span {
-  font-family: Montserrat, sans-serif;
+  font-family: var(--font-main);
   font-size: 14px;
   color: #05456a;
 }
 
 @media (max-width: 1200px) {
+  .reviews-heading {
+    text-align: center;
+    font-size: 22px;
+  }
+
   .reviews-container {
     padding-left: 80px;
   }
@@ -122,23 +138,29 @@
   .reviews-container {
     padding-left: 20px;
   }
+
   .review-nav {
     justify-content: center;
     margin-top: 15px;
     order: 2;
   }
+
   .reviews-heading {
+    font-size: 22px;
     text-align: center;
   }
 }
 
 /*  */
 /*  */
-/*  */ /*  */ /*  */
 /*  */
 /*  */
 /*  */
-/*  */ /*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
 /*  */
 /*  */
 /*  */
@@ -149,8 +171,8 @@
 .bar-hero {
   position: relative;
   width: 100%;
-  min-height: 80vh;
-  background-image: url("../66df668bb4bddf2553c9bb42_68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
+  min-height: 75vh;
+  background-image: url("../images/66df668bb4bddf2553c9bb42_68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -178,10 +200,10 @@
 
 /* ================= HEADING ================= */
 .bar-hero-title {
-  font-family: "Avenir Next", sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  color: var(--bg-white);
   text-transform: uppercase;
   margin-bottom: 15px;
 }
@@ -189,24 +211,24 @@
 /* ================= TEXT ================= */
 .bar-hero-text {
   font-size: 16px;
-  color: #ffffff;
+  color: var(--bg-white);
   opacity: 0.9;
   margin-bottom: 25px;
 }
 
 /* ================= BUTTON ================= */
 .bar-hero-btn {
-  background-color: #c0382c;
-  padding: 14px 30px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
+  background-color: var(--primary-red);
+  padding: 14px 45px;
+  font-size: 16px;
+  font-weight: var(--font-weight-regular);
+  color: var(--bg-white);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .bar-arrow {
@@ -216,7 +238,7 @@
 
 .bar-hero-btn:hover {
   background-color: white;
-  color: #000;
+  color: #292929;
 }
 
 .bar-hero-btn:hover .bar-arrow {
@@ -227,14 +249,22 @@
 @media (max-width: 768px) {
   .bar-hero {
     min-height: 100vh;
-    background-attachment: scroll; /* mobile fix */
   }
 
   .bar-hero-title {
-    font-size: 26px;
+    font-size: 30px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    padding: 0 10px;
   }
 
   .bar-hero-text {
     font-size: 15px;
+    max-width: 100%;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    padding: 0 15px;
+    opacity: 0.95;
   }
 }

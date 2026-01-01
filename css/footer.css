@@ -1,38 +1,49 @@
 .footer {
-  background: #122448;
-  color: #ffffff;
-  padding: 70px 80px 30px;
-}
-
-/* Make footer stick to bottom when page content is short */
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-.footer {
-  margin-top: auto;
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  padding: 85px 0 35px;
+  font-family: var(--font-main);
 }
 
 .footer-top {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1.2fr;
-  gap: 80px;
-}
-.column-1 {
-  margin-left: 60px;
-}
-.footer-logo {
-  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* Ensure all headers align at the top */
+  max-width: 1250px;
+  margin: 15px auto 0;
+  /* Added 15px top margin to shift content down */
+  padding: 0 40px;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
+/* FOOTER COLUMNS */
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-brand {
+  flex: 1.2;
+  padding-left: 60px;
+  /* Match navbar branding offset */
+}
+
+/* HEADINGS */
 .footer h4 {
-  font-size: 16px;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 1px;
-  margin-bottom: 18px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  color: var(--text-light);
+  text-transform: uppercase;
 }
 
+/* LISTS & LINKS */
 .footer ul {
   list-style: none;
   padding: 0;
@@ -44,91 +55,252 @@ body {
 }
 
 .footer ul li a {
-  color: #ffffff;
+  color: var(--text-light);
   text-decoration: none;
   font-size: 14px;
-  opacity: 0.9;
+  transition: all 0.3s ease;
+  font-weight: var(--font-weight-regular);
 }
 
 .footer ul li a:hover {
-  color: #c0392b;
-  opacity: 1;
+  color: var(--primary-red);
+  /* Red hover as requested */
 }
 
-/* Subscribe */
+/* SUBSCRIBE BOX */
 .subscribe-box {
   display: flex;
-  margin: 15px 0 25px;
+  margin-bottom: 35px;
   max-width: 320px;
 }
 
 .subscribe-box input {
-  flex: 1;
-  padding: 10px 12px;
-  border: 1px solid #fff;
   background: transparent;
-  color: #fff;
+  border: 1px solid var(--border-glass);
+  border-right: none;
+  color: var(--text-white);
+  padding: 12px 15px;
+  font-size: 13px;
+  width: 100%;
   outline: none;
 }
 
+.subscribe-box input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .subscribe-box button {
-  background: #c0392b;
+  background-color: var(--primary-red);
+  /* Red/Maroon as per image */
+  color: var(--text-white);
   border: none;
-  color: #fff;
   padding: 0 18px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  font-size: 14px;
 }
 
-.subscribe-box button i {
-  font-size: 16px;
+.subscribe-box button:hover {
+  background-color: var(--secondary-red);
 }
 
-/* Social */
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 25px;
+}
+
 .social-icons a {
-  color: #ffffff;
-  margin-right: 14px;
-  font-size: 15px;
-  text-decoration: none;
+  color: var(--text-white);
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #c0392b;
-  opacity: 1;
+  color: var(--primary-red);
+  transform: translateY(-3px);
 }
 
-/* Bottom */
+/* FOOTER BOTTOM */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin-top: 50px;
-  padding-top: 18px;
+  max-width: 1250px;
+  margin: 80px auto 0;
+  padding: 30px 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  /* subtle line */
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 13px;
-  opacity: 0.85;
+  color: rgba(141, 160, 181, 0.8);
 }
 
-.footer-bottom a {
-  color: #fff;
+.footer-links a {
+  color: rgba(141, 160, 181, 0.8);
   text-decoration: none;
-  margin-left: 15px;
+  margin-left: 25px;
+  transition: color 0.3s;
 }
-@media (max-width: 900px) {
+
+.footer-links a:hover {
+  color: var(--text-white);
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 991px) {
+  .footer-column {
+    min-width: 45%;
+  }
+}
+
+@media (max-width: 767px) {
   .footer {
-    padding: 60px 30px 30px;
+    padding: 60px 0 40px;
+    text-align: center;
   }
 
   .footer-top {
-    grid-template-columns: 1fr;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
     gap: 40px;
+    padding: 0 20px;
   }
 
-  /* 👇 column-1 ko wapas left par lao */
-  .column-1 {
-    margin-left: 0;
+  .footer-column {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-brand {
+    padding-left: 0 !important;
+  }
+
+  .footer-logo,
+  .subscribe-box,
+  .social-icons {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .footer-bottom {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column-reverse;
+    gap: 20px;
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px 20px 0;
   }
+
+  .footer-links a {
+    margin: 0 10px;
+  }
+}
+
+/* SUBSCRIBE SUCCESS MESSAGE */
+.subscribe-success {
+  background-color: var(--bg-light);
+  color: var(--secondary-blue);
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  margin-bottom: 35px;
+  max-width: 350px;
+  line-height: 1.4;
+  border: 1px solid #ddd;
+}
+
+/* --- FOOTER LOGO STYLES (MATCHING NAVBAR) --- */
+.footer-logo-container {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-icon-box {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.footer-logo-icon {
+  position: absolute !important;
+  font-size: 34px;
+  /* Match Navbar Size */
+  /* Gold Color Permanent */
+  color: var(--accent-gold);
+  backface-visibility: hidden;
+  filter: drop-shadow(0 0 2px rgba(185, 153, 76, 0.3));
+}
+
+.footer-logo-text-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Spacing between Bar Law and Group */
+}
+
+/* Static - No Animation classes needed */
+
+.footer-logo-main {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  /* Match Navbar */
+  font-weight: var(--font-weight-bold);
+  color: #ffffff;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.footer-logo-sub {
+  font-family: var(--font-main);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  color: var(--accent-gold);
+  /* User requested GROUP to be Gold */
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-top: 2px;
+  /* Slight adjustment */
+}
+
+.footer-logo-main {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  /* Match Navbar */
+  font-weight: var(--font-weight-bold);
+  color: #ffffff;
+  /* Text remains white or User wants gold? User said "gold rehy". Let's try gold icons + white text first? Or all gold? "loo ka color be change ho kar ayee jessy oper ha matlab gold rehy". Usually implies the icon. I'll stick to Gold Icon, White Text for contrast on dark blue. */
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.footer-logo-sub {
+  font-family: var(--font-main);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  color: #ffffff;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-top: 2px;
+  /* Slight adjustment */
 }

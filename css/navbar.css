@@ -1,23 +1,23 @@
-body {
-  font-family: "Montserrat", sans-serif;
-}
+/* Font standardized via style.css */
 
 /* ===== NAVBAR ===== */
 .main-navbar {
-  position: fixed;
-  top: 0;
+  position: fixed !important;
+  /* Force pinned position */
+  top: 0 !important;
   left: 0;
   right: 0;
   z-index: 1000;
   padding: 15px 0;
   background-color: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid var(--border-glass);
   transition: all 0.3s ease;
 }
 
 .main-navbar.scrolled {
-  background-color: #022347;
-  padding: 10px 0;
+  background-color: var(--secondary-blue);
+  padding: 15px 0;
+  /* Kept same as initial padding to prevent "shrinking" (ikta hona) */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -26,64 +26,232 @@ body {
   display: flex;
   margin-left: 60px;
   align-items: center;
-  gap: 10px;
 }
 
-.logo-icon {
+/* ===== PREMIUM CSS LOGO ===== */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-icon-premium {
+  transition: all 0.3s ease;
+}
+
+/* Morphing Logo Container */
+.logo-icon-container {
+  position: relative;
   width: 40px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
 }
 
-.logo-text {
-  color: #fff;
-  font-family: "Playfair Display", serif;
-  font-size: 24px;
-  letter-spacing: 3px;
+.logo-icon-premium {
+  position: absolute !important;
+  font-size: 34px;
+  transition: all 0.3s ease;
+  backface-visibility: hidden;
+  color: #ffffff;
+  /* Solid White Default */
+  display: inline-block;
 }
 
+/* Scrolled Gold Color */
+.main-navbar.scrolled .logo-icon-premium {
+  color: var(--accent-gold);
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  filter: drop-shadow(0 0 2px rgba(185, 153, 76, 0.3));
+  /* Subtle shadow, no glow */
+}
+
+/* Animation Logic: Morphing Only */
+.icon-scale {
+  animation: logo-morph-scale 4s infinite ease-in-out;
+}
+
+.icon-gavel {
+  animation: logo-morph-gavel 4s infinite ease-in-out;
+}
+
+@keyframes logo-morph-scale {
+
+  0%,
+  40% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+    visibility: visible;
+  }
+
+  50%,
+  90% {
+    opacity: 0;
+    transform: rotateY(180deg) scale(0.5);
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateY(360deg) scale(1);
+    visibility: visible;
+  }
+}
+
+@keyframes logo-morph-gavel {
+
+  0%,
+  40% {
+    opacity: 0;
+    transform: rotateY(-180deg) scale(0.5);
+    visibility: hidden;
+  }
+
+  50%,
+  90% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotateY(180deg) scale(0.5);
+    visibility: hidden;
+  }
+}
+
+
+
+/* Global Layout (Desktop default) */
+.logo-text-group {
+  display: flex !important;
+  flex-direction: row !important;
+  /* Next to each other */
+  align-items: center;
+  /* Align vertically centered */
+  gap: 10px;
+  /* Spacing between BAR LAW and GROUP */
+  line-height: 1;
+}
+
+.logo-name-main {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  /* Increased from 24px */
+  font-weight: var(--font-weight-bold);
+  color: #ffffff;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.logo-name-sub {
+  font-family: var(--font-main);
+  font-size: 12px;
+  /* Increased from 11px */
+  font-weight: var(--font-weight-medium);
+  color: #ffffff;
+  /* White at top */
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  transition: all 0.3s ease;
+}
+
+.main-navbar.scrolled .logo-name-sub {
+  color: var(--accent-gold);
+  /* Gold on scroll */
+}
+
+/* Hide old logo elements */
+.logo-image,
+.logo-icon,
+.logo-text,
 .logo-subtext {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: #fff;
-  margin-top: -5px;
-  display: block;
+  display: none;
 }
 
 /* ===== NAV LINKS ===== */
 .nav-link {
-  color: #f1f1f1 !important;
-  font-size: 14px;
-  font-weight: 500;
+  color: var(--text-light) !important;
+  font-size: 15px;
+  font-weight: var(--font-weight-medium);
   padding: 8px 15px !important;
 }
 
+/* Nav Links Active/Focus */
 .nav-link:focus,
-.nav-link:active {
+.nav-link:active,
+.nav-link.active {
   outline: none;
   box-shadow: none;
+  font-weight: 600;
+  /* Semi-bold on click/active */
+  color: var(--text-highlight) !important;
+  /* Keep consistent color or specific active color? User said hover #e2e6e0, active "halka bold". */
+}
+
+/* Nav Link Hover */
+.nav-link:hover {
+  color: var(--text-highlight) !important;
+  /* Font weight removed from here so Dropdowns don't get bold on hover */
+}
+
+/* Specific Bold Hover for Contact/Blog */
+/* Specific Bold Hover for Contact/Blog */
+.nav-link-bold-hover {
+  display: inline-flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link-bold-hover::after {
+  content: attr(data-text);
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  font-weight: var(--font-weight-bold) !important;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  /* Matches current nav font size */
+}
+
+.nav-link-bold-hover:hover {
+  color: var(--text-highlight) !important;
+  font-weight: 600 !important;
 }
 
 /* ===== CONTACT BUTTON ===== */
 .contact-btn {
-  background-color: #c0382c;
-  color: #fff !important;
+  background-color: var(--primary-red);
+  color: var(--text-white) !important;
   padding: 10px 20px !important;
-  border-radius: 3px;
-  transition: 0.3s ease;
+  transition: var(--transition-fast);
 }
 
 .contact-btn:hover {
-  background-color: #1a2a4a;
-  color: #fff;
+  background-color: var(--primary-blue);
+  color: var(--text-white);
 }
 
 /* ===== DROPDOWN ===== */
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
+/* Only open on hover for desktop to avoid stuck states on mobile */
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }
 
 .dropdown-menu {
-  background-color: #f1f1f1;
+  background-color: #dddddd;
   border: none;
   border-radius: 0;
   padding: 10px 0;
@@ -91,17 +259,26 @@ body {
 }
 
 .dropdown-item {
-  font-family: Monsterrat, sans-serif;
-
-  font-size: 12px;
+  font-family: var(--font-main);
+  font-size: 13px;
   padding: 8px 20px;
-  color: #022347;
-  transition: 0.3s ease;
+  color: #222222;
+  transition: var(--transition-fast);
 }
 
 .dropdown-item:hover {
   background-color: transparent;
-  color: #c0382c;
+  color: var(--primary-red);
+}
+
+/* Dropdown Active State */
+/* Dropdown Active State */
+/* Dropdown Active State */
+.dropdown-item.active {
+  color: var(--primary-blue) !important;
+  font-weight: var(--font-weight-bold) !important;
+  /* Bold as requested */
+  background-color: transparent;
 }
 
 /* Chevron */
@@ -111,112 +288,130 @@ body {
   transition: transform 0.3s ease;
 }
 
-.nav-item.dropdown:hover .bi-chevron-down {
+/* .nav-item.dropdown:hover .bi-chevron-down {
   transform: rotate(180deg);
+} */
+
+/* ===== HAMBURGER ===== */
+.navbar-toggler {
+  border: none !important;
 }
 
-/* ===== HERO SECTION ===== */
-.hero-section {
-  height: 100vh;
-  min-height: 600px;
-  padding-bottom: 60px;
-  background-image: linear-gradient(rgba(1, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-    url("https://cdn.prod.website-files.com/66df668bb4bddf2553c9bb42/66df8e894d890ef9ac072f08_pexels-kehn-hermano-3584437-scaled.webp");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-/* HERO CONTENT */
-.hero-content {
-  max-width: 800px;
-  padding: 15px 20px 0; /* 🔽 text 15px neeche */
-  text-align: center;
-}
-
-/* HERO HEADING */
-.hero-heading {
-  font-family: "Avenir Next", sans-serif;
-  color: #e6e2e0;
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 20px 0px 10px;
-}
-
-/* HERO TEXT */
-.hero-description {
-  font-family: Monsterrat, sans-serif;
-  color: #e6e2e0;
-  font-size: 22px;
-  line-height: 1.6;
-  margin: 0px 0px 10px;
-}
-
-/* HERO BUTTON */
-.hero-btn {
-  font-family: Monsterrat, sans-serif;
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  padding: 14px 22px;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin: 32px 0px 0px;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.hero-btn:hover {
-  background-color: #1a2a4a;
-  border-color: #1a2a4a;
+/* Custom color for hamburger icon */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23e6e2e0' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 991px) {
+
+  /* Mobile Logo Fixes */
+  .navbar-brand {
+    margin-left: 20px !important;
+    /* Moved left (reduced from 60px) */
+  }
+
+  .logo-text-group {
+    flex-direction: column !important;
+    /* Force stack */
+    align-items: flex-start !important;
+    margin-top: 2px;
+  }
+
+  .logo-name-sub {
+    margin-top: 0 !important;
+    /* Tighter spacing */
+  }
+
   .navbar-collapse {
-    background-color: #022347;
+    background-color: var(--secondary-blue);
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .navbar-collapse.show {
+    max-height: 100vh;
+    overflow-y: auto;
+    /* Scrollable if very tall */
   }
 
   .navbar-nav {
-    padding-bottom: 20px; /* contact button space */
+    padding-bottom: 20px;
+    width: 100%;
+    /* Ensure full height feel */
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Items start at top */
   }
 
+  /* 1. Links center aligned generally */
+  .nav-item {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    /* Gap between links */
+  }
+
+  .nav-link {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* 2. Dropdown Toggles: Space Between (Text Left, Icon Right) */
+  .nav-item.dropdown .nav-link {
+    justify-content: space-between !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* 3. Dropdown Menu Full Width */
+  .dropdown-menu {
+    width: 100%;
+    background-color: var(--bg-light);
+    /* Matched to request */
+    border-radius: 0;
+    border: none;
+    text-align: center;
+    /* Keep items centered or aligned as preferred? User said links center. */
+  }
+
+  .dropdown-item {
+    text-align: center;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  /* 4. Button Wider & Square */
   .nav-item .contact-btn {
     margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
-  .hero-section {
-    padding-bottom: 90px;
-  }
-
-  .hero-content {
-    padding-top: 15px;
-  }
-
-  .hero-heading {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-
-  .hero-description {
-    font-size: 17px;
     margin-bottom: 30px;
-  }
-
-  .hero-btn {
-    padding: 12px 20px;
-    font-size: 12px;
+    /* More space at bottom */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    border-radius: 0;
+    /* Removing rounded corners as requested */
   }
 }

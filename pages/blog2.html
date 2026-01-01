@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bar Law Group - Blog Page 2</title>
+
+  <!-- Icons & Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../avenir-next/font.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/blog.css" />
+  <link rel="stylesheet" href="../css/reviewcards.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <style>
+    /* --- LAW FIRM HERO SECTION STYLES --- */
+    .hero-section {
+      background-image: linear-gradient(rgba(1, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.5)),
+        url("../images/66df8e894d890ef9ac072f08_pexels-kehn-hermano-3584437-scaled.webp");
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      padding: 0 !important;
+      margin: 0 !important;
+      text-align: center !important;
+      max-width: 100% !important;
+    }
+
+    .hero-heading {
+      font-family: var(--font-heading) !important;
+      font-weight: var(--font-weight-bold) !important;
+      font-size: 48px !important;
+      color: #e6e2e0 !important;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-heading {
+        font-size: 36px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="main-navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <div class="logo-wrapper">
+          <div class="logo-icon-container">
+            <i class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"></i>
+            <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
+          </div>
+          <div class="logo-text-group">
+            <span class="logo-name-main">BAR LAW</span>
+            <span class="logo-name-sub">GROUP</span>
+          </div>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-bs-toggle="dropdown">About <i class="bi bi-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="aboutus.html">About Us</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="ourteam.html">Our Team</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-bs-toggle="dropdown">Practice Areas <i class="bi bi-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="generalcouncel.html">General Counsel Services</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="fundingandinvestlaw.html">Funding & Investment Law</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="intellectuallaw.html">Intellectual Property Law</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="employmentlaw.html">Employment Law</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="realproperty.html">Real Property Law</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-bold-hover" href="blog.html" data-text="Blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-bold-hover" href="contact.html" data-text="Contact">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link contact-btn" href="tel:+923224217137">+92 322 4217137</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-heading">OUR BLOG - PAGE 2</h1>
+        <p class="hero-description">
+          Continuing our commitment to providing you with valuable, actionable
+          insights. Explore more articles on business law and strategic
+          growth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG CARDS SECTION -->
+  <section class="blog-cards-section blog2-page">
+    <!-- Row 1 -->
+    <div class="cards-container">
+      <!-- Card 1 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          BEYOND BILLS: <br />
+          LEVERAGING <br />
+          ACCOUNTING, FINANCE <br />
+          &AMP; INSURANCE FOR <br />
+          GROWTH IN 2026
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          HOW TO FORM A <br />
+          SUBSIDIARY IN <br />
+          PAKISTAN
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          LAHORE EMPLOYERS <br />
+          ARE REQUIRED TO <br />
+          DEVELOP A WORKPLACE <br />
+          VIOLENCE PREVENTION <br />
+          PLAN BY JULY 1, 2026
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="cards-container row-2-blog2">
+      <!-- Card 4 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          HOW TO FILE A <br />
+          FICTITIOUS BUSINESS <br />
+          NAME STATEMENT IN <br />
+          LAHORE
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          DO I HAVE TO SIGN <br />
+          THIS? SPOUSAL <br />
+          CONSENT FORMS
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          MAJOR FACTORS TO <br />
+          CONSIDER WHEN <br />
+          SELLING YOUR <br />
+          BUSINESS
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="cards-container row-3-blog2">
+      <!-- Card 7 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          CAN YOU USE THE FULL <br />
+          LEGAL NAME OF <br />
+          ANOTHER LAHORE <br />
+          CORPORATION THAT <br />
+          HAS BEEN DISSOLVED?
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          THE CORPORATE <br />
+          TRANSPARENCY ACT: <br />
+          A GUIDE FOR SMALL- <br />
+          BUSINESS OWNERS IN <br />
+          PAKISTAN
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          HERE’S A TIP: <br />
+          SERVICE CHARGE <br />
+          RULES FOR <br />
+          RESTAURANTS IN <br />
+          LAHORE
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="cards-container row-4-blog2">
+      <!-- Card 10 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          CHALLENGING IPO <br />
+          PAKISTAN TRADEMARK <br />
+          REGISTRATIONS BASED <br />
+          ON LACK OF USE: <br />
+          TRADEMARK EXPUNGEMENT
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 11 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          THE SIX FACTORS FOR <br />
+          DETERMINING A FAIR <br />
+          VALUATION CAP FOR <br />
+          YOUR STARTUP IN <br />
+          PAKISTAN
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 12 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          THE 10 STEPS FOR <br />
+          CONVERTING YOUR <br />
+          LAHORE LLC TO A <br />
+          FEDERAL <br />
+          CORPORATION
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Row 5 -->
+    <div class="cards-container row-5-blog2">
+      <!-- Card 13 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          SHOULD YOU CONVERT <br />
+          YOUR STARTUP FROM A <br />
+          LAHORE LLC TO A <br />
+          FEDERAL <br />
+          CORPORATION?
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 14 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          THE IMPORTANCE OF <br />
+          STOCK PURCHASE <br />
+          AGREEMENTS FOR <br />
+          FOUNDERS
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 15 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          HOW TO CHANGE THE <br />
+          LEGAL NAME OF A <br />
+          LAHORE <br />
+          CORPORATION THAT IS <br />
+          ALSO REGISTERED TO <br />
+          DO BUSINESS IN <br />
+          PUNJAB
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Row 6 -->
+    <div class="cards-container row-6-blog2">
+      <!-- Card 16 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          CAUTION – COPYRIGHTS <br />
+          AHEAD!
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 17 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          FORMING A NON-PROFIT <br />
+          (501(C)(3)) EXEMPT <br />
+          ENTITY IN PAKISTAN
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 18 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          SHOULD I USE SAFES OR <br />
+          CONVERTIBLE <br />
+          PROMISSORY NOTES <br />
+          FOR MY STARTUP'S <br />
+          FIRST INVESTMENT <br />
+          ROUND?
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Row 7 -->
+    <div class="cards-container row-7-blog2">
+      <!-- Card 19 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          SIX OPTIONS TO <br />
+          NEGOTIATE WITH YOUR <br />
+          COMMERCIAL <br />
+          LANDLORD DURING <br />
+          COVID
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 20 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          TRADEMARK <br />
+          MODERNIZATION ACT: <br />
+          PROVIDING NEW TOOLS <br />
+          FOR TRADEMARK <br />
+          APPLICANTS
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+
+      <!-- Card 21 -->
+      <div class="blog-card">
+        <h2 class="blog-card-title">
+          THE CONTRACTUAL <br />
+          LANGUAGE OF LOVE: <br />
+          ENSURING <br />
+          COMPLIANCE FOR <br />
+          DATING SERVICE <br />
+          CONTRACTS
+        </h2>
+        <a href="#" class="read-more-link">Read More &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="blog-pagination">
+      <a href="blog.html" class="pagination-btn">&lt; Previous</a>
+      <a href="blog3.html" class="pagination-btn">Next &gt;</a>
+    </div>
+  </section>
+
+  <!-- ================= BAR HERO SECTION ================= -->
+  <section class="bar-hero">
+    <div class="bar-hero-content">
+      <h1 class="bar-hero-title">
+        Strengthen Your Business Strategy with Expert Legal Guidance
+      </h1>
+
+      <p class="bar-hero-text">
+        Protect your business and make confident decisions—our attorneys guide
+        you through contracts, compliance, investments, and critical legal
+        matters.
+      </p>
+
+      <a href="contact.html" class="bar-hero-btn">
+        CONTACT US TODAY <span class="bar-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Column 1 -->
+      <div class="footer-column footer-brand">
+        <!-- FOOTER LOGO START (Static Gold) -->
+        <div class="footer-logo-container">
+          <a href="../index.html" class="footer-logo-link">
+            <div class="footer-logo-icon-box">
+              <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
+            </div>
+            <div class="footer-logo-text-group">
+              <span class="footer-logo-main">BAR LAW</span>
+              <i class="fa-solid fa-circle" style="font-size: 4px; color: var(--accent-gold); margin: 0 2px;"></i>
+              <span class="footer-logo-sub">GROUP</span>
+            </div>
+          </a>
+        </div>
+        <!-- FOOTER LOGO END -->
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">We're Hiring</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="footer-column">
+        <h4>PRACTICE AREAS</h4>
+        <ul>
+          <li><a href="generalcouncel.html">General Counsel</a></li>
+          <li>
+            <a href="fundingandinvestlaw.html">Funding and Investment</a>
+          </li>
+          <li>
+            <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
+          </li>
+          <li><a href="intellectuallaw.html">Intellectual Property</a></li>
+          <li><a href="#">Employment Law</a></li>
+          <li><a href="#">Business Dispute Services</a></li>
+          <li><a href="#">Real Estate Law</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="footer-column">
+        <h4>SUBSCRIBE FOR UPDATES</h4>
+        <div class="subscribe-box" id="subscribe-form-container">
+          <input type="email" id="subscribe-input" placeholder="name@email.com" />
+          <button id="subscribe-btn">
+            <i class="bi bi-arrow-up-right"></i>
+          </button>
+        </div>
+
+        <h4>FOLLOW US:</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        Copyright Bar Law Group ©. Website by Behwal Asad Rasul.
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/index.js" defer></script>
+</body>
+
+</html>

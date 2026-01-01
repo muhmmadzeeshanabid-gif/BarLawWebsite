@@ -1,86 +1,104 @@
-body {
-  background-color: rgba(255, 255, 255, 0.8);
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-}
+/* Font standardized via style.css */
+
+/* =================================
+   ABOUT / LAW FIRM HERO SECTION
+   ================================= */
 
 .law-firm-hero {
-  padding: 60px 0;
-  min-height: 100vh;
-
+  padding: 80px 0 80px 50px;
+  min-height: auto;
   display: flex;
-  margin-top: 20px;
+  margin-top: 50px;
   align-items: center;
 }
 
 .container.law-firm-container {
-  max-width: 970px;
+  max-width: 1140px;
 }
 
+.law-firm-container .row {
+  align-items: center;
+}
+
+/* --- IMAGE COLUMN --- */
 .image-column {
   position: relative;
   z-index: 1;
+  padding-right: 0 !important;
+  /* Remove bootstrap padding for tighter overlap */
 }
 
+/* Image Card Effect (Reset to clean full image) */
 .image-wrapper {
-  height: 100%;
+  height: auto;
+  /* Removed white frame styles per request */
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+  width: 100%;
 }
 
 .lawyer-image {
   width: 100%;
-  height: 550px;
+  height: 650px;
+  /* Increased from 580px to match request */
   object-fit: cover;
   display: block;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  /* Restored shadow to image */
 }
 
+/* --- CONTENT COLUMN --- */
 .content-column {
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 2;
+  z-index: 10;
+  /* Higher than image */
 }
 
 .content-card {
-  background-color: #ffffffff;
-  padding: 50px 40px;
-  margin-left: -90px;
-  width: calc(100% - 30px);
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-white);
+  padding: 65px 60px;
+  margin-left: -100px;
+  width: 520px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
   position: relative;
 }
 
+/* --- TYPOGRAPHY --- */
 .content-heading {
-  color: #122448;
-  font-family: "Avenir Next", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.4;
+  color: var(--primary-blue);
 
-  margin-bottom: 20px;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  margin-bottom: 15px;
   text-transform: uppercase;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  /* Uppercase as per image */
+  letter-spacing: 0.5px;
 }
 
 .content-description {
-  color: #272727;
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  line-height: 1.7;
-  margin-bottom: 30px;
+  color: var(--text-grey);
+  font-family: var(--font-main);
+  font-size: 14px;
+  line-height: 1.8;
+  /* Good spacing */
+  margin-bottom: 20px;
 }
 
+/* --- BUTTON --- */
 .learn-more-btn {
-  background-color: #c0382c;
-  color: #ffffff !important;
+  background-color: var(--primary-red);
+  /* Red color */
+  color: var(--text-white) !important;
   border: none;
-  padding: 12px 30px;
+  padding: 15px 35px;
+  /* Rectangular/Square feel */
   font-size: 14px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-main);
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -88,73 +106,102 @@ body {
   display: inline-block;
   transition: background-color 0.3s ease;
   border-radius: 0;
+  /* Square corners */
 }
 
 .learn-more-btn:hover {
-  background-color: #222448;
-  color: #ffffff !important;
+  background-color: var(--bg-nav-scrolled);
+  /* Dark blue on hover */
+  color: var(--text-white) !important;
 }
+
 /* =================================
    TABLET & SMALL LAPTOP (≤ 991px)
-================================= */
+   ================================= */
 @media (max-width: 991px) {
-  /* Hero section reset */
   .law-firm-hero {
-    padding: 40px 0;
-    margin-top: 20px;
-  }
-
-  /* Image column – no extra bootstrap gap */
-  .image-column {
-    padding: 0;
-  }
-
-  /* Lawyer Image – equal left & right gap */
-  .lawyer-image {
-    width: calc(100% - 30px); /* 15px left + 15px right */
-    height: 450px;
+    padding: 40px 0 !important;
+    margin-top: 30px;
     display: block;
-    margin: 0 auto; /* center image */
-    object-fit: cover;
+    /* Stack items */
   }
 
-  /* Content card */
+  .image-column,
+  .content-column {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  /* Reset layout for stacking */
+  .image-column {
+    padding-right: 15px !important;
+    /* Restore padding value base */
+    margin-bottom: 0;
+  }
+
+  .image-column .image-wrapper {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .lawyer-image {
+    height: 450px;
+    /* Shorter on mobile */
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    /* Shadow directly on image again for mobile */
+  }
+
+  /* Content Card Mobile adjustments */
   .content-card {
-    margin: -40px 15px 0 15px;
-    padding: 35px 30px;
+    margin-left: 0;
+    /* Remove overlap margin */
+    margin-top: -50px;
+    /* Slight overlap upwards onto image */
+    margin-right: 0;
+    width: 90%;
+    /* Matches typical container width */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 30px;
+    /* Ensure shadow is consistent */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   }
 
-  /* Heading */
   .content-heading {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
 /* =================================
    MOBILE (≤ 576px)
-================================= */
+   ================================= */
 @media (max-width: 576px) {
-  /* Hero spacing */
-  .law-firm-hero {
-    padding: 30px 0;
-  }
-
-  /* Lawyer Image – tighter but equal gap */
   .lawyer-image {
-    width: calc(100% - 24px); /* 12px left + 12px right */
-    height: 400px;
+    height: 350px;
+    /* Ensure image width matches card width logic or full width */
+    width: 100%;
   }
 
-  /* Content card */
   .content-card {
-    margin: -30px 12px 0 12px;
-    padding: 25px;
-    transform: translateX(2px); /* card ko 6px right shift */
+    width: 90%;
+    /* Keep aligned with tablet logic */
+    margin-top: -30px;
+    /* Slight overlap */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-top: none;
+    /* Removed red border */
   }
 
-  /* Heading */
   .content-heading {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 
@@ -164,27 +211,33 @@ body {
 /* ================= VIDEO SECTION ================= */
 .shan-content-description {
   padding: 60px 20px;
+  margin-top: -5px;
+  /* Moved section up 5px */
 }
 
 /* Heading */
 .shan-section-headings {
-  font-family: "Avenir Next", sans-serif;
+  font-family: var(--font-heading);
   text-align: center;
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 34px;
+  /* Increased size */
+  font-weight: var(--font-weight-bold);
+  /* Increased weight */
   margin-bottom: 30px;
-  color: #122448;
+  color: var(--primary-blue);
 }
 
 /* Video Background Section */
 .shan-video-section {
   position: relative;
-  background-image: url("https://cdn.prod.website-files.com/66df668bb4bddf2553c9bb42%2F68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
+  background-image: url("../images/66df668bb4bddf2553c9bb42_68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 115%;
-  min-height: 520px;
-  max-width: 1000px;
+  min-height: 595px;
+  /* Reduced by 5px (600px -> 595px) */
+  max-width: 1195px;
+  /* Reduced by 5px (1200px -> 1195px) */
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -200,10 +253,12 @@ body {
     background-position: center left;
     background-size: 120%;
   }
+
   50% {
     background-position: center right;
     background-size: 110%;
   }
+
   100% {
     background-position: center left;
     background-size: 120%;
@@ -212,39 +267,52 @@ body {
 
 /* Play Button */
 .shan-play-button {
-  width: 55px;
-  height: 55px;
-  background-color: #b22222;
+  width: 60px;
+  /* Reduced size */
+  height: 60px;
+  background: linear-gradient(135deg, #e63935 0%, #b22222 100%);
+  /* Premium Red Gradient */
   border-radius: 50%;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 0;
+  box-shadow: 0 10px 25px rgba(178, 34, 34, 0.4);
+  /* Glowing Red Shadow */
+  /* Animation removed as requested */
 }
 
 .shan-play-button:hover {
-  background-color: #8b1a1a;
+  transform: scale(1.1);
+  box-shadow: 0 15px 35px rgba(178, 34, 34, 0.6);
+  /* Stronger glow on hover */
 }
 
+/* Play Icon */
 .shan-play-button i {
-  color: #b9994c;
-  font-size: 22px;
+  font-size: 32px;
+  /* Balanced size */
+  margin-left: 4px;
+  /* Optical centering */
+  color: var(--bg-white);
+  /* Crisp White */
 }
 
 /* Contact Button */
 .shan-contact-wrapper {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 50px;
 }
 
 .shan-video-contact-btn {
-  background-color: #c0382c;
-  color: #ffffff;
+  background-color: var(--primary-red);
+  color: var(--text-white);
   padding: 14px 30px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -252,8 +320,8 @@ body {
 }
 
 .shan-video-contact-btn:hover {
-  background-color: #122448;
-  color: #ffffff;
+  background-color: var(--primary-blue);
+  color: var(--text-white);
 }
 
 /* ================= VIDEO MODAL ================= */
@@ -290,7 +358,7 @@ body {
   right: 35px;
   background: none;
   border: none;
-  color: #ffffff;
+  color: var(--bg-white);
   font-size: 32px;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -340,25 +408,351 @@ body {
   }
 
   .shan-play-button {
-    width: 42px;
-    height: 42px;
+    width: 35px;
+    height: 35px;
+    margin-top: -10px;
   }
 
   .shan-play-button i {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .shan-video-contact-btn {
     width: 100%;
-    max-width: 260px;
-    padding: 12px 20px;
-    font-size: 13px;
-    margin-top: -20px;
+    max-width: 240px;
+    padding: 10px 15px;
+    font-size: 12px;
+    /* Removed heavy negative margin on button, handling in wrapper */
+  }
+
+  /* Target Wrapper for better positioning */
+  /* Target Wrapper for better positioning */
+  .shan-contact-wrapper {
+    margin-top: 5px;
+    position: relative;
+    z-index: 10;
+    /* Ensure on top of video */
   }
 
   .shan-close-btn {
     top: 15px;
     right: 15px;
     font-size: 26px;
+  }
+}
+
+/* =================================
+   OUR VALUES SECTION
+   ================================= */
+.values-section .container {
+  max-width: 1140px;
+}
+
+.values-row {
+  --bs-gutter-x: 5px;
+  /* Fine-tuned small gap */
+  --bs-gutter-y: 20px;
+  /* Fixed vertical spacing for mobile stacking */
+}
+
+.values-section {
+  margin-top: 40px;
+  /* Increased spacing from section above */
+  padding: 100px 0;
+  background-color: var(--bg-light);
+  /* Light grey background */
+  text-align: center;
+}
+
+.values-main-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: 34px;
+  /* Increased from 32px */
+  color: var(--primary-blue);
+  margin-top: 20px;
+  /* Increased top margin */
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+.value-card {
+  background: var(--bg-white);
+  padding: 50px 30px;
+  /* Increased height significantly to show difference */
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  max-width: 315px;
+  /* Reduced width */
+  margin: 0 auto;
+  /* Center within column */
+}
+
+.value-title {
+  color: var(--primary-red);
+  /* Red color from existing branding */
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: 20px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.value-text {
+  color: var(--text-grey);
+  font-family: var(--font-main);
+  font-size: 13.5px;
+  /* Reduced font size */
+  line-height: 1.7;
+  /* Adjusted line height for smaller text */
+  margin-bottom: 0;
+}
+
+/* Tablet adjustments */
+@media (max-width: 991px) {
+  .values-section {
+    padding: 60px 0;
+  }
+
+  .values-main-title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .value-card {
+    padding: 40px 30px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .values-main-title {
+    font-size: 22px;
+  }
+}
+
+/* =================================
+   CLIENT SPOTLIGHT SECTION
+   ================================= */
+.client-spotlight-section {
+  padding: 120px 0;
+  /* Increased padding for a more spacious, premium feel */
+  background-color: var(--text-white);
+  text-align: center;
+}
+
+.spotlight-heading {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: 36px;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.spotlight-subtitle {
+  font-family: var(--font-main);
+  color: #666;
+  font-size: 17px;
+  margin-bottom: 70px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo-grid {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  /* Large gap for premium look */
+  width: max-content;
+  animation: spotlightScroll 40s linear infinite;
+  /* Smooth infinite scroll */
+}
+
+/* Pause scroll on hover for desktop */
+.logo-grid:hover {
+  animation-play-state: paused;
+}
+
+.client-logo-item {
+  font-size: 45px;
+  /* Increased logo size */
+  opacity: 1;
+  /* Removed dulliness */
+  transition: all 0.4s ease;
+  cursor: pointer;
+  white-space: nowrap;
+  filter: none;
+  /* Removed grayscale */
+  flex-shrink: 0;
+}
+
+@keyframes spotlightScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+
+  /* Scroll halfway (since we'll duplicate) */
+}
+
+.client-logo-item:hover {
+  opacity: 1;
+  transform: translateY(-5px) scale(1.1);
+  filter: grayscale(0%);
+}
+
+/* Wrapper to hide overflow */
+.logo-marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Tablet & Mobile Improvements */
+@media (max-width: 991px) {
+  .client-spotlight-section {
+    padding: 80px 0;
+  }
+
+  .client-logo-item {
+    font-size: 30px;
+  }
+}
+
+/* Mobile: Faster Scroll & Smaller Text */
+@media (max-width: 576px) {
+  .client-spotlight-section {
+    padding: 60px 0;
+  }
+
+  .client-logo-item {
+    font-size: 24px;
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+
+  .logo-grid {
+    animation-duration: 25s;
+    /* Faster on mobile */
+    gap: 50px;
+  }
+
+  .spotlight-heading {
+    font-size: 26px;
+    padding: 0 20px;
+  }
+
+  .spotlight-subtitle {
+    font-size: 14px;
+    padding: 0 25px;
+    margin-bottom: 30px;
+  }
+}
+
+/* ================= BAR HERO SECTION ================= */
+.bar-hero {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  background-image: url("../images/6720a08ba1f23d578e026dac_big-BEND-6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay */
+.bar-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.bar-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* ================= HEADING ================= */
+.bar-hero-title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  color: var(--bg-white);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* ================= TEXT ================= */
+.bar-hero-text {
+  font-family: var(--font-main);
+  font-size: 16px;
+  color: var(--bg-white);
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+/* ================= BUTTON ================= */
+.bar-hero-btn {
+  background-color: var(--primary-red);
+  padding: 14px 45px;
+  font-size: 16px;
+  font-weight: var(--font-weight-regular);
+  color: var(--text-white);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.bar-arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.bar-hero-btn:hover {
+  background-color: white;
+  color: #292929;
+}
+
+.bar-hero-btn:hover .bar-arrow {
+  transform: translateX(4px);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .bar-hero {
+    min-height: 100vh;
+  }
+
+  .bar-hero-title {
+    font-size: 25px;
+    max-width: 320px;
+    margin: 0 auto 15px;
+    line-height: 1.4;
+  }
+
+  .bar-hero-text {
+    font-size: 14px;
+    max-width: 340px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
   }
 }

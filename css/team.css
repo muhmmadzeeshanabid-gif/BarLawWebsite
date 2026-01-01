@@ -1,0 +1,167 @@
+/* --- TEAM SECTION STYLES --- */
+.team-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.team-main-heading {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  color: #122448;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.team-description {
+  font-family: var(--font-main);
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- TEAM CARD --- */
+.team-card {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  height: 480px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.team-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0) 100%);
+  transition: background 0.3s ease;
+}
+
+/* --- TEAM INFO (Name & Role) --- */
+.team-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  color: #ffffff;
+  z-index: 2;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.team-name {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.team-role {
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease 0.1s;
+  color: #e6e2e0;
+}
+
+/* --- ARROW ICON --- */
+.team-arrow {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  /* Increased from 18px */
+  line-height: 1;
+  /* Ensures vertical alignment */
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+/* --- HOVER EFFECTS --- */
+.team-card:hover .team-image {
+  transform: scale(1.05);
+}
+
+.team-card:hover .team-overlay {
+  background: rgba(18, 36, 72, 0.4);
+  /* Subtle brand blue tint on hover */
+}
+
+.team-card:hover .team-info {
+  transform: translateY(-20px);
+}
+
+.team-card:hover .team-role {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-card:hover .team-arrow {
+  background: #c0382c;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 991px) {
+  .team-card {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .team-main-heading {
+    font-size: 28px;
+  }
+}

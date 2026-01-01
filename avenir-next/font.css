@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Bold'), local('AvenirNextCyr-Bold'),
+        url('fonts/avenir-next/AvenirNextCyr-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Thin Italic'), local('AvenirNextCyr-ThinItalic'),
+        url('fonts/avenir-next/AvenirNextCyr-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Medium Italic'), local('AvenirNextCyr-MediumItalic'),
+        url('fonts/avenir-next/AvenirNextCyr-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr Ultra';
+    src: local('Avenir Next Cyr Ultra Light Italic'), local('AvenirNextCyr-UltraLightIt'),
+        url('fonts/avenir-next/AvenirNextCyr-UltraLightIt.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Light'), local('AvenirNextCyr-Light'),
+        url('fonts/avenir-next/AvenirNextCyr-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Italic'), local('AvenirNextCyr-Italic'),
+        url('fonts/avenir-next/AvenirNextCyr-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Bold Italic'), local('AvenirNextCyr-BoldItalic'),
+        url('fonts/avenir-next/AvenirNextCyr-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Heavy'), local('AvenirNextCyr-Heavy'),
+        url('fonts/avenir-next/AvenirNextCyr-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Heavy Italic'), local('AvenirNextCyr-HeavyItalic'),
+        url('fonts/avenir-next/AvenirNextCyr-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Thin'), local('AvenirNextCyr-Thin'),
+        url('fonts/avenir-next/AvenirNextCyr-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Medium'), local('AvenirNextCyr-Medium'),
+        url('fonts/avenir-next/AvenirNextCyr-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Demi Italic'), local('AvenirNextCyr-DemiItalic'),
+        url('fonts/avenir-next/AvenirNextCyr-DemiItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Demi'), local('AvenirNextCyr-Demi'),
+        url('fonts/avenir-next/AvenirNextCyr-Demi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Regular'), local('AvenirNextCyr-Regular'),
+        url('fonts/avenir-next/AvenirNextCyr-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('Avenir Next Cyr Light Italic'), local('AvenirNextCyr-LightItalic'),
+        url('fonts/avenir-next/AvenirNextCyr-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr Ultra';
+    src: local('Avenir Next Cyr Ultra Light'), local('AvenirNextCyr-UltraLight'),
+        url('fonts/avenir-next/AvenirNextCyr-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Global Font Configuration */
+:root {
+    /* Option 1: Avenir Next */
+    /* --font-main: 'Avenir Next Cyr', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+
+    /* Option 2: Montserrat (Google Font - Currently Active for Body) */
+    --font-main: "Montserrat", sans-serif;
+}
+
+.font-montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+}

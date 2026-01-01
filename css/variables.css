@@ -1,0 +1,33 @@
+:root {
+    /* --- Typography --- */
+    --font-main: 'Montserrat', sans-serif;
+    --font-heading: 'Avenir Next Cyr', sans-serif;
+    --font-weight-bold: 700;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+
+    /* --- Brand Colors --- */
+    --primary-red: #c0382c;
+    --secondary-red: #a52d24;
+    --primary-blue: #122448;
+    --secondary-blue: #022347;
+    --accent-gold: #b9994c;
+
+    /* --- Text Colors --- */
+    --text-dark: #272727;
+    --text-grey: #555555;
+    --text-light: #f1f1f1;
+    --text-white: #ffffff;
+    --text-highlight: #e2e6e0;
+
+    /* --- Background Colors --- */
+    --bg-white: #ffffff;
+    --bg-light: #f1f1f1;
+    --bg-dark: #122448;
+    --bg-nav-scrolled: #022347;
+
+    /* --- UI Elements --- */
+    --border-glass: rgba(255, 255, 255, 0.3);
+    --shadow-standard: 0 4px 18px rgba(0, 0, 0, 0.1);
+    --transition-fast: 0.3s ease;
+}

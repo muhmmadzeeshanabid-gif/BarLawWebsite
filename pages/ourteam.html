@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bar Law Group</title>
+
+  <!-- Icons & Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../avenir-next/font.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/team.css" />
+
+  <style>
+    /* --- LAW FIRM HERO SECTION STYLES --- */
+    .hero-section {
+      background-image: linear-gradient(rgba(1, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.5)),
+        url("../images/66df8e894d890ef9ac072f08_pexels-kehn-hermano-3584437-scaled.webp");
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      padding: 0 !important;
+      margin: 0 !important;
+      text-align: center !important;
+      max-width: 100% !important;
+    }
+
+    .hero-heading {
+      font-family: var(--font-heading) !important;
+      font-weight: var(--font-weight-bold) !important;
+      font-size: 48px !important;
+      color: #e6e2e0 !important;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-heading {
+        font-size: 36px !important;
+      }
+    }
+
+    /* ================= BAR HERO SECTION ================= */
+    .bar-hero {
+      position: relative;
+      width: 100%;
+      min-height: 75vh;
+      background-image: url("../images/66df668bb4bddf2553c9bb42_68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Dark overlay */
+    .bar-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .bar-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    /* ================= HEADING ================= */
+    .bar-hero-title {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: var(--font-weight-bold);
+      color: var(--bg-white);
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    /* ================= TEXT ================= */
+    .bar-hero-text {
+      font-size: 16px;
+      color: var(--bg-white);
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    /* ================= BUTTON ================= */
+    .bar-hero-btn {
+      background-color: var(--primary-red);
+      padding: 14px 45px;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--bg-white);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      margin-top: 15px;
+    }
+
+    .bar-arrow {
+      font-size: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .bar-hero-btn:hover {
+      background-color: white;
+      color: #292929;
+    }
+
+    .bar-hero-btn:hover .bar-arrow {
+      transform: translateX(4px);
+    }
+
+    /* ================= MOBILE ================= */
+    @media (max-width: 768px) {
+      .bar-hero {
+        min-height: 100vh;
+      }
+
+      .bar-hero-title {
+        font-size: 25px;
+        max-width: 320px;
+        margin: 0 auto 15px;
+        line-height: 1.4;
+      }
+
+      .bar-hero-text {
+        font-size: 14px;
+        max-width: 340px;
+        margin: 0 auto 25px;
+        line-height: 1.6;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="main-navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <div class="logo-wrapper">
+          <div class="logo-icon-container">
+            <i class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"></i>
+            <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
+          </div>
+          <div class="logo-text-group">
+            <span class="logo-name-main">BAR LAW</span>
+            <span class="logo-name-sub">GROUP</span>
+          </div>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-bs-toggle="dropdown">About <i class="bi bi-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="aboutus.html">About Us</a>
+              </li>
+              <li><a class="dropdown-item" href="ourteam.html">Our Team</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-bs-toggle="dropdown">Practice Areas <i class="bi bi-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="generalcouncel.html">General Counsel Services</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="fundingandinvestlaw.html">Funding & Investment Law</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="intellectuallaw.html">Intellectual Property Law</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="employmentlaw.html">Employment Law</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="realproperty.html">Real Property Law</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-bold-hover" href="blog.html" data-text="Blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-bold-hover" href="contact.html" data-text="Contact">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link contact-btn" href="tel:+923224217137">+92 322 4217137</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-heading">OUR TEAM</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR TEAM SECTION -->
+  <section class="team-section">
+    <div class="team-container">
+      <div class="team-header">
+        <h2 class="team-main-heading">OUR TEAM</h2>
+        <p class="team-description">
+          Our team is made up of experienced professionals who are passionate
+          about helping entrepreneurs not only establish a strong foundation,
+          but grow and thrive. Each attorney brings a unique background and
+          skill set, allowing us to provide well-rounded legal guidance that's
+          tailored to your needs. Meet the team that's here to help your build
+          and achieve your dreams.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Doug Bend -->
+        <div class="team-card">
+          <div class="team-card-inner">
+            <img src="../images/WhatsApp Image 2025-12-14 at 5.58.52 PM (1).jpeg" alt="Doug Bend" class="team-image" />
+            <div class="team-overlay"></div>
+            <div class="team-info">
+              <h3 class="team-name">Behwal<br />Asad Rasool</h3>
+              <p class="team-role">Founder & Managing Partner</p>
+            </div>
+            <div class="team-arrow">&rarr;</div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-inner">
+            <img src="../images/6719ed6f331153978fab73c7_pexels-mikhail-nilov-6962994.jpg" alt="Robin O'Donnell"
+              class="team-image" />
+            <div class="team-overlay"></div>
+            <div class="team-info">
+              <h3 class="team-name">Zeeshan<br />R</h3>
+              <p class="team-role">Senior Associate Attorney</p>
+            </div>
+            <div class="team-arrow">&rarr;</div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-inner">
+            <img src="../images/6720a09983c12a4c6e7e045a_big-BEND-5.jpg" alt="Vivek Vaidya" class="team-image" />
+            <div class="team-overlay"></div>
+            <div class="team-info">
+              <h3 class="team-name">Usman<br />Umer</h3>
+              <p class="team-role">Of Counsel</p>
+            </div>
+            <div class="team-arrow">&rarr;</div>
+          </div>
+        </div>
+
+        <!-- Bilal Ahmed -->
+        <div class="team-card">
+          <div class="team-card-inner">
+            <img src="../images/6720a08ba1f23d578e026dac_big-BEND-6.jpg" alt="Bilal Ahmed" class="team-image" />
+            <div class="team-overlay"></div>
+            <div class="team-info">
+              <h3 class="team-name">Bilal<br />Ahmed</h3>
+              <p class="team-role">Junior Attorney</p>
+            </div>
+            <div class="team-arrow">&rarr;</div>
+          </div>
+        </div>
+
+        <!-- Amna Sheikh -->
+        <div class="team-card">
+          <div class="team-card-inner">
+            <img src="../images/6720a0a400921826d84cdee8_big-BEND-4.jpg" alt="Amna Sheikh" class="team-image" />
+            <div class="team-overlay"></div>
+            <div class="team-info">
+              <h3 class="team-name">Amna<br />Sheikh</h3>
+              <p class="team-role">Legal Researcher</p>
+            </div>
+            <div class="team-arrow">&rarr;</div>
+          </div>
+        </div>
+
+        <!-- Haider Ali -->
+        <div class="team-card">
+          <div class="team-card-inner">
+            <img src="../images/6729eaddd9ebee9580c65598_big-BEND-1.jpg" alt="Haider Ali" class="team-image" />
+            <div class="team-overlay"></div>
+            <div class="team-info">
+              <h3 class="team-name">Haider<br />Ali</h3>
+              <p class="team-role">Paralegal</p>
+            </div>
+            <div class="team-arrow">&rarr;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- bar hero section -->
+  <section class="bar-hero">
+    <div class="bar-hero-content">
+      <h1 class="bar-hero-title">
+        Back Your Business Strategy With Experienced Legal Guidance
+      </h1>
+
+      <p class="bar-hero-text">
+        Protect your business and make strategic decisions with confidence.
+        Our attorneys are ready to guide you through contracts, compliance,
+        investments and more. Contact us today to learn how we can support
+        your goals.
+      </p>
+
+      <a href="contact.html" class="bar-hero-btn">
+        Contact Us Today <span class="bar-arrow">→</span>
+      </a>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Column 1 -->
+      <div class="footer-column footer-brand">
+        <!-- FOOTER LOGO START (Static Gold) -->
+        <div class="footer-logo-container">
+          <a href="../index.html" class="footer-logo-link">
+            <div class="footer-logo-icon-box">
+              <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
+            </div>
+            <div class="footer-logo-text-group">
+              <span class="footer-logo-main">BAR LAW</span>
+              <i class="fa-solid fa-circle" style="font-size: 4px; color: var(--accent-gold); margin: 0 2px;"></i>
+              <span class="footer-logo-sub">GROUP</span>
+            </div>
+          </a>
+        </div>
+        <!-- FOOTER LOGO END -->
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">We're Hiring</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="footer-column">
+        <h4>PRACTICE AREAS</h4>
+        <ul>
+          <li><a href="generalcouncel.html">General Counsel</a></li>
+          <li>
+            <a href="fundingandinvestlaw.html">Funding and Investment</a>
+          </li>
+          <li>
+            <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
+          </li>
+          <li><a href="intellectuallaw.html">Intellectual Property</a></li>
+          <li><a href="#">Employment Law</a></li>
+          <li><a href="#">Business Dispute Services</a></li>
+          <li><a href="#">Real Estate Law</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="footer-column">
+        <h4>SUBSCRIBE FOR UPDATES</h4>
+        <div class="subscribe-box" id="subscribe-form-container">
+          <input type="email" id="subscribe-input" placeholder="name@email.com" />
+          <button id="subscribe-btn">
+            <i class="bi bi-arrow-up-right"></i>
+          </button>
+        </div>
+
+        <h4>FOLLOW US:</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        Copyright Bar Law Group © 2026. Website by Behwal Asad Rasul.
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/index.js" defer></script>
+</body>
+
+</html>

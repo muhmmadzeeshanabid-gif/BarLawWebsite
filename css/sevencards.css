@@ -33,17 +33,9 @@
 }
 
 /* ---------------- GRID ---------------- */
-.row.g-4 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* 3 Equal Columns */
-  gap: 25px;
-  justify-content: center;
-  align-items: stretch;
-  margin: 0 auto;
-  /* Ensure grid centers in container */
-  width: 100%;
-}
+/* ---------------- GRID ---------------- */
+/* ---------------- GRID ---------------- */
+/* .row.g-4 alignment is handled in media queries below to support device-specific needs */
 
 /* ---------------- CARD ---------------- */
 .zee-service-card {
@@ -52,7 +44,7 @@
   height: 100%;
   /* Fills the grid cell perfectly */
   min-height: 320px;
-  /* Minimum baseline */
+  /* Minimum baseline for consistency */
   box-shadow: var(--shadow-standard);
 
   display: flex;
@@ -160,35 +152,25 @@
 }
 
 /* ---------------- RESPONSIVE ---------------- */
+
 @media (min-width: 992px) {
+
+  /* Override style.css global column settings to ensure full width and proper left alignment */
   .col-lg-4 {
-    width: 100%;
-    /* Grid handles sizing */
+    /* (100% - 2 * 25px gap) / 3 columns */
+    flex: 0 0 calc((100% - 50px) / 3) !important;
+    max-width: calc((100% - 50px) / 3) !important;
   }
 
-  .zee-service-card {
-    height: 100%;
-    /* Flexible uniform height */
-    width: 100%;
+  .row.g-4 {
+    justify-content: flex-start !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .row.g-4 {
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 Columns on Tablet */
-  }
-
-  .col-lg-4 {
-    width: 100%;
-    flex: none;
-    /* Reset flex */
-    max-width: 100%;
-  }
+  /* Let Bootstrap column classes handle the grid (col-md-6) */
 
   .zee-service-card {
-    height: 100%;
-    /* Flexible uniform height */
     padding: 25px 22px;
   }
 
@@ -200,12 +182,6 @@
     font-size: 14px;
   }
 
-  /* Ensure column stretches content */
-  .col-lg-4 {
-    display: flex;
-    flex-direction: column;
-  }
-
   .zee-explore-link {
     font-size: 16px;
   }
@@ -214,7 +190,6 @@
 @media (max-width: 767px) {
   .zee-section-heading {
     font-size: 22px;
-    /* Matched to Video Section Mobile */
   }
 
   .clients-section h1 {
@@ -225,25 +200,14 @@
     padding: 60px 0;
   }
 
+  /* Grid gap adjustments only, no custom grid templates */
   .row.g-4 {
-    grid-template-columns: 1fr;
-    /* 1 Column on Mobile */
     gap: 20px;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-  }
-
-  .col-lg-4 {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: block;
   }
 
   .zee-service-card {
-    height: 300px;
-    /* Reduced height */
+    /* Ensure consistent height on mobile too */
+    min-height: 300px;
     padding: 20px;
   }
 
@@ -256,12 +220,10 @@
 @media (max-width: 575px) {
   .zee-section-heading {
     font-size: 22px;
-    /* Matched to Video Section Mobile */
   }
 
   .clients-section h1 {
     font-size: 22px;
-    /* Matched to other headings */
   }
 
   .zee-section-description {
@@ -273,23 +235,13 @@
     gap: 15px;
   }
 
-  .col-lg-4 {
+  .zee-service-card {
+    /* Removed width: 95% and height: auto !important to ensure full width and equal heights */
     width: 100%;
-    padding: 0;
-  }
-
-  .zee-service-card {
-    width: 95%;
-    /* Keep 95% for equal side spacing visual */
-    height: 270px;
-    padding: 18px;
-    margin: 0 auto;
-  }
-
-  .zee-service-card {
-    height: 270px;
-    /* Reduced height */
-    padding: 18px;
+    min-height: 320px;
+    /* Restored consistency */
+    padding: 20px;
+    margin-bottom: 20px;
   }
 
   .zee-service-title {
@@ -304,11 +256,3 @@
     font-size: 15px;
   }
 }
-
-/*  */
-/*  */
-/*  */
-
-/*  */
-/*  */
-/*  */

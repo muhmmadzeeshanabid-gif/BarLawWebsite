@@ -54,40 +54,56 @@ if (slider) {
   function setCardWidth() {
     const wrapper = document.querySelector(".slider-wrapper");
     if (!wrapper) return;
+
+    const isMobile = window.innerWidth <= 1024;
     const wrapperWidth = wrapper.offsetWidth;
-    if (window.innerWidth < 768) {
+
+    if (isMobile) {
       visible = 1;
-    } else if (window.innerWidth < 1200) {
-      visible = 2;
+      for (let c of cards) {
+        c.style.width = wrapperWidth + "px";
+        c.style.minWidth = wrapperWidth + "px";
+        c.style.maxWidth = wrapperWidth + "px";
+        c.style.flexShrink = "0";
+      }
     } else {
       visible = 3;
-    }
-    const cardWidth = (wrapperWidth - (visible - 1) * 20) / visible; // gap 20px
-    for (let c of cards) {
-      c.style.width = cardWidth + "px";
+      const cardWidth = 420;
+      for (let c of cards) {
+        c.style.width = cardWidth + "px";
+        c.style.minWidth = cardWidth + "px";
+        c.style.maxWidth = cardWidth + "px";
+        c.style.flexShrink = "0";
+      }
     }
   }
 
   function setupInfinite() {
+    const maxVisible = 3;
     const clonesBefore = [];
     const clonesAfter = [];
-    for (let i = 0; i < visible; i++) {
-      clonesAfter.push(slider.children[i].cloneNode(true));
-      clonesBefore.push(
-        slider.children[slider.children.length - 1 - i].cloneNode(true)
-      );
+    // Clone all if small set, or just enough for sliding
+    const totalOriginal = slider.children.length;
+    for (let i = 0; i < maxVisible; i++) {
+      clonesAfter.push(slider.children[i % totalOriginal].cloneNode(true));
     }
+    for (let i = 0; i < maxVisible; i++) {
+      clonesBefore.push(slider.children[(totalOriginal - 1 - i) % totalOriginal].cloneNode(true));
+    }
+
     clonesAfter.forEach((c) => slider.appendChild(c));
-    clonesBefore
-      .reverse()
-      .forEach((c) => slider.insertBefore(c, slider.firstChild));
+    clonesBefore.forEach((c) => slider.insertBefore(c, slider.firstChild));
+
     cards = slider.children;
-    index = visible;
+    index = maxVisible; // Start at first real card
     updateSlider();
   }
 
   function updateSlider() {
-    const cardWidth = cards[0].getBoundingClientRect().width + 20;
+    if (!cards[0]) return;
+    const isMobile = window.innerWidth <= 1024;
+    const gap = isMobile ? 0 : 25;
+    const cardWidth = cards[0].offsetWidth + gap;
     slider.style.transition = "none";
     slider.style.transform = `translateX(-${cardWidth * index}px)`;
   }
@@ -96,7 +112,11 @@ if (slider) {
 
   function move(dir) {
     if (isMoving) return;
-    const cardWidth = cards[0].getBoundingClientRect().width + 20;
+    if (!cards[0]) return;
+
+    const isMobile = window.innerWidth <= 1024;
+    const gap = isMobile ? 0 : 25;
+    const cardWidth = cards[0].offsetWidth + gap;
 
     isMoving = true;
     index += dir;
@@ -107,16 +127,17 @@ if (slider) {
       "transitionend",
       () => {
         isMoving = false;
-        const currentCardWidth = cards[0].getBoundingClientRect().width + 20;
+        const maxVisible = 3;
+        const totalOriginal = cards.length - (maxVisible * 2);
 
-        if (index >= cards.length - visible) {
+        if (index >= cards.length - (isMobile ? 1 : 3)) {
           slider.style.transition = "none";
-          index = visible;
-          slider.style.transform = `translateX(-${currentCardWidth * index}px)`;
-        } else if (index < visible) {
+          index = maxVisible;
+          updateSlider();
+        } else if (index < maxVisible) {
           slider.style.transition = "none";
-          index = cards.length - 2 * visible;
-          slider.style.transform = `translateX(-${currentCardWidth * index}px)`;
+          index = totalOriginal + maxVisible - 1;
+          updateSlider();
         }
       },
       { once: true }
@@ -124,14 +145,12 @@ if (slider) {
   }
 
   window.addEventListener("resize", () => {
-    visible = window.innerWidth < 768 ? 1 : window.innerWidth < 1200 ? 2 : 3;
     setCardWidth();
     updateSlider();
   });
 
   setCardWidth();
   setupInfinite();
-  // expose move to global so inline buttons can use it
   window.move = move;
 }
 

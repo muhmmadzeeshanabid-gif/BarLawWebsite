@@ -6,7 +6,7 @@
 
 .law-firm-hero {
   padding: 80px 0 80px 50px;
-  min-height: auto;
+  min-height: 111.11vh !important;
   display: flex;
   margin-top: 50px;
   align-items: center;
@@ -31,7 +31,6 @@
 /* Image Card Effect (Reset to clean full image) */
 .image-wrapper {
   height: auto;
-  /* Removed white frame styles per request */
   background-color: transparent;
   padding: 0;
   box-shadow: none;
@@ -40,12 +39,10 @@
 
 .lawyer-image {
   width: 100%;
-  height: 650px;
-  /* Increased from 580px to match request */
+  height: 623px;
   object-fit: cover;
   display: block;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  /* Restored shadow to image */
 }
 
 /* --- CONTENT COLUMN --- */
@@ -54,12 +51,12 @@
   align-items: center;
   position: relative;
   z-index: 10;
-  /* Higher than image */
 }
 
 .content-card {
   background-color: var(--bg-white);
-  padding: 65px 60px;
+  padding: 50.5px 60px;
+  /* Increased from 48px to 50.5px to add 5px total height */
   margin-left: -100px;
   width: 520px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
@@ -97,9 +94,9 @@
   border: none;
   padding: 15px 35px;
   /* Rectangular/Square feel */
-  font-size: 14px;
+  font-size: 16px;
   font-family: var(--font-main);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
@@ -209,6 +206,7 @@
 /* ================= RESET ================= */
 
 /* ================= VIDEO SECTION ================= */
+/* ================= VIDEO SECTION ================= */
 .shan-content-description {
   padding: 60px 20px;
   margin-top: -5px;
@@ -228,50 +226,117 @@
 }
 
 /* Video Background Section */
+/* Video Background Section */
 .shan-video-section {
   position: relative;
-  background-image: url("../images/66df668bb4bddf2553c9bb42_68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 115%;
-  min-height: 595px;
-  /* Reduced by 5px (600px -> 595px) */
-  max-width: 1195px;
-  /* Reduced by 5px (1200px -> 1195px) */
+  min-height: 535px;
+  /* Increased height by 5px (530px -> 535px) */
+  max-width: 1138px;
+  /* Increased width by 8px (1130px -> 1138px) */
   margin-left: auto;
   margin-right: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: shanSubtleMove 35s ease-in-out infinite;
   overflow: hidden;
+  background-color: #000;
+  /* Fallback color */
 }
 
-/* Background Motion Animation */
-@keyframes shanSubtleMove {
-  0% {
-    background-position: center left;
-    background-size: 120%;
-  }
+/* Video Background */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  /* Wider to allow panning */
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  animation: panLeftRight 20s ease-in-out infinite alternate;
+}
 
-  50% {
-    background-position: center right;
-    background-size: 110%;
+@keyframes panLeftRight {
+  0% {
+    transform: translateX(0);
   }
 
   100% {
-    background-position: center left;
-    background-size: 120%;
+    transform: translateX(-10%);
+    /* Pan from left to right */
   }
 }
 
-/* Play Button */
+/* Dark Overlay for Color Grading */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Warm Dusk Overlay to match design */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(80, 40, 20, 0.4));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Subtle Cloud/Smoke Effect - Drifts Across Image */
+.video-overlay::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: -30%;
+  width: 60%;
+  height: 50%;
+  background:
+    radial-gradient(ellipse at 40% 50%, rgba(80, 60, 45, 0.50) 0%, rgba(80, 60, 45, 0.25) 40%, transparent 70%),
+    radial-gradient(ellipse at 70% 30%, rgba(70, 50, 40, 0.45) 0%, rgba(70, 50, 40, 0.20) 40%, transparent 60%);
+  animation: cloudDrift 35s linear infinite;
+  z-index: 2;
+  filter: blur(25px);
+}
+
+.video-overlay::after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: -40%;
+  width: 70%;
+  height: 40%;
+  background:
+    radial-gradient(ellipse at 50% 60%, rgba(75, 55, 45, 0.48) 0%, rgba(75, 55, 45, 0.22) 40%, transparent 65%);
+  animation: cloudDrift 45s linear infinite;
+  animation-delay: 5s;
+  z-index: 2;
+  filter: blur(28px);
+}
+
+@keyframes cloudDrift {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.95;
+  }
+
+  80% {
+    opacity: 0.95;
+  }
+
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+
+/* Play Button - Simple Design */
 .shan-play-button {
   width: 60px;
-  /* Reduced size */
   height: 60px;
-  background: linear-gradient(135deg, #e63935 0%, #b22222 100%);
-  /* Premium Red Gradient */
+  background-color: #E74C3C;
+  /* Simple red from reference */
   border-radius: 50%;
   border: none;
   display: flex;
@@ -279,26 +344,22 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 0;
-  box-shadow: 0 10px 25px rgba(178, 34, 34, 0.4);
-  /* Glowing Red Shadow */
-  /* Animation removed as requested */
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  /* Simple shadow */
 }
 
 .shan-play-button:hover {
   transform: scale(1.1);
-  box-shadow: 0 15px 35px rgba(178, 34, 34, 0.6);
-  /* Stronger glow on hover */
+  background-color: #C0392B;
 }
 
 /* Play Icon */
 .shan-play-button i {
-  font-size: 32px;
-  /* Balanced size */
+  font-size: 28px;
   margin-left: 4px;
-  /* Optical centering */
-  color: var(--bg-white);
-  /* Crisp White */
+  color: #fff;
 }
 
 /* Contact Button */
@@ -311,8 +372,8 @@
   background-color: var(--primary-red);
   color: var(--text-white);
   padding: 14px 30px;
-  font-size: 14px;
-  font-weight: var(--font-weight-medium);
+  font-size: 16px;
+  font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -372,66 +433,70 @@
 @media (max-width: 991px) {
   .shan-section-headings {
     font-size: 26px;
+    margin-bottom: 40px;
+    /* Added spacing */
   }
 
   .shan-video-section {
-    min-height: 440px;
-    background-size: 120%;
+    min-height: 400px;
+    /* Reduced tablet height */
+    max-width: 90%;
+    /* Ensure it fits */
   }
 
   .shan-play-button {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
   }
 
   .shan-play-button i {
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 576px) {
   .shan-content-description {
-    padding: 40px 15px;
+    padding: 60px 15px;
+    /* Increased top/bottom padding */
   }
 
   .shan-section-headings {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.4;
-    margin-bottom: -18px;
+    margin-bottom: 30px;
+    /* More space below heading */
   }
 
   .shan-video-section {
-    min-height: 330px;
-    background-size: 130%;
-    animation: shanSubtleMove 35s ease-in-out infinite;
+    min-height: 250px;
+    background-size: cover;
+    /* Ensure image covers fully */
   }
 
   .shan-play-button {
-    width: 35px;
-    height: 35px;
-    margin-top: -10px;
+    width: 50px;
+    height: 50px;
+    margin-top: 0;
   }
 
   .shan-play-button i {
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .shan-video-contact-btn {
     width: 100%;
     max-width: 240px;
-    padding: 10px 15px;
-    font-size: 12px;
-    /* Removed heavy negative margin on button, handling in wrapper */
+    padding: 12px 15px;
+    font-size: 13px;
   }
 
   /* Target Wrapper for better positioning */
-  /* Target Wrapper for better positioning */
   .shan-contact-wrapper {
-    margin-top: 5px;
+    margin-top: 40px;
+    /* Spacing from video */
     position: relative;
     z-index: 10;
-    /* Ensure on top of video */
   }
 
   .shan-close-btn {
@@ -501,12 +566,12 @@
 }
 
 .value-text {
-  color: var(--text-grey);
+  color: #272727;
   font-family: var(--font-main);
-  font-size: 13.5px;
-  /* Reduced font size */
-  line-height: 1.7;
-  /* Adjusted line height for smaller text */
+  font-size: 14px;
+  /* Adjusted font size per request */
+  line-height: 1.6;
+  /* Slightly tighter line-height */
   margin-bottom: 0;
 }
 
@@ -661,7 +726,7 @@
 .bar-hero {
   position: relative;
   width: 100%;
-  min-height: 75vh;
+  min-height: 75vh !important;
   background-image: url("../images/6720a08ba1f23d578e026dac_big-BEND-6.jpg");
   background-size: cover;
   background-position: center;

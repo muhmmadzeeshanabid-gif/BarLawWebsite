@@ -34,16 +34,42 @@ form.addEventListener("submit", function (e) {
   // 🔹 Send email
   emailjs.send("service_dh0z34j", "template_j3sh2o9", params).then(
     function () {
-      alert("✅ Message sent successfully!");
+      showPopup(
+        "Success!",
+        "Your message has been sent successfully. We will get back to you shortly.",
+        "success"
+      );
       form.reset();
       btn.innerText = "SUBMIT";
       btn.disabled = false;
     },
     function (error) {
-      alert("❌ Message send nahi hui");
+      showPopup(
+        "Oops!",
+        "Something went wrong while sending your message. Please try again later.",
+        "error"
+      );
       console.log(error);
       btn.innerText = "SUBMIT";
       btn.disabled = false;
     }
   );
 });
+
+function showPopup(title, message, type) {
+  const overlay = document.getElementById("popup-overlay");
+  const card = document.getElementById("popup-card");
+  const titleEl = document.getElementById("popup-title");
+  const messageEl = document.getElementById("popup-message");
+
+  titleEl.innerText = title;
+  messageEl.innerText = message;
+
+  if (type === "success") {
+    card.classList.remove("error-card");
+  } else {
+    card.classList.add("error-card");
+  }
+
+  overlay.classList.add("active");
+}

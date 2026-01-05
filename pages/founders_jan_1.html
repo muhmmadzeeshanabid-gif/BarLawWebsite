@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,21 +7,21 @@
   <title>Founders Choose January 1st | Bar Law Group</title>
 
   <!-- Icons & Fonts -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../avenir-next/font.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?v=3" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?v=3" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css?v=3" rel="stylesheet" />
+  <link rel="stylesheet" href="../avenir-next/font.css?v=3" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- CSS FILES -->
-  <link rel="stylesheet" href="../css/variables.css" />
-  <link rel="stylesheet" href="../css/navbar.css" />
-  <link rel="stylesheet" href="../css/herosection.css" />
-  <link rel="stylesheet" href="../css/contactnav.css" />
-  <link rel="stylesheet" href="../css/footer.css" />
-  <link rel="stylesheet" href="../css/about.css" />
+  <link rel="stylesheet" href="../css/variables.css?v=3" />
+  <link rel="stylesheet" href="../css/navbar.css?v=3" />
+  <link rel="stylesheet" href="../css/herosection.css?v=3" />
+  <link rel="stylesheet" href="../css/contactnav.css?v=3" />
+  <link rel="stylesheet" href="../css/footer.css?v=3" />
+  <link rel="stylesheet" href="../css/about.css?v=3" />
 
   <style>
     /* --- CUSTOM HERO SECTION FOR FOUNDERS PAGE --- */
@@ -30,8 +30,8 @@
       /* Force override */
       padding-top: 80px;
       /* Ensure space for navbar */
-      height: 100vh !important;
-      min-height: 100vh !important;
+      height: 111.11vh !important;
+      min-height: 111.11vh !important;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -48,18 +48,21 @@
 
     .founders-hero-heading {
       font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 42px;
+      font-weight: var(--font-weight-bold);
+      font-size: 48px;
       color: #ffffff;
       text-transform: uppercase;
-      line-height: 1.3;
+      line-height: 1.2;
       letter-spacing: 1px;
     }
 
     @media (max-width: 768px) {
       .founders-hero-heading {
-        font-size: 28px;
-        line-height: 1.4;
+        font-size: 22px;
+        line-height: 1.3;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 
@@ -142,10 +145,9 @@
       color: #777 !important;
       font-style: italic;
       line-height: 1.4 !important;
-      margin-top: 6px !important;
-      /* Adjusted to 6px after removing HR */
-      border-top: none;
-      padding-top: 0;
+      margin-top: 30px !important;
+      border-top: 1px solid #eee;
+      padding-top: 15px;
     }
 
     /* --- ADDITIONAL READING SECTION --- */
@@ -210,6 +212,7 @@
       color: var(--primary-red);
     }
   </style>
+  <link rel="stylesheet" href="../css/style.css?v=3" />
 </head>
 
 <body>
@@ -404,7 +407,7 @@
       </p>
 
       <a href="contact.html" class="bar-hero-btn">
-        CONTACT US TODAY <span class="bar-arrow">→</span>
+        CONTACT US TODAY <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
       </a>
     </div>
   </section>
@@ -449,7 +452,7 @@
     <div class="footer-top">
       <!-- Column 1 -->
       <div class="footer-column footer-brand">
-        <!-- FOOTER LOGO START (Static Gold) -->
+        <!-- FOOTER LOGO START -->
         <div class="footer-logo-container">
           <a href="../index.html" class="footer-logo-link">
             <div class="footer-logo-icon-box">
@@ -457,13 +460,12 @@
             </div>
             <div class="footer-logo-text-group">
               <span class="footer-logo-main">BAR LAW</span>
-              <i class="fa-solid fa-circle" style="font-size: 4px; color: var(--accent-gold); margin: 0 2px;"></i>
               <span class="footer-logo-sub">GROUP</span>
             </div>
           </a>
         </div>
         <!-- FOOTER LOGO END -->
-        <h4>COMPANY</h4>
+        <h6>COMPANY</h6>
         <ul>
           <li><a href="aboutus.html">About Us</a></li>
           <li><a href="ourteam.html">Our Team</a></li>
@@ -475,7 +477,7 @@
 
       <!-- Column 2 -->
       <div class="footer-column">
-        <h4>PRACTICE AREAS</h4>
+        <h6>PRACTICE AREAS</h6>
         <ul>
           <li><a href="generalcouncel.html">General Counsel</a></li>
           <li>
@@ -493,7 +495,7 @@
 
       <!-- Column 3 -->
       <div class="footer-column">
-        <h4>SUBSCRIBE FOR UPDATES</h4>
+        <h6>SUBSCRIBE FOR UPDATES</h6>
         <div class="subscribe-box" id="subscribe-form-container">
           <input type="email" id="subscribe-input" placeholder="name@email.com" />
           <button id="subscribe-btn">
@@ -501,7 +503,7 @@
           </button>
         </div>
 
-        <h4>FOLLOW US:</h4>
+        <h6>FOLLOW US:</h6>
         <div class="social-icons">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -513,7 +515,7 @@
 
     <div class="footer-bottom">
       <div class="footer-copyright">
-        Copyright Bar Law Group © 2026. Website by Behwal Asad Rasul.
+        Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
       </div>
       <div class="footer-links">
         <a href="#">Privacy Policy</a>

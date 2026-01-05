@@ -18,14 +18,20 @@
 
 /* Center content and set max width */
 /* Contact Info box */
+.main-contact-container {
+  padding-top: 50px;
+}
+
 .contact-info {
   padding: 30px;
 }
 
 @media (min-width: 992px) {
   .contact-info {
-    transform: translateX(40px);
-    /* Explicit shift right on big screen */
+    margin-top: 50px;
+    padding-right: 50px;
+    transform: translateX(-10px) !important;
+    /* Move info 10px further right towards the card */
   }
 }
 
@@ -70,7 +76,8 @@
 
 /* Contact Form adjustments */
 .contact-form {
-  margin-top: -120px;
+  margin-top: -110px !important;
+  /* Increased overlap into hero */
   background-color: var(--text-white);
   border-radius: 0;
   /* removed border radius */
@@ -85,8 +92,8 @@
 
 @media (min-width: 992px) {
   .contact-form {
-    transform: translateX(-7px);
-    /* Explicit 7px shift left on big screen */
+    transform: translateX(40px);
+    /* Push form further right away from info */
   }
 }
 
@@ -164,7 +171,7 @@
 /* Responsive tweaks */
 @media (max-width: 991px) {
   .contact-form {
-    margin-top: -150px;
+    margin-top: -260px;
     /* Increased overlap on mobile */
     margin-left: auto;
     margin-right: auto;
@@ -199,7 +206,7 @@
 
 @media (max-width: 768px) {
   .contact-form {
-    margin-top: -120px;
+    margin-top: -140px;
     /* Even more overlap on smaller mobile */
     min-height: auto;
     padding: 40px 20px;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,73 +7,22 @@
   <title>Bar Law Group</title>
 
   <!-- Icons & Fonts -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../avenir-next/font.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?v=3" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?v=3" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css?v=3" rel="stylesheet" />
+  <link rel="stylesheet" href="../avenir-next/font.css?v=3" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet" />
 
   <!-- CSS FILES -->
-  <link rel="stylesheet" href="../css/variables.css" />
-  <link rel="stylesheet" href="../css/navbar.css" />
-  <link rel="stylesheet" href="../css/herosection.css" />
-  <link rel="stylesheet" href="../css/contactnav.css" />
-  <link rel="stylesheet" href="../css/footer.css" />
-  <link rel="stylesheet" href="../css/about.css" />
+  <link rel="stylesheet" href="../css/variables.css?v=3" />
+  <link rel="stylesheet" href="../css/navbar.css?v=3" />
+  <link rel="stylesheet" href="../css/herosection.css?v=3" />
+  <link rel="stylesheet" href="../css/contactnav.css?v=3" />
+  <link rel="stylesheet" href="../css/footer.css?v=3" />
+  <link rel="stylesheet" href="../css/about.css?v=3" />
 
   <style>
-    /* --- LAW FIRM HERO SECTION STYLES --- */
-    .hero-section {
-      background-image: linear-gradient(rgba(1, 0, 0, 0.4),
-          rgba(0, 0, 0, 0.5)),
-        url("../images/66df8e894d890ef9ac072f08_pexels-kehn-hermano-3584437-scaled.webp");
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .hero-content {
-      padding: 0 !important;
-      margin: 0 !important;
-      text-align: center !important;
-      max-width: 100% !important;
-    }
-
-    .hero-heading {
-      font-family: var(--font-heading) !important;
-      font-weight: var(--font-weight-bold) !important;
-      font-size: 48px !important;
-      color: #e6e2e0 !important;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .hero-content p {
-      color: #e6e2e0;
-      font-family: var(--font-main);
-      font-size: 17px;
-      line-height: 1.6;
-      max-width: 650px;
-      margin: 20px auto 0;
-      font-weight: 500;
-    }
-
-    @media (max-width: 768px) {
-      .hero-heading {
-        font-size: 32px !important;
-      }
-
-      .hero-content p {
-        font-size: 14px;
-        padding: 0 10px;
-      }
-    }
-
     /* --- EMPOWER SECTION STYLES --- */
     .about-empower-section {
       padding: 80px 15px;
@@ -92,26 +41,26 @@
     }
 
     .about-empower-section .empower-text-container {
-      max-width: 850px;
+      max-width: 1050px;
       margin: 0 auto;
     }
 
     .about-empower-section p {
       font-family: var(--font-main);
-      font-size: 14.5px;
-      color: #4a4a4a;
+      font-size: 14px;
+      color: #272727;
       line-height: 1.8;
       margin-bottom: 22px;
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: 0.1px;
     }
 
     .about-empower-section .tagline {
-      font-size: 16.5px;
+      font-size: 14px;
       font-weight: 500;
       margin-top: 35px;
       margin-bottom: 40px;
-      color: #4a4a4a;
+      color: #272727;
     }
 
     .contact-red-btn {
@@ -224,7 +173,7 @@
       }
 
       .about-empower-section p {
-        font-size: 13.5px;
+        font-size: 14px;
         margin-bottom: 18px;
       }
 
@@ -271,7 +220,13 @@
         font-size: 26px !important;
       }
     }
+
+    /* Reduce gap between value cards */
+    .values-row {
+      gap: 16px;
+    }
   </style>
+  <link rel="stylesheet" href="../css/style.css?v=3" />
 </head>
 
 <body>
@@ -279,20 +234,16 @@
   <nav class="main-navbar navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="../index.html">
-        <!-- FOOTER LOGO START (Static Gold) -->
-        <div class="footer-logo-container">
-          <a href="../index.html" class="footer-logo-link">
-            <div class="footer-logo-icon-box">
-              <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
-            </div>
-            <div class="footer-logo-text-group">
-              <span class="footer-logo-main">BAR LAW</span>
-              <i class="fa-solid fa-circle" style="font-size: 4px; color: var(--accent-gold); margin: 0 2px;"></i>
-              <span class="footer-logo-sub">GROUP</span>
-            </div>
-          </a>
+        <div class="logo-wrapper">
+          <div class="logo-icon-container">
+            <i class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"></i>
+            <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
+          </div>
+          <div class="logo-text-group">
+            <span class="logo-name-main">BAR LAW</span>
+            <span class="logo-name-sub">GROUP</span>
+          </div>
         </div>
-        <!-- FOOTER LOGO END -->
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -305,7 +256,7 @@
             <a class="nav-link" href="#" data-bs-toggle="dropdown">About <i class="bi bi-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item active" href="aboutus.html">About Us</a>
+                <a class="dropdown-item" href="aboutus.html">About Us</a>
               </li>
               <li>
                 <a class="dropdown-item" href="ourteam.html">Our Team</a>
@@ -350,13 +301,37 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <section class="hero-section" id="home">
+  <section class="hero-section" id="home" style="
+        background-image: linear-gradient(
+            rgba(1, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('../images/66df8e894d890ef9ac072f08_pexels-kehn-hermano-3584437-scaled.webp');
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      ">
     <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-heading">about US</h1>
-        <p>
-          Accessible, sustainable, high-quality legal services that empower
-          small businesses to thrive.
+      <div class="hero-content" style="padding: 0; margin: 0; text-align: center; max-width: 100%">
+        <h1 class="hero-heading" style="
+              font-family: var(--font-heading) !important;
+              font-weight: var(--font-weight-bold) !important;
+              font-size: 48px !important;
+              color: #e6e2e0 !important;
+              text-transform: uppercase;
+            ">
+          ABOUT US
+        </h1>
+        <p class="hero-description" style="
+              font-family: var(--font-main) !important;
+              font-size: 22px !important;
+              color: #e6e2e0 !important;
+              max-width: 800px;
+              margin: 20px auto 0;
+            ">
+          We are more than just a law firm – we are your strategic partners in
+          navigating the legal landscape of Pakistan.
         </p>
       </div>
     </div>
@@ -485,7 +460,7 @@
               create a healthy, supportive and open environment for our
               clients to achieve their goals.
             </p>
-            <a href="contact.html" class="btn learn-more-btn">MEET OUR TEAM</a>
+            <a href="ourteam.html" class="btn learn-more-btn">MEET OUR TEAM</a>
           </div>
         </div>
       </div>
@@ -654,7 +629,8 @@
       </p>
 
       <a href="contact.html" class="bar-hero-btn">
-        CONTACT US TODAY <span class="bar-arrow">→</span>
+        CONTACT US TODAY
+        <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
       </a>
     </div>
   </section>
@@ -665,22 +641,19 @@
       <!-- Column 1 -->
       <div class="footer-column footer-brand">
         <!-- FOOTER LOGO START -->
-        <div class="footer-logo-container" style="margin-bottom: 25px;">
-          <a href="../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
-            <div style="width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;">
-              <i class="fa-solid fa-scale-balanced" style="color: #ffffff; font-size: 28px;"></i>
+        <div class="footer-logo-container">
+          <a href="../index.html" class="footer-logo-link">
+            <div class="footer-logo-icon-box">
+              <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
             </div>
-            <div style="display: flex; flex-direction: column; line-height: 1;">
-              <span
-                style="font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: #ffffff; letter-spacing: 1px;">BAR
-                LAW</span>
-              <span
-                style="font-family: var(--font-main); font-size: 10px; font-weight: 500; color: #ffffff; letter-spacing: 3px; margin-top: 2px;">GROUP</span>
+            <div class="footer-logo-text-group">
+              <span class="footer-logo-main">BAR LAW</span>
+              <span class="footer-logo-sub">GROUP</span>
             </div>
           </a>
         </div>
         <!-- FOOTER LOGO END -->
-        <h4>COMPANY</h4>
+        <h6>COMPANY</h6>
         <ul>
           <li><a href="aboutus.html">About Us</a></li>
           <li><a href="#">Our Team</a></li>
@@ -692,7 +665,7 @@
 
       <!-- Column 2 -->
       <div class="footer-column">
-        <h4>PRACTICE AREAS</h4>
+        <h6>PRACTICE AREAS</h6>
         <ul>
           <li><a href="generalcouncel.html">General Counsel</a></li>
           <li>
@@ -710,7 +683,7 @@
 
       <!-- Column 3 -->
       <div class="footer-column">
-        <h4>SUBSCRIBE FOR UPDATES</h4>
+        <h6>SUBSCRIBE FOR UPDATES</h6>
         <div class="subscribe-box" id="subscribe-form-container">
           <input type="email" id="subscribe-input" placeholder="name@email.com" />
           <button id="subscribe-btn">
@@ -718,7 +691,7 @@
           </button>
         </div>
 
-        <h4>FOLLOW US:</h4>
+        <h6>FOLLOW US:</h6>
         <div class="social-icons">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -730,7 +703,7 @@
 
     <div class="footer-bottom">
       <div class="footer-copyright">
-        Copyright Bar Law Group © 2026. Website by Behwal Asad Rasul.
+        Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
       </div>
       <div class="footer-links">
         <a href="#">Privacy Policy</a>

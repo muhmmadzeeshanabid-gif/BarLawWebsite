@@ -1,8 +1,91 @@
 .footer {
   background-color: var(--primary-blue);
   color: var(--text-light);
-  padding: 85px 0 35px;
+  padding: 55px 0 50px;
   font-family: var(--font-main);
+}
+
+/* Initial duplicate definitions removed to prevent conflicts. 
+   Styles are defined in the lower section of this file. */
+
+/* SUBSCRIBE SUCCESS MESSAGE */
+.subscribe-success {
+  background-color: var(--bg-light);
+  color: var(--secondary-blue);
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  margin-bottom: 35px;
+  max-width: 350px;
+  line-height: 1.4;
+  border: 1px solid #ddd;
+}
+
+/* --- FOOTER LOGO STYLES (MATCHING NAVBAR) --- */
+.footer-logo-container {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-icon-box {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.footer-logo-icon {
+  position: absolute !important;
+  font-size: 34px;
+  /* Match Navbar Size */
+  /* Gold Color Permanent */
+  color: var(--accent-gold);
+  backface-visibility: hidden;
+  filter: drop-shadow(0 0 2px rgba(185, 153, 76, 0.3));
+}
+
+.footer-logo-text-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Spacing between Bar Law and Group */
+}
+
+/* Static - No Animation classes needed */
+
+.footer-logo-main {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  /* Match Navbar */
+  font-weight: var(--font-weight-bold);
+  color: #ffffff;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.footer-logo-sub {
+  font-family: var(--font-main);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  color: var(--accent-gold);
+  /* User requested GROUP to be Gold */
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-top: 2px;
+  /* Slight adjustment */
 }
 
 .footer-top {
@@ -31,9 +114,9 @@
 }
 
 /* HEADINGS */
-.footer h4 {
+.footer h6 {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 20px;
   line-height: 28px;
   font-weight: var(--font-weight-bold);
   letter-spacing: 1px;
@@ -100,7 +183,8 @@
   align-items: center;
   justify-content: center;
   transition: background 0.3s;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .subscribe-box button:hover {

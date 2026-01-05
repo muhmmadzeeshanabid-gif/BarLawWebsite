@@ -1,11 +1,15 @@
 .reviews-section {
-  background: var(--bg-light);
-  padding: 70px 0;
+  background: var(--bg-light) !important;
+  padding: 80px 0;
   overflow: hidden;
 }
 
 .reviews-container {
-  padding-left: 180px;
+  max-width: 1300px;
+  /* Increased to fit 3 large cards */
+  margin: 0 auto;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .reviews-heading {
@@ -15,46 +19,18 @@
   color: var(--primary-blue);
   letter-spacing: 0.5px;
   text-transform: uppercase;
-}
-
-.review-nav {
-  display: flex;
-  gap: 13px;
-  margin-right: 40px;
-}
-
-.review-nav button {
-  width: 40px;
-  height: 40px;
-  background: var(--text-white);
-  border: 1px solid #222;
-  font-size: 18px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-@media (hover: hover) {
-  .review-nav button:hover {
-    background-color: var(--primary-red);
-    color: var(--text-white);
-    border-color: var(--primary-red);
-  }
-}
-
-.review-nav button:active {
-  background-color: var(--primary-red);
-  color: var(--text-white);
-  border-color: var(--primary-red);
+  text-align: center;
+  margin-bottom: 45px;
 }
 
 .slider-wrapper {
   overflow: hidden;
-  margin-top: 45px;
+  margin-bottom: 30px;
 }
 
 .slider-track {
   display: flex;
-  gap: 20px;
+  gap: 0;
   transition: transform 0.6s ease;
 }
 
@@ -62,20 +38,24 @@
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
+  width: 420px;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
-.review-card:nth-child(odd) .review-box {
+/* Zig-zag staggered layout - alternate cards up/down */
+.review-card:nth-child(odd) {
   margin-top: 0;
 }
 
-.review-card:nth-child(even) .review-box {
-  margin-top: 30px;
+.review-card:nth-child(even) {
+  margin-top: 40px;
 }
 
 .review-box {
   background: var(--bg-white);
-  padding: 20px 24px 30px;
-  min-height: 180px;
+  padding: 25px 30px 35px;
+  min-height: 160px;
   position: relative;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
@@ -123,31 +103,93 @@
   color: #05456a;
 }
 
-@media (max-width: 1200px) {
-  .reviews-heading {
-    text-align: center;
-    font-size: 22px;
-  }
+.review-nav {
+  display: flex;
+  gap: 13px;
+  justify-content: center;
+}
 
-  .reviews-container {
-    padding-left: 80px;
+.review-nav button {
+  width: 40px;
+  height: 40px;
+  background: var(--text-white);
+  border: 1px solid #222;
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .review-nav button:hover {
+    background-color: var(--primary-red);
+    color: var(--text-white);
+    border-color: var(--primary-red);
   }
 }
 
-@media (max-width: 768px) {
-  .reviews-container {
-    padding-left: 20px;
+.review-nav button:active {
+  background-color: var(--primary-red);
+  color: var(--text-white);
+  border-color: var(--primary-red);
+}
+
+/* Mobile & Tablet Styles - Show 1 Full Card */
+@media (max-width: 1024px) {
+  .reviews-section {
+    padding: 50px 0;
   }
 
-  .review-nav {
-    justify-content: center;
-    margin-top: 15px;
-    order: 2;
+  .reviews-container {
+    padding: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden;
   }
 
   .reviews-heading {
-    font-size: 22px;
-    text-align: center;
+    font-size: 28px;
+    margin-bottom: 35px;
+    padding: 0 20px;
+  }
+
+  .slider-wrapper {
+    margin-bottom: 30px;
+    overflow: hidden !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .slider-track {
+    display: flex !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .review-card {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+    margin-top: 0 !important;
+  }
+
+  .review-box {
+    padding: 30px 25px;
+    min-height: 220px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Reset zig-zag completely */
+  .review-card:nth-child(odd),
+  .review-card:nth-child(even) {
+    margin-top: 0 !important;
+  }
+
+  .review-nav {
+    margin-top: 25px;
   }
 }
 
@@ -248,7 +290,7 @@
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .bar-hero {
-    min-height: 100vh;
+    min-height: 75vh;
   }
 
   .bar-hero-title {

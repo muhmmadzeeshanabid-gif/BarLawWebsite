@@ -110,17 +110,38 @@
 
 @media (max-width: 768px) {
   .blog-heading {
-    font-size: 22px;
+    font-size: 26px;
+    margin-bottom: 30px;
   }
 
   .blog-row {
     flex-direction: column;
     align-items: center;
+    gap: 25px;
+    /* Explicit gap between cards in the row */
   }
 
   .blog-card {
-    max-width: 100%;
-    width: 100%;
+    max-width: calc(90% - 4px) !important;
+    width: calc(90% - 4px) !important;
+    height: auto !important;
+    min-height: 350px !important;
+    margin-bottom: 25px !important;
+    flex: 0 0 auto !important;
+    padding: 30px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .blog-title {
+    width: 100% !important;
+    display: block !important;
+    word-wrap: break-word;
+    word-break: normal;
+    text-align: left;
+    margin-bottom: 12px;
   }
 }
 

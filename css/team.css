@@ -67,10 +67,12 @@
 .team-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.2) 50%,
-      rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
   transition: background 0.3s ease;
 }
 
@@ -106,7 +108,7 @@
 }
 
 /* --- ARROW ICON --- */
-.team-arrow {
+.team-arrow a {
   position: absolute;
   bottom: 30px;
   right: 30px;
@@ -118,7 +120,7 @@
   justify-content: center;
   color: #fff;
   font-size: 22px;
-  /* Increased from 18px */
+  text-decoration: none;
   line-height: 1;
   /* Ensures vertical alignment */
   z-index: 2;

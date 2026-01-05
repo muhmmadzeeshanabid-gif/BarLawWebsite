@@ -1,6 +1,7 @@
 /* ===== HERO SECTION ===== */
 .hero-section {
-  height: 100vh;
+  height: 111.11vh !important;
+  min-height: 111.11vh !important;
   min-height: 600px;
   padding-bottom: 60px;
   background-image: linear-gradient(rgba(1, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
@@ -19,10 +20,10 @@
   /* text slightly below */
   text-align: left;
   /* Left align text */
-  padding-top: 150px;
-  /* Shift down */
-  padding-left: 80px;
-  /* Shift right */
+  padding-top: 120px;
+  /* Shift down (slightly reduced) */
+  padding-left: 60px;
+  /* Shift right (slightly reduced) */
 }
 
 /* HERO HEADING */
@@ -39,11 +40,11 @@
 .hero-description {
   font-family: var(--font-main);
   color: var(--text-highlight);
-  font-size: 22px;
   line-height: 1.6;
+  font-size: 22px;
   margin: 0px 0px 10px;
-  /* max-width removed to match heading width */
-  max-width: 800px;
+  /* slightly wider max-width to allow longer lines */
+  max-width: 900px;
   /* Constrain visually to match heading text length */
 }
 
@@ -54,8 +55,8 @@
   color: var(--text-white);
   border: 1px solid var(--text-white);
   padding: 14px 22px;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
@@ -76,13 +77,11 @@
   }
 
   .hero-content {
-    padding-top: 100px;
-    /* Adjusted padding for mobile */
+    padding-top: 180px;
+    /* Increased to push content well below the navbar */
     padding-left: 20px;
-    /* Reset left padding for mobile safety */
     padding-right: 20px;
     text-align: left;
-    /* Keep left align */
   }
 
   .hero-heading {
@@ -105,4 +104,31 @@
     padding: 12px 20px;
     font-size: 12px;
   }
+
+  /* Centered variant for Blog Pages */
+  .hero-content.text-center {
+    text-align: center !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero-content.text-center .hero-description {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Global Desktop Center Adjustment */
+.hero-content.text-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+}
+
+.hero-content.text-center .hero-description {
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,73 +7,20 @@
   <title>Bar Law Group</title>
 
   <!-- Icons & Fonts -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../avenir-next/font.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?v=3" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?v=3" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css?v=3" rel="stylesheet" />
+  <link rel="stylesheet" href="../avenir-next/font.css?v=3" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet" />
 
   <!-- CSS FILES -->
   <link rel='stylesheet' href='../css/variables.css' />
-  <link rel="stylesheet" href="../css/navbar.css" />
-  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/navbar.css?v=3" />
+  <link rel="stylesheet" href="../css/herosection.css?v=3" />
+  <link rel="stylesheet" href="../css/footer.css?v=3" />
 
   <style>
-    .hero-section {
-      background-image: linear-gradient(rgba(1, 0, 0, 0.4),
-          rgba(0, 0, 0, 0.5)),
-        url("../images/6720a0a400921826d84cdee8_big-BEND-4.jpg");
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background-size: cover;
-      background-position: center top;
-    }
-
-    .hero-content {
-      padding: 0 !important;
-      margin: 0 !important;
-      text-align: center !important;
-      max-width: 100% !important;
-    }
-
-    .hero-heading {
-      font-family: var(--font-heading) !important;
-      font-weight: var(--font-weight-bold) !important;
-      font-size: 48px !important;
-      color: #e6e2e0 !important;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      line-height: 1.2;
-    }
-
-    .hero-heading span {
-      display: inline-block;
-      white-space: nowrap;
-    }
-
-    @media (max-width: 768px) {
-      .hero-heading {
-        font-size: 24px !important;
-        letter-spacing: 1px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-heading {
-        font-size: 26px !important;
-        letter-spacing: 0.5px;
-      }
-    }
-
-    /*  */
-    /*  */
-    /*  */
-    /*  */
-
     /* LEGAL SERVICES SECTION */
     /* Reset */
     * {
@@ -234,7 +181,7 @@
     /* ================= MOBILE ================= */
     @media (max-width: 768px) {
       .bar-hero {
-        min-height: 100vh;
+        min-height: 75vh;
       }
 
       .bar-hero-title {
@@ -252,6 +199,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="../css/style.css?v=3" />
 </head>
 
 <body>
@@ -283,7 +231,9 @@
               <li>
                 <a class="dropdown-item" href="aboutus.html">About Us</a>
               </li>
-              <li><a class="dropdown-item" href="ourteam.html">Our Team</a></li>
+              <li>
+                <a class="dropdown-item" href="ourteam.html">Our Team</a>
+              </li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -299,7 +249,7 @@
                 <a class="dropdown-item" href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
               </li>
               <li>
-                <a class="dropdown-item active" href="intellectuallaw.html">Intellectual Property Law</a>
+                <a class="dropdown-item" href="intellectuallaw.html">Intellectual Property Law</a>
               </li>
               <li>
                 <a class="dropdown-item" href="employmentlaw.html">Employment Law</a>
@@ -324,12 +274,13 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <section class="hero-section" id="home">
+  <section class="hero-section" id="home"
+    style="background-image: linear-gradient(rgba(1, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../images/6720a0a400921826d84cdee8_big-BEND-4.jpg'); display: flex; align-items: center; justify-content: center; text-align: center;">
     <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-heading">
-          intellectual property <br />
-          law attorneys
+      <div class="hero-content" style="padding: 0; margin: 0; text-align: center; max-width: 100%;">
+        <h1 class="hero-heading"
+          style="font-family: var(--font-heading) !important; font-weight: var(--font-weight-bold) !important; font-size: 48px !important; color: #e6e2e0 !important; text-transform: uppercase;">
+          INTELLECTUAL PROPERTY <br /> LAW
         </h1>
       </div>
     </div>
@@ -351,8 +302,8 @@
         believe in giving personal attention to every client. When you work
         with us, you get more than just a lawyer—you get a
         <strong>trusted partner</strong> who will support your goals. And if
-        we aren’t the right fit for your needs, we’ll connect you with someone
-        who is. Let’s work together to help your business grow.
+        we aren't the right fit for your needs, we'll connect you with someone
+        who is. Let's work together to help your business grow.
       </p>
     </section>
 
@@ -371,7 +322,7 @@
         </li>
         <li>
           <strong>Regulatory Issues:</strong> Failing to comply with
-          regulations, whether it’s in setting up your business or in your
+          regulations, whether it's in setting up your business or in your
           daily operations, could lead to fines or shutdowns.
         </li>
         <li>
@@ -396,7 +347,7 @@
       <ul>
         <li>
           <strong>Entity Formation:</strong> We can help you decide the best
-          legal structure for your business, whether it’s an LLC, corporation
+          legal structure for your business, whether it's an LLC, corporation
           or a sole proprietorship.
         </li>
         <li>
@@ -430,7 +381,7 @@
       </p>
 
       <a href="contact.html" class="bar-hero-btn">
-        Contact Us Today <span class="bar-arrow">→</span>
+        Contact Us Today <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
       </a>
     </div>
   </section>
@@ -439,7 +390,7 @@
     <div class="footer-top">
       <!-- Column 1 -->
       <div class="footer-column footer-brand">
-        <!-- FOOTER LOGO START (Static Gold) -->
+        <!-- FOOTER LOGO START -->
         <div class="footer-logo-container">
           <a href="../index.html" class="footer-logo-link">
             <div class="footer-logo-icon-box">
@@ -447,13 +398,12 @@
             </div>
             <div class="footer-logo-text-group">
               <span class="footer-logo-main">BAR LAW</span>
-              <i class="fa-solid fa-circle" style="font-size: 4px; color: var(--accent-gold); margin: 0 2px;"></i>
               <span class="footer-logo-sub">GROUP</span>
             </div>
           </a>
         </div>
         <!-- FOOTER LOGO END -->
-        <h4>COMPANY</h4>
+        <h6>COMPANY</h6>
         <ul>
           <li><a href="aboutus.html">About Us</a></li>
           <li><a href="#">Our Team</a></li>
@@ -465,7 +415,7 @@
 
       <!-- Column 2 -->
       <div class="footer-column">
-        <h4>PRACTICE AREAS</h4>
+        <h6>PRACTICE AREAS</h6>
         <ul>
           <li><a href="generalcouncel.html">General Counsel</a></li>
           <li>
@@ -483,7 +433,7 @@
 
       <!-- Column 3 -->
       <div class="footer-column">
-        <h4>SUBSCRIBE FOR UPDATES</h4>
+        <h6>SUBSCRIBE FOR UPDATES</h6>
         <div class="subscribe-box" id="subscribe-form-container">
           <input type="email" id="subscribe-input" placeholder="name@email.com" />
           <button id="subscribe-btn">
@@ -491,7 +441,7 @@
           </button>
         </div>
 
-        <h4>FOLLOW US:</h4>
+        <h6>FOLLOW US:</h6>
         <div class="social-icons">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -503,7 +453,7 @@
 
     <div class="footer-bottom">
       <div class="footer-copyright">
-        Copyright Bar Law Group © 2026. Website by Behwal Asad Rasul.
+        Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
       </div>
       <div class="footer-links">
         <a href="#">Privacy Policy</a>

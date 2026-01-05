@@ -16,21 +16,25 @@
   padding: 0 40px;
 }
 
-.cards-container.row-2,
-.cards-container.row-3,
-.cards-container.row-4,
-.cards-container.row-5,
-.cards-container.row-6,
-.cards-container.row-1,
-.row-2,
-.row-3-blog2,
-.row-4-blog2,
-.row-5-blog2,
-.row-6-blog2,
-.row-7-blog2,
-.row-1-blog3,
-.row-2-blog3 {
-  margin-top: 45px;
+@media (min-width: 992px) {
+
+  .cards-container.row-2,
+  .cards-container.row-3,
+  .cards-container.row-4,
+  .cards-container.row-5,
+  .cards-container.row-6,
+  .cards-container.row-7,
+  .row-2,
+  .row-2-blog2,
+  .row-3-blog2,
+  .row-4-blog2,
+  .row-5-blog2,
+  .row-6-blog2,
+  .row-7-blog2,
+  .row-1-blog3,
+  .row-2-blog3 {
+    margin-top: 45px;
+  }
 }
 
 .blog-card {
@@ -302,14 +306,14 @@
   font-family: var(--font-heading);
   font-weight: var(--font-weight-bold);
   /* Extra bold requested */
-  font-size: 22px;
+  font-size: 20px;
   /* Adjusted to fit width */
   color: #05456a;
   /* Exact Dark Blue requested */
   text-transform: uppercase;
-  line-height: 1.2;
-  /* Tightened line-height for better look */
-  margin-bottom: 25px;
+  line-height: 1.1;
+  /* Reduced line-height for tighter heading */
+  margin-bottom: 22px;
   letter-spacing: -0.2px;
   /* Slight negative spacing for premium feel */
 }
@@ -341,42 +345,85 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .blog-card {
-    width: 100%;
-    max-width: 550px;
-    margin-bottom: 30px;
-    min-height: 70px !important;
-    /* Ultra-compact height */
-    padding: 12px 20px 10px !important;
-    /* Reduced top padding to move heading higher */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px !important;
+    padding: 0 15px !important;
+    /* Adjusted for better side spacing */
+  }
+
+  /* Reset all desktop-specific min-heights for mobile */
+  .blog-card,
+  .cards-container .blog-card,
+  .cards-container.row-2 .blog-card,
+  .blog2-page .blog-card,
+  .blog3-page .blog-card,
+  .cards-container.row-3 .blog-card,
+  .cards-container.row-4 .blog-card,
+  .cards-container.row-5 .blog-card,
+  .cards-container.row-6 .blog-card,
+  .cards-container.row-7 .blog-card {
+    min-height: 140px !important;
+    height: auto !important;
+    width: calc(100% - 4px) !important;
+    /* Reduced width by 4px */
+    max-width: 500px !important;
+    flex: 0 0 auto !important;
+    margin-bottom: 0 !important;
+    padding: 30px 20px !important;
+    /* Slightly reduced horizontal padding to give title more room */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
   }
 
   .blog-cards-section {
-    padding: 40px 15px;
+    padding: 40px 0;
   }
 
   .blog-card-title {
-    font-size: 20px;
-    margin-bottom: 35px;
-    /* More gap to separate link from heading */
-    line-height: 1.2;
-    text-align: left;
+    font-size: 20px !important;
+    margin-bottom: 15px !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+    width: 100% !important;
+    max-width: none !important;
+    display: block !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+
+  /* Force <br> to hide so title can spread across full width */
+  .blog-card-title br {
+    display: none !important;
+  }
+
+  .blog-card-excerpt {
+    font-size: 14px !important;
+    margin-bottom: 25px !important;
+    line-height: 1.6 !important;
+    display: block !important;
+    flex-grow: 1 !important;
+    color: #444 !important;
+    margin-top: 10px !important;
+    width: 100% !important;
   }
 
   .read-more-link {
-    justify-content: flex-start;
-    width: 100%;
-    margin-top: auto;
+    margin-top: auto !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    padding-top: 10px;
   }
 }
+
+/* Ensure consistent vertical spacing between stacked rows of cards.
+   This gives each `.cards-container` a top margin and ensures the
+   very first row stays flush to the section top. Keeps changes minimal.
+*/
+/* end of file */

@@ -132,3 +132,45 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ===== PRACTICE HERO (SCROLLING BG) ===== */
+.hero-section.practice-hero {
+  background-attachment: scroll !important;
+  height: 111.11vh !important;
+  min-height: 111.11vh !important;
+  background-position: center center !important;
+}
+
+@media (max-width: 991px) {
+  .hero-section.practice-hero {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    padding-bottom: 0px !important;
+  }
+
+  .hero-section.practice-hero .hero-content {
+    padding-top: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .hero-section.practice-hero .hero-heading {
+    font-size: 36px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section.practice-hero {
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+
+  .hero-section.practice-hero .hero-heading {
+    font-size: 28px !important;
+  }
+}

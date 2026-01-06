@@ -1,707 +1,642 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      How to Set Up a California Professional Corporation (PC) for a Law Firm |
-      Bar Law Group
-    </title>
-
-    <!-- Icons & Fonts -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?v=3"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?v=3"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css?v=3"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../avenir-next/font.css?v=3" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- CSS FILES -->
-    <link rel="stylesheet" href="../css/variables.css?v=3" />
-    <link rel="stylesheet" href="../css/navbar.css?v=3" />
-    <link rel="stylesheet" href="../css/herosection.css?v=3" />
-    <link rel="stylesheet" href="../css/contactnav.css?v=3" />
-    <link rel="stylesheet" href="../css/footer.css?v=3" />
-    <link rel="stylesheet" href="../css/about.css?v=3" />
-
-    <style>
-      /* --- CUSTOM HERO SECTION FOR FOUNDERS PAGE --- */
-      .founders-hero {
-        background-color: #031b33 !important;
-        /* Force override */
-        padding-top: 80px;
-        /* Ensure space for navbar */
-        height: 111.11vh !important;
-        min-height: 111.11vh !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 60px 20px;
-        background-image: none !important;
-        /* Ensure no bg image from hero-section */
-      }
-
-      .founders-hero-content {
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .founders-hero-heading {
-        font-family: var(--font-heading);
-        font-weight: var(--font-weight-bold);
-        font-size: 48px;
-        color: #ffffff;
-        text-transform: uppercase;
-        line-height: 1.2;
-        letter-spacing: 1px;
-      }
-
-      @media (max-width: 768px) {
-        .founders-hero {
-          height: 111.11vh !important;
-          min-height: 111.11vh !important;
-          padding-top: 60px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .founders-hero-heading {
-          font-size: 26px !important;
-          line-height: 1.25;
-          max-width: 90%;
-          margin: 0 auto;
-        }
-      }
-
-      /* --- CONTENT SECTION STYLES --- */
-      .founders-content-section {
-        padding: 30px 0;
-        background-color: #fff;
-      }
-
-      .founders-text-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .founders-intro-text {
-        font-family: var(--font-main);
-        font-size: 12px;
-        /* Reduced to match disclaimer */
-        line-height: 1.5;
-        /* Reduced line height */
-        color: #222;
-        margin-bottom: 8px;
-        /* Tighter gap */
-      }
-
-      .founders-content-section p {
-        font-family: var(--font-main);
-        font-size: 12px;
-        /* Reduced to match disclaimer */
-        line-height: 1.5;
-        /* Reduced line height */
-        color: #444;
-        margin-bottom: 8px;
-        /* Tighter gap */
-      }
-
-      .founders-subheading {
-        font-family: var(--font-heading);
-        font-weight: 700;
-        font-size: 16px;
-        /* Scaled down heading */
-        color: #122448;
-        margin-top: 20px;
-        /* Tighter section break */
-        margin-bottom: 8px;
-      }
-
-      .founders-list {
-        margin-bottom: 12px;
-        padding-left: 20px;
-      }
-
-      .founders-list li {
-        font-family: var(--font-main);
-        font-size: 12px;
-        /* Reduced to match disclaimer */
-        line-height: 1.5;
-        color: #444;
-        margin-bottom: 5px;
-        /* Ultra tight list items */
-        position: relative;
-        list-style-type: none;
-      }
-
-      .founders-list li::before {
-        content: "•";
-        position: absolute;
-        left: -20px;
-        color: var(--primary-red);
-        font-weight: bold;
-        font-size: 16px;
-        /* Scaled bullet size */
-        line-height: 1;
-        top: 2px;
-      }
-
-      .founders-disclaimer {
-        font-size: 12px !important;
-        color: #777 !important;
-        font-style: italic;
-        line-height: 1.4 !important;
-        margin-top: 30px !important;
-        border-top: 1px solid #eee;
-        padding-top: 15px;
-      }
-
-      .founders-final-thoughts {
-        margin-top: 30px;
-        margin-bottom: 20px;
-      }
-
-      /* --- ADDITIONAL READING SECTION --- */
-      .additional-reading-section {
-        background-color: #f8f9fa;
-        padding: 60px 0;
-        text-align: center;
-      }
-
-      .additional-reading-title {
-        font-family: var(--font-heading);
-        font-size: 26px;
-        font-weight: 700;
-        color: #031b33;
-        margin-bottom: 50px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .reading-card {
-        text-align: left;
-        padding: 0 15px;
-        margin-bottom: 30px;
-      }
-
-      .reading-card-dot {
-        display: inline-block;
-        width: 6px;
-        height: 6px;
-        background-color: #122448;
-        border-radius: 50%;
-        margin-bottom: 15px;
-      }
-
-      .reading-card-title {
-        font-family: var(--font-heading);
-        font-size: 22px;
-        /* Increased from 18px */
-        font-weight: 600;
-        color: #122448;
-        line-height: 1.3;
-        margin-bottom: 15px;
-        min-height: 50px;
-        max-width: 85%;
-        /* Constrain width to force wrap */
-      }
-
-      .reading-card-title-lg {
-        /* Specific modifier for longer titles if needed */
-      }
-
-      .reading-card-link {
-        font-family: var(--font-main);
-        font-size: 13px;
-        color: #666;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-
-      .reading-card-link:hover {
-        color: var(--primary-red);
-      }
-    </style>
-    <link rel="stylesheet" href="../css/style.css?v=3" />
-  </head>
-
-  <body>
-    <!-- NAVBAR -->
-    <nav class="main-navbar navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="../index.html">
-          <div class="logo-wrapper">
-            <div class="logo-icon-container">
-              <i
-                class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"
-              ></i>
-              <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
-            </div>
-            <div class="logo-text-group">
-              <span class="logo-name-main">BAR LAW</span>
-              <span class="logo-name-sub">GROUP</span>
-            </div>
-          </div>
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav align-items-center">
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
-                >About <i class="bi bi-chevron-down"></i
-              ></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="aboutus.html">About Us</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="ourteam.html">Our Team</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
-                >Practice Areas <i class="bi bi-chevron-down"></i
-              ></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="generalcouncel.html"
-                    >General Counsel Services</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="fundingandinvestlaw.html"
-                    >Funding & Investment Law</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="mergersandaccuqirtes.html"
-                    >Mergers & Acquisitions</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="intellectuallaw.html"
-                    >Intellectual Property Law</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="employmentlaw.html"
-                    >Employment Law</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="realproperty.html"
-                    >Real Property Law</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link nav-link-bold-hover"
-                href="blog.html"
-                data-text="Blog"
-                >Blog</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link nav-link-bold-hover"
-                href="contact.html"
-                data-text="Contact"
-                >Contact</a
-              >
-            </li>
-            <li class="nav-item ms-lg-3">
-              <a class="nav-link contact-btn" href="tel:+923224217137"
-                >+92 322 4217137</a
-              >
-            </li>
-          </ul>
-        </div>
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+   How to Set Up a California Professional Corporation (PC) for a Law Firm |
+   Bar Law Group
+  </title>
+ 
+  <!-- Icons & Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../avenir-next/font.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+   rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+ 
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/herosection.css" />
+  <link rel="stylesheet" href="../css/contactnav.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/about.css" />
+ 
+  <style>
+   /* --- CUSTOM HERO SECTION FOR FOUNDERS PAGE --- */
+   .founders-hero {
+    background-color: #031b33 !important;
+    /* Force override */
+    padding-top: 80px;
+    /* Ensure space for navbar */
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-image: none !important;
+    /* Ensure no bg image from hero-section */
+   }
+ 
+   .founders-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+   }
+ 
+   .founders-hero-heading {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    font-size: 48px;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 1px;
+   }
+ 
+   @media (max-width: 768px) {
+    .founders-hero {
+     min-height: 60vh !important;
+     padding-top: 60px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    }
+ 
+    .founders-hero-heading {
+     font-size: 26px !important;
+     line-height: 1.25;
+     max-width: 90%;
+     margin: 0 auto;
+    }
+   }
+ 
+   /* --- CONTENT SECTION STYLES --- */
+   .founders-content-section {
+    padding: 30px 0;
+    background-color: #fff;
+   }
+ 
+   .founders-text-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+   }
+ 
+   .founders-intro-text {
+    font-family: var(--font-main);
+    font-size: 12px;
+    /* Reduced to match disclaimer */
+    line-height: 1.5;
+    /* Reduced line height */
+    color: #222;
+    margin-bottom: 8px;
+    /* Tighter gap */
+   }
+ 
+   .founders-content-section p {
+    font-family: var(--font-main);
+    font-size: 15px;
+    /* Reduced to match disclaimer */
+    line-height: 1.5;
+    /* Reduced line height */
+    color: #444;
+    margin-bottom: 8px;
+    /* Tighter gap */
+   }
+ 
+   .founders-subheading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 16px;
+    /* Scaled down heading */
+    color: #122448;
+    margin-top: 20px;
+    /* Tighter section break */
+    margin-bottom: 8px;
+   }
+ 
+   .founders-list {
+    margin-bottom: 12px;
+    padding-left: 20px;
+   }
+ 
+   .founders-list li {
+    font-family: var(--font-main);
+    font-size: 12px;
+    /* Reduced to match disclaimer */
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 5px;
+    /* Ultra tight list items */
+    position: relative;
+    list-style-type: none;
+   }
+ 
+   .founders-list li::before {
+    content: " ";
+    position: absolute;
+    left: -20px;
+    color: var(--primary-red);
+    font-weight: bold;
+    font-size: 16px;
+    /* Scaled bullet size */
+    line-height: 1;
+    top: 2px;
+   }
+ 
+   .founders-disclaimer {
+    font-size: 12px !important;
+    color: #777 !important;
+    font-style: italic;
+    line-height: 1.4 !important;
+    margin-top: 30px !important;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+   }
+ 
+   .founders-final-thoughts {
+    margin-top: 30px;
+    margin-bottom: 20px;
+   }
+ 
+   /* --- ADDITIONAL READING SECTION --- */
+   .additional-reading-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+   }
+ 
+   .additional-reading-title {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 700;
+    color: #031b33;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+   }
+ 
+   .reading-card {
+    text-align: left;
+    padding: 0 15px;
+    margin-bottom: 30px;
+   }
+ 
+   .reading-card-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #122448;
+    border-radius: 50%;
+    margin-bottom: 15px;
+   }
+ 
+   .reading-card-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    /* Increased from 18px */
+    font-weight: 600;
+    color: #122448;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    min-height: 50px;
+    max-width: 85%;
+    /* Constrain width to force wrap */
+   }
+ 
+   .reading-card-title-lg {
+    /* Specific modifier for longer titles if needed */
+   }
+ 
+   .reading-card-link {
+    font-family: var(--font-main);
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+   }
+ 
+   .reading-card-link:hover {
+    color: var(--primary-red);
+   }
+  </style>
+  <link rel="stylesheet" href="../css/style.css" />
+ </head>
+ 
+ <body>
+  <!-- NAVBAR -->
+  <nav class="main-navbar navbar navbar-expand-lg">
+   <div class="container">
+    <a class="navbar-brand" href="../index.html">
+     <div class="logo-wrapper">
+      <div class="logo-icon-container">
+       <i class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"></i>
+       <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
       </div>
-    </nav>
-
-    <!-- CUSTOM HERO SECTION -->
-    <!-- Added hero-section class to trigger JS scroll logic -->
-    <section class="founders-hero hero-section" id="home">
-      <div class="container">
-        <div class="founders-hero-content">
-          <h1 class="founders-hero-heading">
-            HOW TO SET UP A<br />
-            CALIFORNIA PROFESSIONAL<br />
-            CORPORATION (PC) FOR A<br />
-            LAW FIRM
-          </h1>
-        </div>
+      <div class="logo-text-group">
+       <span class="logo-name-main">BAR LAW</span>
+       <span class="logo-name-sub">GROUP</span>
       </div>
-    </section>
-
-    <!-- CONTENT SECTION -->
-    <section class="founders-content-section">
-      <div class="container founders-text-container">
-        <p class="founders-intro-text">
-          If you're an attorney planning to open your own practice in
-          California, one of your key decisions is choosing the right legal
-          structure. California lawyers cannot form limited liability companies
-          (LLCs), but they can form limited liability partnerships (LLPs) or
-          professional corporations (PCs).
-        </p>
-        <p>
-          For solo attorneys or small firms, a professional corporation is often
-          the preferred choice because it provides limited liability protection
-          and eligibility for S-Corp tax status.
-        </p>
-        <p>
-          Here's an overview of the key steps involved in setting up a
-          California PC for your law firm.
-        </p>
-
-        <h3 class="founders-subheading">
-          1. File the Articles of Incorporation
-        </h3>
-        <p>
-          Your law corporation is officially formed once you file the Articles
-          of Incorporation with the California Secretary of State's Office. Be
-          sure to use the form specifically for a professional corporation, not
-          a general corporation.
-        </p>
-
-        <h3 class="founders-subheading">2. Obtain a City Business License</h3>
-        <p>
-          In most cities, you are required to obtain a city business license. In
-          San Francisco, this is obtained through the San Francisco Tax
-          Collector's Office.
-        </p>
-
-        <h3 class="founders-subheading">
-          3. File a Fictitious Business Name Statement (If Needed)
-        </h3>
-        <p>
-          If your law firm will operate under a name other than its full legal
-          corporate name, file a Fictitious Business Name Statement with the
-          county clerk's office. Once it's endorsed, you'll also need to publish
-          it in a legally adjudicated newspaper.
-        </p>
-
-        <h3 class="founders-subheading">4. Draft the Bylaws</h3>
-        <p>
-          When drafting your bylaws, include the specific language required by
-          the State Bar of California for professional law corporations. The
-          bylaws serve as your internal governance document, outlining officer
-          roles, shareholder rights, and corporate procedures.
-        </p>
-
-        <h3 class="founders-subheading">
-          5. Complete the Action of the Incorporator
-        </h3>
-        <p>
-          The Action of the Incorporator formally approves the bylaws and elects
-          the initial board of directors and officers for your law corporation.
-        </p>
-
-        <h3 class="founders-subheading">
-          6. Create Consents for E-mail Notices
-        </h3>
-        <p>
-          If you prefer to send shareholder and board notices via e-mail instead
-          of regular mail, each shareholder and director should sign a consent
-          to electronic transmission.
-        </p>
-
-        <h3 class="founders-subheading">
-          7. File the First Statement of Information
-        </h3>
-        <p>
-          Within 90 days of formation, you must file your first Statement of
-          Information with the California Secretary of State's Office.
-        </p>
-
-        <h3 class="founders-subheading">8. Obtain an EIN</h3>
-        <p>
-          Apply for a Federal Employer Identification Number (EIN) from the IRS.
-          You'll need this to open a business checking account for your law
-          firm.
-        </p>
-
-        <h3 class="founders-subheading">9. Stock Purchase Agreements</h3>
-        <p>
-          Each shareholder should have a stock purchase agreement documenting
-          how many shares they own and the purchase price of those shares.
-        </p>
-
-        <h3 class="founders-subheading">10. Issue Stock Certificates</h3>
-        <p>
-          When issuing stock certificates, make sure to include the required
-          State Bar language for professional law corporations.
-        </p>
-
-        <h3 class="founders-subheading">11. S-Corp Tax Election</h3>
-        <p>
-          Consult with your CPA about whether they recommend filing IRS Form
-          2553 to elect S-Corp tax status for your PC. This election can provide
-          tax savings by allowing you to take part of your income as
-          distributions rather than salary.
-        </p>
-
-        <h3 class="founders-subheading">12. Indemnification Agreements</h3>
-        <p>
-          You may want each officer and director to have an indemnification
-          agreement to help protect them from personal liability for corporate
-          actions taken in good faith.
-        </p>
-
-        <h3 class="founders-subheading">13. Prepare The First Board Consent</h3>
-        <p>
-          The board of directors should approve, by written consent, the
-          issuance of stock, adoption of the bylaws, and other formation-related
-          matters.
-        </p>
-
-        <h3 class="founders-subheading">14. The 25102(f) Securities Notice</h3>
-        <p>
-          You may need to file a 25102(f) securities notice for the issuance of
-          your shares.
-        </p>
-
-        <h3 class="founders-subheading">
-          15. Register Your PC with the State Bar
-        </h3>
-        <p>
-          Before practicing law as a corporation, you must register your
-          professional corporation with the State Bar of California.
-        </p>
-
-        <h3 class="founders-subheading">16. Shareholders' Agreement</h3>
-        <p>
-          Although not legally required, a shareholders' agreement is strongly
-          recommended. It should outline the rights and obligations of each
-          attorney-shareholder and address issues such as:
-        </p>
-        <ul class="founders-list">
-          <li>What happens if a shareholder leaves the firm?</li>
-          <li>Can the remaining shareholder(s) purchase their shares?</li>
-          <li>How is the purchase price determined?</li>
-        </ul>
-        <p>
-          A well-drafted shareholders' agreement helps prevent future disputes
-          and ensures a smooth transition if ownership changes.
-        </p>
-
-        <h3 class="founders-subheading founders-final-thoughts">
-          Final Thoughts
-        </h3>
-        <p>
-          Forming a law corporation in California involves several important
-          steps but it's a worthwhile investment in protecting your firm and
-          establishing a strong operational foundation. If you'd like help
-          forming your professional corporation, our team at Bar Law Group can
-          assist with every step of the process.
-          <a
-            href="contact.html"
-            style="color: var(--primary-red); text-decoration: none"
-            >Contact us today</a
-          >
-          to get started setting up your California law corporation.
-        </p>
-
-        <p class="founders-disclaimer">
-          <strong>Disclaimer:</strong> This article discusses general legal
-          issues and developments. Such materials are for informational purposes
-          only and may not reflect the most current law in your jurisdiction.
-          These informational materials are not intended, and should not be
-          taken, as legal or tax advice on any particular set of facts or
-          circumstances. No reader should act or refrain from acting on the
-          basis of any information presented herein without seeking the advice
-          of counsel. Bar Law Group expressly disclaims all liability in respect
-          of any actions taken or not taken based on any contents of this
-          article.
-        </p>
-      </div>
-    </section>
-
-    <!-- ================= BAR HERO SECTION ================= -->
-    <section class="bar-hero">
-      <div class="bar-hero-content">
-        <h1 class="bar-hero-title">
-          Strengthen Your Business Strategy <br />
-          with Expert Legal <br />
-          Guidance
-        </h1>
-
-        <p class="bar-hero-text">
-          Protect your business and make confident decisions—our attorneys guide
-          you through contracts, compliance, investments, and critical legal
-          matters.
-        </p>
-
-        <a href="contact.html" class="bar-hero-btn">
-          CONTACT US TODAY
-          <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
-        </a>
-      </div>
-    </section>
-
-    <!-- ADDITIONAL READING SECTION -->
-    <section class="additional-reading-section">
-      <div class="container">
-        <h2 class="additional-reading-title">ADDITIONAL READING</h2>
-        <div class="row">
-          <!-- Card 1 -->
-          <div class="col-md-4 reading-card">
-            <span class="reading-card-dot"></span>
-            <h3 class="reading-card-title">
-              Why So Many Founders Choose January 1st to Form Their Company
-            </h3>
-            <a href="founders_jan_1.html" class="reading-card-link"
-              >Read More &rarr;</a
-            >
-          </div>
-
-          <!-- Card 2 -->
-          <div class="col-md-4 reading-card">
-            <span class="reading-card-dot"></span>
-            <h3 class="reading-card-title">
-              How to Set Up a California Professional Corporation (PC) for a Law
-              Firm
-            </h3>
-            <a href="#" class="reading-card-link">Read More &rarr;</a>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col-md-4 reading-card">
-            <span class="reading-card-dot"></span>
-            <h3 class="reading-card-title">
-              6 Times a Business Dispute Belongs in Court
-            </h3>
-            <a href="#" class="reading-card-link">Read More &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-top">
-        <!-- Column 1 -->
-        <div class="footer-column footer-brand">
-          <!-- FOOTER LOGO START (Static Gold) -->
-          <div class="footer-logo-container">
-            <a href="../index.html" class="footer-logo-link">
-              <div class="footer-logo-icon-box">
-                <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
-              </div>
-              <div class="footer-logo-text-group">
-                <span class="footer-logo-main">BAR LAW</span>
-                <i
-                  class="fa-solid fa-circle"
-                  style="
-                    font-size: 4px;
-                    color: var(--accent-gold);
-                    margin: 0 2px;
-                  "
-                ></i>
-                <span class="footer-logo-sub">GROUP</span>
-              </div>
-            </a>
-          </div>
-          <!-- FOOTER LOGO END -->
-          <h6>COMPANY</h6>
-          <ul>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="ourteam.html">Our Team</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 2 -->
-        <div class="footer-column">
-          <h6>PRACTICE AREAS</h6>
-          <ul>
-            <li><a href="generalcouncel.html">General Counsel</a></li>
-            <li>
-              <a href="fundingandinvestlaw.html">Funding and Investment</a>
-            </li>
-            <li>
-              <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
-            </li>
-            <li><a href="intellectuallaw.html">Intellectual Property</a></li>
-            <li><a href="employmentlaw.html">Employment Law</a></li>
-            <li><a href="bussniess.html">Business Dispute Services</a></li>
-            <li><a href="realproperty.html">Real Estate Law</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 3 -->
-        <div class="footer-column">
-          <h6>SUBSCRIBE FOR UPDATES</h6>
-          <div class="subscribe-box" id="subscribe-form-container">
-            <input
-              type="email"
-              id="subscribe-input"
-              placeholder="name@email.com"
-            />
-            <button id="subscribe-btn">
-              <i class="bi bi-arrow-up-right"></i>
-            </button>
-          </div>
-
-          <h6>FOLLOW US:</h6>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="footer-copyright">
-          Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
-        </div>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Disclaimer</a>
-        </div>
-      </div>
-    </footer>
-
-    <!-- SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/index.js" defer></script>
-  </body>
-</html>
+     </div>
+    </a>
+ 
+    <button class="navbar-toggler collapsed" aria-expanded="false" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+     <ul class="navbar-nav align-items-center">
+      <li class="nav-item dropdown">
+       <a class="nav-link" href="#" data-bs-toggle="dropdown">About <i class="bi bi-chevron-down"></i></a>
+       <ul class="dropdown-menu">
+        <li>
+         <a class="dropdown-item" href="aboutus.html">About Us</a>
+        </li>
+        <li>
+         <a class="dropdown-item" href="ourteam.html">Our Team</a>
+        </li>
+       </ul>
+      </li>
+      <li class="nav-item dropdown">
+       <a class="nav-link" href="#" data-bs-toggle="dropdown">Practice Areas <i class="bi bi-chevron-down"></i></a>
+       <ul class="dropdown-menu">
+        <li>
+         <a class="dropdown-item" href="generalcouncel.html">General Counsel Services</a>
+        </li>
+        <li>
+         <a class="dropdown-item" href="fundingandinvestlaw.html">Funding & Investment Law</a>
+        </li>
+        <li>
+         <a class="dropdown-item" href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
+        </li>
+        <li>
+         <a class="dropdown-item" href="intellectuallaw.html">Intellectual Property Law</a>
+        </li>
+        <li>
+         <a class="dropdown-item" href="employmentlaw.html">Employment Law</a>
+        </li>
+        <li>
+         <a class="dropdown-item" href="realproperty.html">Real Property Law</a>
+        </li>
+       </ul>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link nav-link-bold-hover" href="blog.html" data-text="Blog">Blog</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link nav-link-bold-hover" href="contact.html" data-text="Contact">Contact</a>
+      </li>
+      <li class="nav-item ms-lg-3">
+       <a class="nav-link contact-btn" href="tel:+923224217137">+92 322 4217137</a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </nav>
+ 
+  <!-- CUSTOM HERO SECTION -->
+  <!-- Added hero-section class to trigger JS scroll logic -->
+  <section class="founders-hero hero-section" id="home">
+   <div class="container">
+    <div class="founders-hero-content">
+     <h1 class="founders-hero-heading">
+      HOW TO SET UP A<br />
+      CALIFORNIA PROFESSIONAL<br />
+      CORPORATION (PC) FOR A<br />
+      LAW FIRM
+     </h1>
+    </div>
+   </div>
+  </section>
+ 
+  <!-- CONTENT SECTION -->
+  <section class="founders-content-section">
+   <div class="container founders-text-container">
+    <p class="founders-intro-text">
+     If you're an attorney planning to open your own practice in
+     California, one of your key decisions is choosing the right legal
+     structure. California lawyers cannot form limited liability companies
+     (LLCs), but they can form limited liability partnerships (LLPs) or
+     professional corporations (PCs).
+    </p>
+    <p>
+     For solo attorneys or small firms, a professional corporation is often
+     the preferred choice because it provides limited liability protection
+     and eligibility for S-Corp tax status.
+    </p>
+    <p>
+     Here's an overview of the key steps involved in setting up a
+     California PC for your law firm.
+    </p>
+ 
+    <h3 class="founders-subheading">
+     1. File the Articles of Incorporation
+    </h3>
+    <p>
+     Your law corporation is officially formed once you file the Articles
+     of Incorporation with the California Secretary of State's Office. Be
+     sure to use the form specifically for a professional corporation, not
+     a general corporation.
+    </p>
+ 
+    <h3 class="founders-subheading">2. Obtain a City Business License</h3>
+    <p>
+     In most cities, you are required to obtain a city business license. In
+     San Francisco, this is obtained through the San Francisco Tax
+     Collector's Office.
+    </p>
+ 
+    <h3 class="founders-subheading">
+     3. File a Fictitious Business Name Statement (If Needed)
+    </h3>
+    <p>
+     If your law firm will operate under a name other than its full legal
+     corporate name, file a Fictitious Business Name Statement with the
+     county clerk's office. Once it's endorsed, you'll also need to publish
+     it in a legally adjudicated newspaper.
+    </p>
+ 
+    <h3 class="founders-subheading">4. Draft the Bylaws</h3>
+    <p>
+     When drafting your bylaws, include the specific language required by
+     the State Bar of California for professional law corporations. The
+     bylaws serve as your internal governance document, outlining officer
+     roles, shareholder rights, and corporate procedures.
+    </p>
+ 
+    <h3 class="founders-subheading">
+     5. Complete the Action of the Incorporator
+    </h3>
+    <p>
+     The Action of the Incorporator formally approves the bylaws and elects
+     the initial board of directors and officers for your law corporation.
+    </p>
+ 
+    <h3 class="founders-subheading">
+     6. Create Consents for E-mail Notices
+    </h3>
+    <p>
+     If you prefer to send shareholder and board notices via e-mail instead
+     of regular mail, each shareholder and director should sign a consent
+     to electronic transmission.
+    </p>
+ 
+    <h3 class="founders-subheading">
+     7. File the First Statement of Information
+    </h3>
+    <p>
+     Within 90 days of formation, you must file your first Statement of
+     Information with the California Secretary of State's Office.
+    </p>
+ 
+    <h3 class="founders-subheading">8. Obtain an EIN</h3>
+    <p>
+     Apply for a Federal Employer Identification Number (EIN) from the IRS.
+     You'll need this to open a business checking account for your law
+     firm.
+    </p>
+ 
+    <h3 class="founders-subheading">9. Stock Purchase Agreements</h3>
+    <p>
+     Each shareholder should have a stock purchase agreement documenting
+     how many shares they own and the purchase price of those shares.
+    </p>
+ 
+    <h3 class="founders-subheading">10. Issue Stock Certificates</h3>
+    <p>
+     When issuing stock certificates, make sure to include the required
+     State Bar language for professional law corporations.
+    </p>
+ 
+    <h3 class="founders-subheading">11. S-Corp Tax Election</h3>
+    <p>
+     Consult with your CPA about whether they recommend filing IRS Form
+     2553 to elect S-Corp tax status for your PC. This election can provide
+     tax savings by allowing you to take part of your income as
+     distributions rather than salary.
+    </p>
+ 
+    <h3 class="founders-subheading">12. Indemnification Agreements</h3>
+    <p>
+     You may want each officer and director to have an indemnification
+     agreement to help protect them from personal liability for corporate
+     actions taken in good faith.
+    </p>
+ 
+    <h3 class="founders-subheading">13. Prepare The First Board Consent</h3>
+    <p>
+     The board of directors should approve, by written consent, the
+     issuance of stock, adoption of the bylaws, and other formation-related
+     matters.
+    </p>
+ 
+    <h3 class="founders-subheading">14. The 25102(f) Securities Notice</h3>
+    <p>
+     You may need to file a 25102(f) securities notice for the issuance of
+     your shares.
+    </p>
+ 
+    <h3 class="founders-subheading">
+     15. Register Your PC with the State Bar
+    </h3>
+    <p>
+     Before practicing law as a corporation, you must register your
+     professional corporation with the State Bar of California.
+    </p>
+ 
+    <h3 class="founders-subheading">16. Shareholders' Agreement</h3>
+    <p>
+     Although not legally required, a shareholders' agreement is strongly
+     recommended. It should outline the rights and obligations of each
+     attorney-shareholder and address issues such as:
+    </p>
+    <ul class="founders-list">
+     <li>What happens if a shareholder leaves the firm?</li>
+     <li>Can the remaining shareholder(s) purchase their shares?</li>
+     <li>How is the purchase price determined?</li>
+    </ul>
+    <p>
+     A well-drafted shareholders' agreement helps prevent future disputes
+     and ensures a smooth transition if ownership changes.
+    </p>
+ 
+    <h3 class="founders-subheading founders-final-thoughts">
+     Final Thoughts
+    </h3>
+    <p>
+     Forming a law corporation in California involves several important
+     steps but it's a worthwhile investment in protecting your firm and
+     establishing a strong operational foundation. If you'd like help
+     forming your professional corporation, our team at Bar Law Group can
+     assist with every step of the process.
+     <a href="contact.html" style="color: var(--primary-red); text-decoration: none">Contact us today</a>
+     to get started setting up your California law corporation.
+    </p>
+ 
+    <p class="founders-disclaimer">
+     <strong>Disclaimer:</strong> This article discusses general legal
+     issues and developments. Such materials are for informational purposes
+     only and may not reflect the most current law in your jurisdiction.
+     These informational materials are not intended, and should not be
+     taken, as legal or tax advice on any particular set of facts or
+     circumstances. No reader should act or refrain from acting on the
+     basis of any information presented herein without seeking the advice
+     of counsel. Bar Law Group expressly disclaims all liability in respect
+     of any actions taken or not taken based on any contents of this
+     article.
+    </p>
+   </div>
+  </section>
+ 
+  <!-- ================= BAR HERO SECTION ================= -->
+  <section class="bar-hero">
+   <div class="bar-hero-content">
+    <h1 class="bar-hero-title">
+     Strengthen Your Business Strategy <br />
+     with Expert Legal <br />
+     Guidance
+    </h1>
+ 
+    <p class="bar-hero-text">
+     Protect your business and make confident decisions our attorneys guide
+     you through contracts, compliance, investments, and critical legal
+     matters.
+    </p>
+ 
+    <a href="contact.html" class="bar-hero-btn">
+     CONTACT US TODAY
+     <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
+    </a>
+   </div>
+  </section>
+ 
+  <!-- ADDITIONAL READING SECTION -->
+  <section class="additional-reading-section">
+   <div class="container">
+    <h2 class="additional-reading-title">ADDITIONAL READING</h2>
+    <div class="row">
+     <!-- Card 1 -->
+     <div class="col-md-4 reading-card">
+      <span class="reading-card-dot"></span>
+      <h3 class="reading-card-title">
+       Why So Many Founders Choose January 1st to Form Their Company
+      </h3>
+      <a href="founders_jan_1.html" class="reading-card-link">Read More &rarr;</a>
+     </div>
+ 
+     <!-- Card 2 -->
+     <div class="col-md-4 reading-card">
+      <span class="reading-card-dot"></span>
+      <h3 class="reading-card-title">
+       How to Set Up a California Professional Corporation (PC) for a Law
+       Firm
+      </h3>
+      <a href="#" class="reading-card-link">Read More &rarr;</a>
+     </div>
+ 
+     <!-- Card 3 -->
+     <div class="col-md-4 reading-card">
+      <span class="reading-card-dot"></span>
+      <h3 class="reading-card-title">
+       6 Times a Business Dispute Belongs in Court
+      </h3>
+      <a href="#" class="reading-card-link">Read More &rarr;</a>
+     </div>
+    </div>
+   </div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <footer class="footer">
+   <div class="footer-top">
+    <!-- Column 1 -->
+    <div class="footer-column footer-brand">
+     <!-- FOOTER LOGO START (Static Gold) -->
+     <div class="footer-logo-container">
+      <a href="../index.html" class="footer-logo-link">
+       <div class="footer-logo-icon-box">
+        <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
+       </div>
+       <div class="footer-logo-text-group">
+        <span class="footer-logo-main">BAR LAW</span>
+        <i class="fa-solid fa-circle" style="
+           font-size: 4px;
+           color: var(--accent-gold);
+           margin: 0 2px;
+          "></i>
+        <span class="footer-logo-sub">GROUP</span>
+       </div>
+      </a>
+     </div>
+     <!-- FOOTER LOGO END -->
+     <h6>COMPANY</h6>
+     <ul>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="ourteam.html">Our Team</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+     </ul>
+    </div>
+ 
+    <!-- Column 2 -->
+    <div class="footer-column">
+     <h6>PRACTICE AREAS</h6>
+     <ul>
+      <li><a href="generalcouncel.html">General Counsel</a></li>
+      <li>
+       <a href="fundingandinvestlaw.html">Funding and Investment</a>
+      </li>
+      <li>
+       <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
+      </li>
+      <li><a href="intellectuallaw.html">Intellectual Property</a></li>
+      <li><a href="employmentlaw.html">Employment Law</a></li>
+      <li><a href="bussniess.html">Business Dispute Services</a></li>
+      <li><a href="realproperty.html">Real Estate Law</a></li>
+     </ul>
+    </div>
+ 
+    <!-- Column 3 -->
+    <div class="footer-column">
+     <h6>SUBSCRIBE FOR UPDATES</h6>
+     <div class="subscribe-box" id="subscribe-form-container">
+      <input type="email" id="subscribe-input" placeholder="name@email.com" />
+      <button id="subscribe-btn">
+       <i class="bi bi-arrow-up-right"></i>
+      </button>
+     </div>
+ 
+     <h6>FOLLOW US:</h6>
+     <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+     </div>
+    </div>
+   </div>
+ 
+   <div class="footer-bottom">
+    <div class="footer-copyright">
+     Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
+    </div>
+    <div class="footer-links">
+     <a href="#">Privacy Policy</a>
+     <a href="#">Disclaimer</a>
+    </div>
+   </div>
+  </footer>
+ 
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/index.js" defer></script>
+ </body>
+ 
+ </html

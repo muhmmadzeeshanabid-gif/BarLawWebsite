@@ -1,529 +1,528 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+﻿ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Can You Appeal a Federal Court Decision? | Bar Law Group</title>
-
+ 
   <!-- Icons & Fonts -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?v=3" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?v=3" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css?v=3" rel="stylesheet" />
-  <link rel="stylesheet" href="../avenir-next/font.css?v=3" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../avenir-next/font.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
-    rel="stylesheet" />
+   rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+ 
   <!-- CSS FILES -->
-  <link rel="stylesheet" href="../css/variables.css?v=3" />
-  <link rel="stylesheet" href="../css/navbar.css?v=3" />
-  <link rel="stylesheet" href="../css/herosection.css?v=3" />
-  <link rel="stylesheet" href="../css/contactnav.css?v=3" />
-  <link rel="stylesheet" href="../css/footer.css?v=3" />
-  <link rel="stylesheet" href="../css/about.css?v=3" />
-
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/herosection.css" />
+  <link rel="stylesheet" href="../css/contactnav.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/about.css" />
+ 
   <style>
-    /* --- CUSTOM HERO SECTION FOR BLOG PAGE --- */
-    .founders-hero {
-      background-color: #031b33 !important;
-      /* Force override */
-      padding-top: 80px;
-      /* Ensure space for navbar */
-      height: 111.11vh !important;
-      min-height: 111.11vh !important;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-      background-image: none !important;
-      /* Ensure no bg image from hero-section */
-    }
-
-    .founders-hero-content {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
+   /* --- CUSTOM HERO SECTION FOR BLOG PAGE --- */
+   .founders-hero {
+    background-color: #031b33 !important;
+    /* Force override */
+    padding-top: 80px;
+    /* Ensure space for navbar */
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-image: none !important;
+    /* Ensure no bg image from hero-section */
+   }
+ 
+   .founders-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+   }
+ 
+   .founders-hero-heading {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    font-size: 48px;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 1px;
+   }
+ 
+   @media (max-width: 768px) {
     .founders-hero-heading {
-      font-family: var(--font-heading);
-      font-weight: var(--font-weight-bold);
-      font-size: 48px;
-      color: #ffffff;
-      text-transform: uppercase;
-      line-height: 1.2;
-      letter-spacing: 1px;
+     font-size: 22px;
+     line-height: 1.3;
+     max-width: 320px;
+     margin-left: auto;
+     margin-right: auto;
     }
-
-    @media (max-width: 768px) {
-      .founders-hero-heading {
-        font-size: 22px;
-        line-height: 1.3;
-        max-width: 320px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-
-    /* --- CONTENT SECTION STYLES --- */
-    .founders-content-section {
-      padding: 30px 0;
-      background-color: #fff;
-    }
-
-    .founders-text-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .founders-intro-text {
-      font-family: var(--font-main);
-      font-size: 13px;
-      line-height: 1.6;
-      color: #222;
-      margin-bottom: 12px;
-    }
-
-    .founders-content-section p {
-      font-family: var(--font-main);
-      font-size: 13px;
-      line-height: 1.6;
-      color: #444;
-      margin-bottom: 12px;
-    }
-
-    .founders-subheading {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 18px;
-      color: var(--accent-gold);
-      margin-top: 25px;
-      margin-bottom: 10px;
-    }
-
-    .founders-content-section ul {
-      padding-left: 20px;
-      margin-bottom: 20px;
-    }
-
-    .founders-content-section li {
-      font-family: var(--font-main);
-      font-size: 13px;
-      line-height: 1.6;
-      color: #444;
-      margin-bottom: 10px;
-      list-style-type: disc;
-    }
-
-    .founders-disclaimer {
-      font-size: 12px !important;
-      color: #777 !important;
-      font-style: italic;
-      line-height: 1.4 !important;
-      margin-top: 30px !important;
-      border-top: 1px solid #eee;
-      padding-top: 15px;
-    }
-
-    /* --- ADDITIONAL READING SECTION --- */
-    .additional-reading-section {
-      background-color: #f8f9fa;
-      padding: 60px 0;
-      text-align: center;
-    }
-
-    .additional-reading-title {
-      font-family: var(--font-heading);
-      font-size: 26px;
-      font-weight: 700;
-      color: #031b33;
-      margin-bottom: 50px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .reading-card {
-      text-align: left;
-      padding: 0 15px;
-      margin-bottom: 30px;
-    }
-
-    .reading-card-dot {
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      background-color: #122448;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
-
-    .reading-card-title {
-      font-family: var(--font-heading);
-      font-size: 22px;
-      font-weight: 600;
-      color: #122448;
-      line-height: 1.3;
-      margin-bottom: 15px;
-      min-height: 50px;
-      max-width: 85%;
-    }
-
-    .reading-card-link {
-      font-family: var(--font-main);
-      font-size: 13px;
-      color: #666;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .reading-card-link:hover {
-      color: var(--primary-red);
-    }
+   }
+ 
+   /* --- CONTENT SECTION STYLES --- */
+   .founders-content-section {
+    padding: 30px 0;
+    background-color: #fff;
+   }
+ 
+   .founders-text-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+   }
+ 
+   .founders-intro-text {
+    font-family: var(--font-main);
+    font-size: 13px;
+    line-height: 1.6;
+    color: #222;
+    margin-bottom: 12px;
+   }
+ 
+   .founders-content-section p {
+    font-family: var(--font-main);
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 12px;
+   }
+ 
+   .founders-subheading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--accent-gold);
+    margin-top: 25px;
+    margin-bottom: 10px;
+   }
+ 
+   .founders-content-section ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+   }
+ 
+   .founders-content-section li {
+    font-family: var(--font-main);
+    font-size: 13px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 10px;
+    list-style-type: disc;
+   }
+ 
+   .founders-disclaimer {
+    font-size: 12px !important;
+    color: #777 !important;
+    font-style: italic;
+    line-height: 1.4 !important;
+    margin-top: 30px !important;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+   }
+ 
+   /* --- ADDITIONAL READING SECTION --- */
+   .additional-reading-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+   }
+ 
+   .additional-reading-title {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 700;
+    color: #031b33;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+   }
+ 
+   .reading-card {
+    text-align: left;
+    padding: 0 15px;
+    margin-bottom: 30px;
+   }
+ 
+   .reading-card-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #122448;
+    border-radius: 50%;
+    margin-bottom: 15px;
+   }
+ 
+   .reading-card-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 600;
+    color: #122448;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    min-height: 50px;
+    max-width: 85%;
+   }
+ 
+   .reading-card-link {
+    font-family: var(--font-main);
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+   }
+ 
+   .reading-card-link:hover {
+    color: var(--primary-red);
+   }
   </style>
-  <link rel="stylesheet" href="../css/style.css?v=3" />
-</head>
-
-<body>
+  <link rel="stylesheet" href="../css/style.css" />
+ </head>
+ 
+ <body>
   <!-- NAVBAR -->
   <nav class="main-navbar navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="../index.html">
-        <div class="logo-wrapper">
-          <div class="logo-icon-container">
-            <i class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"></i>
-            <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
-          </div>
-          <div class="logo-text-group">
-            <span class="logo-name-main">BAR LAW</span>
-            <span class="logo-name-sub">GROUP</span>
-          </div>
-        </div>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav align-items-center">
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#" data-bs-toggle="dropdown">About <i class="bi bi-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="aboutus.html">About Us</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="ourteam.html">Our Team</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#" data-bs-toggle="dropdown">Practice Areas <i class="bi bi-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="generalcouncel.html">General Counsel Services</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="fundingandinvestlaw.html">Funding & Investment Law</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="intellectuallaw.html">Intellectual Property Law</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="employmentlaw.html">Employment Law</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="realproperty.html">Real Property Law</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold-hover" href="blog.html" data-text="Blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold-hover" href="contact.html" data-text="Contact">Contact</a>
-          </li>
-          <li class="nav-item ms-lg-3">
-            <a class="nav-link contact-btn" href="tel:+923224217137">+92 322 4217137</a>
-          </li>
-        </ul>
+   <div class="container">
+    <a class="navbar-brand" href="../index.html">
+     <div class="logo-wrapper">
+      <div class="logo-icon-container">
+       <i class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"></i>
+       <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
       </div>
+      <div class="logo-text-group">
+       <span class="logo-name-main">BAR LAW</span>
+       <span class="logo-name-sub">GROUP</span>
+      </div>
+     </div>
+    </a>
+ 
+    <button class="navbar-toggler collapsed" aria-expanded="false" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+     <ul class="navbar-nav align-items-center">
+      <li class="nav-item dropdown">
+       <a class="nav-link" href="#" data-bs-toggle="dropdown">About <i class="bi bi-chevron-down"></i></a>
+       <ul class="dropdown-menu">
+        <li>
+         <a class="dropdown-item" href="aboutus.html">About Us</a>
+        </li>
+        <li>
+         <a class="dropdown-item" href="ourteam.html">Our Team</a>
+        </li>
+       </ul>
+      </li>
+      <li class="nav-item dropdown">
+       <a class="nav-link" href="#" data-bs-toggle="dropdown">Practice Areas <i class="bi bi-chevron-down"></i></a>
+       <ul class="dropdown-menu">
+        <li>
+         <a class="dropdown-item" href="generalcouncel.html">General Counsel Services</a>
+        </li>
+        <li>
+         <a class="dropdown-item" href="fundingandinvestlaw.html">Funding & Investment Law</a>
+        </li>
+        <li>
+         <a class="dropdown-item" href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
+        </li>
+        <li>
+         <a class="dropdown-item" href="intellectuallaw.html">Intellectual Property Law</a>
+        </li>
+        <li>
+         <a class="dropdown-item" href="employmentlaw.html">Employment Law</a>
+        </li>
+        <li>
+         <a class="dropdown-item" href="realproperty.html">Real Property Law</a>
+        </li>
+       </ul>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link nav-link-bold-hover" href="blog.html" data-text="Blog">Blog</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link nav-link-bold-hover" href="contact.html" data-text="Contact">Contact</a>
+      </li>
+      <li class="nav-item ms-lg-3">
+       <a class="nav-link contact-btn" href="tel:+923224217137">+92 322 4217137</a>
+      </li>
+     </ul>
     </div>
+   </div>
   </nav>
-
+ 
   <!-- CUSTOM HERO SECTION -->
   <section class="founders-hero hero-section" id="home">
-    <div class="container">
-      <div class="founders-hero-content">
-        <h1 class="founders-hero-heading">
-          CAN YOU APPEAL A FEDERAL<br />
-          COURT DECISION? HERE'S<br />
-          HOW IT WORKS:
-        </h1>
-      </div>
+   <div class="container">
+    <div class="founders-hero-content">
+     <h1 class="founders-hero-heading">
+      CAN YOU APPEAL A FEDERAL<br />
+      COURT DECISION? HERE'S<br />
+      HOW IT WORKS:
+     </h1>
     </div>
+   </div>
   </section>
-
+ 
   <!-- CONTENT SECTION -->
   <section class="founders-content-section">
-    <div class="container founders-text-container">
-      <p class="founders-intro-text">
-        If you've just gone through a federal trial and didn't like the
-        outcome, you may be wondering:
-        <i>Can I appeal? What happens next? Do I get to present my case all
-          over again?</i>
-      </p>
-      <p>
-        Federal appeals can feel like a mysterious process — but the basics
-        are actually straightforward once you know what to expect. Here's a
-        plain-English overview.
-      </p>
-
-      <h3 class="founders-subheading">1. An Appeal Is Not a Do-Over</h3>
-      <p>
-        One of the most common misconceptions is that an appeal means a second
-        trial. It doesn't. An appeal is not about re-arguing the facts or
-        bringing in new witnesses. Instead, it's about whether the trial court
-        made legal mistakes that affected the outcome.
-      </p>
-
-      <h3 class="founders-subheading">2. The Appeal Starts With a Notice</h3>
-      <p>
-        The first step is filing a "notice of appeal." This is a formal
-        document telling the court and the other side that you're challenging
-        the decision. Timing matters — in federal cases, you typically only
-        have
-        <strong>30 days</strong> from the date of judgment to file. Missing
-        that deadline can end your appeal before it begins.
-      </p>
-
-      <h3 class="founders-subheading">
-        3. Written Briefs Do the Heavy Lifting
-      </h3>
-      <p>
-        Unlike trial court, appeals are mostly decided on paper. Both sides
-        file written arguments, called briefs, explaining their position. The
-        appellate judges rely heavily on these documents to decide whether the
-        lower court made errors.
-      </p>
-
-      <h3 class="founders-subheading">
-        4. Oral Argument (Sometimes) Comes Next
-      </h3>
-      <p>
-        In some cases, the appellate court will schedule oral argument. This
-        is usually a short session - often less than an hour - where each
-        side's attorney answers the judges' questions. It's not a second
-        trial, but rather a chance to clarify the legal issues.
-      </p>
-
-      <h3 class="founders-subheading">
-        5. A Panel of Judges Makes the Decision
-      </h3>
-      <p>
-        Instead of a single trial judge, appeals are decided by a panel of
-        three federal judges. They review the briefs, any oral argument, and
-        the trial record. The judges then issue a written opinion, which
-        could:
-      </p>
-      <ul>
-        <li><strong>Affirm</strong> (agree with) the trial court,</li>
-        <li><strong>Reverse</strong> (overturn) the decision, or</li>
-        <li>
-          <strong>Remand</strong> (send the case back) for further
-          proceedings.
-        </li>
-      </ul>
-
-      <h3 class="founders-subheading">6. Appeals Take Time</h3>
-      <p>
-        Federal appeals aren't quick. Even relatively straightforward appeals
-        can take months to over a year. Understanding the timeline helps set
-        realistic expectations and allows businesses to plan around the
-        uncertainty.
-      </p>
-
-      <h3 class="founders-subheading">Why This Matters for Your Business</h3>
-      <p>
-        If your business is involved in federal litigation, the trial is not
-        necessarily the final word. Appeals provide a path to challenge errors
-        - but they also require quick action, careful strategy, and an
-        understanding of the high stakes.
-      </p>
-      <p>
-        If your business is considering an appeal in federal court, don't
-        wait. Call us today at
-        <a href="tel:+923224217137" style="
-              color: var(--primary-blue);
-              font-weight: 700;
-              text-decoration: none;
-            ">+92 322 4217137</a>
-        or email us at
-        <a href="mailto:info@BarLawGroup.com" style="
-              color: var(--primary-blue);
-              font-weight: 700;
-              text-decoration: none;
-            ">info@BarLawGroup.com</a>.
-      </p>
-
-      <p class="founders-disclaimer">
-        <strong>Disclaimer:</strong> This article discusses general legal
-        issues and developments. Such materials are for informational purposes
-        only and may not reflect the most current law in your jurisdiction.
-        These informational materials are not intended, and should not be
-        taken, as legal or tax advice on any particular set of facts or
-        circumstances. No reader should act or refrain from acting on the
-        basis of any information presented herein without seeking the advice
-        of counsel in the relevant jurisdiction. Bar Law Group expressly
-        disclaims all liability in respect of any actions taken or not taken
-        based on any contents of this article.
-      </p>
-    </div>
+   <div class="container founders-text-container">
+    <p class="founders-intro-text">
+     If you've just gone through a federal trial and didn't like the
+     outcome, you may be wondering:
+     <i>Can I appeal? What happens next? Do I get to present my case all
+      over again?</i>
+    </p>
+    <p>
+     Federal appeals can feel like a mysterious process - but the basics
+     are actually straightforward once you know what to expect. Here's a
+     plain-English overview.
+    </p>
+ 
+    <h3 class="founders-subheading">1. An Appeal Is Not a Do-Over</h3>
+    <p>
+     One of the most common misconceptions is that an appeal means a second
+     trial. It doesn't. An appeal is not about re-arguing the facts or
+     bringing in new witnesses. Instead, it's about whether the trial court
+     made legal mistakes that affected the outcome.
+    </p>
+ 
+    <h3 class="founders-subheading">2. The Appeal Starts With a Notice</h3>
+    <p>
+     The first step is filing a "notice of appeal." This is a formal
+     document telling the court and the other side that you're challenging
+     the decision. Timing matters - in federal cases, you typically only
+     have
+     <strong>30 days</strong> from the date of judgment to file. Missing
+     that deadline can end your appeal before it begins.
+    </p>
+ 
+    <h3 class="founders-subheading">
+     3. Written Briefs Do the Heavy Lifting
+    </h3>
+    <p>
+     Unlike trial court, appeals are mostly decided on paper. Both sides
+     file written arguments, called briefs, explaining their position. The
+     appellate judges rely heavily on these documents to decide whether the
+     lower court made errors.
+    </p>
+ 
+    <h3 class="founders-subheading">
+     4. Oral Argument (Sometimes) Comes Next
+    </h3>
+    <p>
+     In some cases, the appellate court will schedule oral argument. This
+     is usually a short session - often less than an hour - where each
+     side's attorney answers the judges' questions. It's not a second
+     trial, but rather a chance to clarify the legal issues.
+    </p>
+ 
+    <h3 class="founders-subheading">
+     5. A Panel of Judges Makes the Decision
+    </h3>
+    <p>
+     Instead of a single trial judge, appeals are decided by a panel of
+     three federal judges. They review the briefs, any oral argument, and
+     the trial record. The judges then issue a written opinion, which
+     could:
+    </p>
+    <ul>
+     <li><strong>Affirm</strong> (agree with) the trial court,</li>
+     <li><strong>Reverse</strong> (overturn) the decision, or</li>
+     <li>
+      <strong>Remand</strong> (send the case back) for further
+      proceedings.
+     </li>
+    </ul>
+ 
+    <h3 class="founders-subheading">6. Appeals Take Time</h3>
+    <p>
+     Federal appeals aren't quick. Even relatively straightforward appeals
+     can take months to over a year. Understanding the timeline helps set
+     realistic expectations and allows businesses to plan around the
+     uncertainty.
+    </p>
+ 
+    <h3 class="founders-subheading">Why This Matters for Your Business</h3>
+    <p>
+     If your business is involved in federal litigation, the trial is not
+     necessarily the final word. Appeals provide a path to challenge errors
+     - but they also require quick action, careful strategy, and an
+     understanding of the high stakes.
+    </p>
+    <p>
+     If your business is considering an appeal in federal court, don't
+     wait. Call us today at
+     <a href="tel:+923224217137" style="
+        color: var(--primary-blue);
+        font-weight: 700;
+        text-decoration: none;
+       ">+92 322 4217137</a>
+     or email us at
+     <a href="mailto:info@BarLawGroup.com" style="
+        color: var(--primary-blue);
+        font-weight: 700;
+        text-decoration: none;
+       ">info@BarLawGroup.com</a>.
+    </p>
+ 
+    <p class="founders-disclaimer">
+     <strong>Disclaimer:</strong> This article discusses general legal
+     issues and developments. Such materials are for informational purposes
+     only and may not reflect the most current law in your jurisdiction.
+     These informational materials are not intended, and should not be
+     taken, as legal or tax advice on any particular set of facts or
+     circumstances. No reader should act or refrain from acting on the
+     basis of any information presented herein without seeking the advice
+     of counsel in the relevant jurisdiction. Bar Law Group expressly
+     disclaims all liability in respect of any actions taken or not taken
+     based on any contents of this article.
+    </p>
+   </div>
   </section>
-
+ 
   <!-- ================= BAR HERO SECTION ================= -->
   <section class="bar-hero">
-    <div class="bar-hero-content">
-      <h1 class="bar-hero-title">
-        Strengthen Your Business Strategy <br />
-        with Expert Legal <br />
-        Guidance
-      </h1>
-
-      <p class="bar-hero-text">
-        Protect your business and make confident decisions—our attorneys guide
-        you through contracts, compliance, investments, and critical legal
-        matters.
-      </p>
-
-      <a href="contact.html" class="bar-hero-btn">
-        CONTACT US TODAY
-        <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
-      </a>
-    </div>
+   <div class="bar-hero-content">
+    <h1 class="bar-hero-title">
+     Strengthen Your Business Strategy <br />
+     with Expert Legal <br />
+     Guidance
+    </h1>
+ 
+    <p class="bar-hero-text">
+     Protect your business and make confident decisions - our attorneys guide
+     you through contracts, compliance, investments, and critical legal
+     matters.
+    </p>
+ 
+    <a href="contact.html" class="bar-hero-btn">
+     CONTACT US TODAY
+     <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
+    </a>
+   </div>
   </section>
-
+ 
   <!-- ADDITIONAL READING SECTION -->
   <section class="additional-reading-section">
-    <div class="container">
-      <h2 class="additional-reading-title">ADDITIONAL READING</h2>
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="col-md-4 reading-card">
-          <span class="reading-card-dot"></span>
-          <h3 class="reading-card-title">
-            5 Key Differences Between Federal and State Business Litigation
-          </h3>
-          <a href="federal_state_litigation.html" class="reading-card-link">Read More &rarr;</a>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-md-4 reading-card">
-          <span class="reading-card-dot"></span>
-          <h3 class="reading-card-title">
-            How to Set Up a Private Limited Company (Pvt Ltd) for a Law Firm
-          </h3>
-          <a href="setup_lahore.html" class="reading-card-link">Read More &rarr;</a>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-md-4 reading-card">
-          <span class="reading-card-dot"></span>
-          <h3 class="reading-card-title">
-            6 Times a Business Dispute Belongs in Federal Court
-          </h3>
-          <a href="mistakes_federal.html" class="reading-card-link">Read More &rarr;</a>
-        </div>
-      </div>
+   <div class="container">
+    <h2 class="additional-reading-title">ADDITIONAL READING</h2>
+    <div class="row">
+     <!-- Card 1 -->
+     <div class="col-md-4 reading-card">
+      <span class="reading-card-dot"></span>
+      <h3 class="reading-card-title">
+       5 Key Differences Between Federal and State Business Litigation
+      </h3>
+      <a href="federal_state_litigation.html" class="reading-card-link">Read More &rarr;</a>
+     </div>
+ 
+     <!-- Card 2 -->
+     <div class="col-md-4 reading-card">
+      <span class="reading-card-dot"></span>
+      <h3 class="reading-card-title">
+       How to Set Up a Private Limited Company (Pvt Ltd) for a Law Firm
+      </h3>
+      <a href="setup_lahore.html" class="reading-card-link">Read More &rarr;</a>
+     </div>
+ 
+     <!-- Card 3 -->
+     <div class="col-md-4 reading-card">
+      <span class="reading-card-dot"></span>
+      <h3 class="reading-card-title">
+       6 Times a Business Dispute Belongs in Federal Court
+      </h3>
+      <a href="mistakes_federal.html" class="reading-card-link">Read More &rarr;</a>
+     </div>
     </div>
+   </div>
   </section>
-
+ 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-top">
-      <!-- Column 1 -->
-      <div class="footer-column footer-brand">
-        <!-- FOOTER LOGO START -->
-        <div class="footer-logo-container">
-          <a href="../index.html" class="footer-logo-link">
-            <div class="footer-logo-icon-box">
-              <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
-            </div>
-            <div class="footer-logo-text-group">
-              <span class="footer-logo-main">BAR LAW</span>
-              <span class="footer-logo-sub">GROUP</span>
-            </div>
-          </a>
-        </div>
-        <!-- FOOTER LOGO END -->
-        <h6>COMPANY</h6>
-        <ul>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="ourteam.html">Our Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 2 -->
-      <div class="footer-column">
-        <h6>PRACTICE AREAS</h6>
-        <ul>
-          <li><a href="generalcouncel.html">General Counsel</a></li>
-          <li>
-            <a href="fundingandinvestlaw.html">Funding and Investment</a>
-          </li>
-          <li>
-            <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
-          </li>
-          <li><a href="intellectuallaw.html">Intellectual Property</a></li>
-          <li><a href="employmentlaw.html">Employment Law</a></li>
-          <li><a href="bussniess.html">Business Dispute Services</a></li>
-          <li><a href="realproperty.html">Real Estate Law</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3 -->
-      <div class="footer-column">
-        <h6>SUBSCRIBE FOR UPDATES</h6>
-        <div class="subscribe-box" id="subscribe-form-container">
-          <input type="email" id="subscribe-input" placeholder="name@email.com" />
-          <button id="subscribe-btn">
-            <i class="bi bi-arrow-up-right"></i>
-          </button>
-        </div>
-
-        <h6>FOLLOW US:</h6>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-        </div>
-      </div>
+   <div class="footer-top">
+    <!-- Column 1 -->
+    <div class="footer-column footer-brand">
+     <!-- FOOTER LOGO START -->
+     <div class="footer-logo-container">
+      <a href="../index.html" class="footer-logo-link">
+       <div class="footer-logo-icon-box">
+        <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
+       </div>
+       <div class="footer-logo-text-group">
+        <span class="footer-logo-main">BAR LAW</span>
+        <span class="footer-logo-sub">GROUP</span>
+       </div>
+      </a>
+     </div>
+     <!-- FOOTER LOGO END -->
+     <h6>COMPANY</h6>
+     <ul>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="ourteam.html">Our Team</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+     </ul>
     </div>
-
-    <div class="footer-bottom">
-      <div class="footer-copyright">
-        Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
-      </div>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Disclaimer</a>
-      </div>
+ 
+    <!-- Column 2 -->
+    <div class="footer-column">
+     <h6>PRACTICE AREAS</h6>
+     <ul>
+      <li><a href="generalcouncel.html">General Counsel</a></li>
+      <li>
+       <a href="fundingandinvestlaw.html">Funding and Investment</a>
+      </li>
+      <li>
+       <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
+      </li>
+      <li><a href="intellectuallaw.html">Intellectual Property</a></li>
+      <li><a href="employmentlaw.html">Employment Law</a></li>
+      <li><a href="bussniess.html">Business Dispute Services</a></li>
+      <li><a href="realproperty.html">Real Estate Law</a></li>
+     </ul>
     </div>
+ 
+    <!-- Column 3 -->
+    <div class="footer-column">
+     <h6>SUBSCRIBE FOR UPDATES</h6>
+     <div class="subscribe-box" id="subscribe-form-container">
+      <input type="email" id="subscribe-input" placeholder="name@email.com" />
+      <button id="subscribe-btn">
+       <i class="bi bi-arrow-up-right"></i>
+      </button>
+     </div>
+ 
+     <h6>FOLLOW US:</h6>
+     <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+     </div>
+    </div>
+   </div>
+ 
+   <div class="footer-bottom">
+    <div class="footer-copyright">
+     Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
+    </div>
+    <div class="footer-links">
+     <a href="#">Privacy Policy</a>
+     <a href="#">Disclaimer</a>
+    </div>
+   </div>
   </footer>
-
+ 
   <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/index.js" defer></script>
-</body>
-
-</html>
+ </body>
+ 
+ </html

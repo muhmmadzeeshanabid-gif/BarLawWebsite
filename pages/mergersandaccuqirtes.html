@@ -1,567 +1,553 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿ <!DOCTYPE html>
+ <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bar Law Group</title>
-
-    <!-- Icons & Fonts -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?v=3"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?v=3"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css?v=3"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../avenir-next/font.css?v=3" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- CSS FILES -->
-    <link rel="stylesheet" href="../css/variables.css" />
-    <link rel="stylesheet" href="../css/navbar.css?v=3" />
-    <link rel="stylesheet" href="../css/herosection.css?v=3" />
-    <link rel="stylesheet" href="../css/footer.css?v=3" />
-
-    <style>
-      /* LEGAL SERVICES SECTION */
-      /* Reset */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      .legal-services {
-        max-width: 1022px;
-        width: 100%;
-        font-family: var(--font-main);
-        background-color: var(--bg-white);
-        color: #333333;
-        padding: 0 15px;
-        margin: 60px auto;
-      }
-
-      /* H2 Headings */
-      .legal-services h2 {
-        font-size: 30px;
-        line-height: 40px;
-        font-weight: var(--font-weight-bold);
-        color: var(--primary-blue);
-        font-family: var(--font-heading);
-        margin-bottom: 20px;
-      }
-
-      /* Paragraphs */
-      .legal-services p {
-        font-family: var(--font-main);
-        font-size: 13px;
-        color: #333333;
-        line-height: 1.6;
-        letter-spacing: normal;
-        margin-bottom: 20px;
-        font-weight: 400;
-      }
-
-      /* Lists */
-      .legal-services ul {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
-
-      .legal-services li {
-        font-family: var(--font-main);
-        font-size: 13px;
-        color: #333333;
-        line-height: 1.6;
-        margin-bottom: 8px;
-        font-weight: 400;
-      }
-
-      /* Specific style for Outside Counsel section strong tags */
-      .legal-services section:nth-of-type(2) ul li strong {
-        font-style: italic;
-      }
-
-      @media (max-width: 1024px) {
-        .legal-services h2 {
-          font-size: 28px;
-          line-height: 36px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .legal-services h2 {
-          font-size: 24px;
-          line-height: 30px;
-        }
-
-        .legal-services p,
-        .legal-services li {
-          font-size: 12px;
-          line-height: 1.5;
-        }
-      }
-
-      /* ================= BAR HERO SECTION ================= */
-      .bar-hero {
-        position: relative;
-        width: 100%;
-        min-height: 75vh;
-        background-image: url("../images/66df668bb4bddf2553c9bb42_68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      /* Dark overlay */
-      .bar-hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.55);
-      }
-
-      .bar-hero-content {
-        position: relative;
-        z-index: 2;
-        text-align: center;
-        max-width: 800px;
-        padding: 20px;
-      }
-
-      /* ================= HEADING ================= */
-      .bar-hero-title {
-        font-family: var(--font-heading);
-        font-size: 36px;
-        font-weight: 700;
-        color: var(--bg-white);
-        text-transform: uppercase;
-        margin-bottom: 15px;
-      }
-
-      /* ================= TEXT ================= */
-      .bar-hero-text {
-        font-size: 16px;
-        color: var(--bg-white);
-        opacity: 0.9;
-        margin-bottom: 25px;
-      }
-
-      /* ================= BUTTON ================= */
-      .bar-hero-btn {
-        background-color: var(--primary-red);
-        padding: 14px 45px;
-        font-size: 16px;
-        font-weight: 400;
-        color: var(--bg-white);
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.3s ease;
-        margin-top: 15px;
-      }
-
-      .bar-arrow {
-        font-size: 16px;
-        transition: transform 0.3s ease;
-      }
-
-      .bar-hero-btn:hover {
-        background-color: white;
-        color: #292929;
-      }
-
-      .bar-hero-btn:hover .bar-arrow {
-        transform: translateX(4px);
-      }
-
-      /* ================= MOBILE ================= */
-      @media (max-width: 768px) {
-        .bar-hero {
-          min-height: 75vh;
-        }
-
-        .bar-hero-title {
-          font-size: 25px;
-          max-width: 320px;
-          margin: 0 auto 15px;
-          line-height: 1.4;
-        }
-
-        .bar-hero-text {
-          font-size: 14px;
-          max-width: 340px;
-          margin: 0 auto 25px;
-          line-height: 1.6;
-        }
-      }
-    </style>
-    <link rel="stylesheet" href="../css/style.css?v=3" />
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Bar Law Group</title>
+ 
+   <!-- Icons & Fonts -->
+   <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+   />
+   <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+   />
+   <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+   />
+   <link rel="stylesheet" href="../avenir-next/font.css" />
+   <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet"
+   />
+ 
+   <!-- CSS FILES -->
+   <link rel="stylesheet" href="../css/variables.css" />
+   <link rel="stylesheet" href="../css/navbar.css" />
+   <link rel="stylesheet" href="../css/herosection.css" />
+   <link rel="stylesheet" href="../css/footer.css" />
+ 
+   <style>
+    /* LEGAL SERVICES SECTION */
+    /* Reset */
+    * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+    }
+ 
+    .legal-services {
+     max-width: 1022px;
+     width: 100%;
+     font-family: var(--font-main);
+     background-color: var(--bg-white);
+     color: #333333;
+     padding: 0 15px;
+     margin: 60px auto;
+    }
+ 
+    /* H2 Headings */
+    .legal-services h2 {
+     font-size: 30px;
+     line-height: 40px;
+     font-weight: var(--font-weight-bold);
+     color: var(--primary-blue);
+     font-family: var(--font-heading);
+     margin-bottom: 20px;
+    }
+ 
+    /* Paragraphs */
+    .legal-services p {
+     font-family: var(--font-main);
+     font-size: 15px;
+     color: #333333;
+     line-height: 1.6;
+     letter-spacing: normal;
+     margin-bottom: 20px;
+     font-weight: 400;
+    }
+ 
+    /* Lists */
+    .legal-services ul {
+     margin-left: 20px;
+     margin-bottom: 20px;
+    }
+ 
+    .legal-services li {
+     font-family: var(--font-main);
+     font-size: 15px;
+     color: #333333;
+     line-height: 1.6;
+     margin-bottom: 8px;
+     font-weight: 400;
+    }
+ 
+    /* Specific style for Outside Counsel section strong tags */
+    .legal-services section:nth-of-type(2) ul li strong {
+     font-style: italic;
+    }
+ 
+    @media (max-width: 1024px) {
+     .legal-services h2 {
+      font-size: 28px;
+      line-height: 36px;
+     }
+    }
+ 
+    @media (max-width: 768px) {
+     .legal-services h2 {
+      font-size: 24px;
+      line-height: 30px;
+     }
+ 
+     .legal-services p,
+     .legal-services li {
+      font-size: 12px;
+      line-height: 1.5;
+     }
+    }
+ 
+    /* ================= BAR HERO SECTION ================= */
+    
+ 
+    /* Dark overlay */
+    .bar-hero::before {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.55);
+    }
+ 
+    .bar-hero-content {
+     position: relative;
+     z-index: 2;
+     text-align: center;
+     max-width: 800px;
+     padding: 20px;
+    }
+ 
+    /* ================= HEADING ================= */
+    .bar-hero-title {
+     font-family: var(--font-heading);
+     font-size: 36px;
+     font-weight: 700;
+     color: var(--bg-white);
+     text-transform: uppercase;
+     margin-bottom: 15px;
+    }
+ 
+    /* ================= TEXT ================= */
+    .bar-hero-text {
+     font-size: 16px;
+     color: var(--bg-white);
+     opacity: 0.9;
+     margin-bottom: 25px;
+    }
+ 
+    /* ================= BUTTON ================= */
+    .bar-hero-btn {
+     background-color: var(--primary-red);
+     padding: 14px 45px;
+     font-size: 16px;
+     font-weight: 400;
+     color: var(--bg-white);
+     text-decoration: none;
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+     transition: all 0.3s ease;
+     margin-top: 15px;
+    }
+ 
+    .bar-arrow {
+     font-size: 16px;
+     transition: transform 0.3s ease;
+    }
+ 
+    .bar-hero-btn:hover {
+     background-color: white;
+     color: #292929;
+    }
+ 
+    .bar-hero-btn:hover .bar-arrow {
+     transform: translateX(4px);
+    }
+ 
+    /* ================= MOBILE ================= */
+    @media (max-width: 768px) {
+     
+ 
+     .bar-hero-title {
+      font-size: 25px;
+      max-width: 320px;
+      margin: 0 auto 15px;
+      line-height: 1.4;
+     }
+ 
+     .bar-hero-text {
+      font-size: 14px;
+      max-width: 340px;
+      margin: 0 auto 25px;
+      line-height: 1.6;
+     }
+    }
+   </style>
+   <link rel="stylesheet" href="../css/style.css" />
   </head>
-
+ 
   <body>
-    <!-- NAVBAR -->
-    <nav class="main-navbar navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="../index.html">
-          <div class="logo-wrapper">
-            <div class="logo-icon-container">
-              <i
-                class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"
-              ></i>
-              <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
-            </div>
-            <div class="logo-text-group">
-              <span class="logo-name-main">BAR LAW</span>
-              <span class="logo-name-sub">GROUP</span>
-            </div>
-          </div>
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav align-items-center">
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
-                >About <i class="bi bi-chevron-down"></i
-              ></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="aboutus.html">About Us</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="ourteam.html">Our Team</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
-                >Practice Areas <i class="bi bi-chevron-down"></i
-              ></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="generalcouncel.html"
-                    >General Counsel Services</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="fundingandinvestlaw.html"
-                    >Funding & Investment Law</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="mergersandaccuqirtes.html"
-                    >Mergers & Acquisitions</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="intellectuallaw.html"
-                    >Intellectual Property Law</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="employmentlaw.html"
-                    >Employment Law</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="realproperty.html"
-                    >Real Property Law</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link nav-link-bold-hover"
-                href="blog.html"
-                data-text="Blog"
-                >Blog</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link nav-link-bold-hover"
-                href="contact.html"
-                data-text="Contact"
-                >Contact</a
-              >
-            </li>
-            <li class="nav-item ms-lg-3">
-              <a class="nav-link contact-btn" href="tel:+923224217137"
-                >+92 322 4217137</a
-              >
-            </li>
-          </ul>
-        </div>
+   <!-- NAVBAR -->
+   <nav class="main-navbar navbar navbar-expand-lg">
+    <div class="container">
+     <a class="navbar-brand" href="../index.html">
+      <div class="logo-wrapper">
+       <div class="logo-icon-container">
+        <i
+         class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"
+        ></i>
+        <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
+       </div>
+       <div class="logo-text-group">
+        <span class="logo-name-main">BAR LAW</span>
+        <span class="logo-name-sub">GROUP</span>
+       </div>
       </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section
-      class="hero-section practice-hero"
-      id="home"
-      style="
-        background-image: linear-gradient(
-            rgba(1, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.5)
-          ),
-          url('../images/6720a08ba1f23d578e026dac_big-BEND-6.jpg');
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      "
-    >
-      <div class="container">
-        <div
-          class="hero-content"
-          style="padding: 0; margin: 0; text-align: center; max-width: 100%"
-        >
-          <h1
-            class="hero-heading"
-            style="
-              font-family: var(--font-heading) !important;
-              font-weight: var(--font-weight-bold) !important;
-              font-size: 48px !important;
-              color: #e6e2e0 !important;
-              text-transform: uppercase;
-            "
-          >
-            MERGERS AND <br />
-            ACQUISITIONS
-          </h1>
-        </div>
-      </div>
-    </section>
-
-    <!-- LEGAL SERVICES SECTION -->
-    <section class="legal-services">
-      <section>
-        <p style="margin-top: 5px">
-          When you're ready to grow your business or sell it, having the right
-          legal support can make all the difference for your success. At Bend
-          Law Group, we help businesses get through mergers and acquisitions
-          (M&A) smoothly. Whether you're acquiring a company, merging with
-          another business or selling your own, our attorneys can guide you
-          every step of the way to make sure the process is efficient and your
-          interests are protected.
-        </p>
-        <h2>M&A for Small and Growing California Businesses</h2>
-        <p>
-          We focus on providing tailored legal services to small businesses. We
-          believe in giving personal attention to every client. When you work
-          with us, you get more than just a lawyer—you get a
-          <strong>trusted partner</strong> who will support your goals. And if
-          we aren't the right fit for your needs, we'll connect you with someone
-          who is. Let's work together to help your business grow. Whether you're
-          negotiating the purchase of a competitor, merging with another company
-          to expand your reach or selling your business to move on to the next
-          chapter, we're here to ensure you get the best possible outcome.
-        </p>
-      </section>
-
-      <section>
-        <h2>Our Mergers & Acquisitions Services:</h2>
-
-        <ul>
-          <li>
-            <strong>Deal Structuring:</strong> We can help you decide the best
-            way to structure your deal, whether it's an asset purchase, stock
-            purchase or merger. Our goal is to minimize your risk and maximize
-            value.
-          </li>
-          <li>
-            <strong>Due Diligence:</strong> We carefully review all aspects of
-            the transaction, making sure there are no hidden liabilities or
-            issues that could create problems down the road. Afterall, sometimes
-            no deal is the best deal.
-          </li>
-          <li>
-            <strong>Contract Drafting and Negotiation:</strong> From the initial
-            term sheet to the final purchase agreement, we draft and negotiate
-            contracts legal structure for your business, whether it's an LLC,
-            corporation or a sole proprietorship.
-          </li>
-          <li>
-            <strong>Regulatory Issues:</strong> Failing to comply with
-            regulations, whether it's in setting up your business or in your
-            daily operations, could lead to fines or shutdowns.
-          </li>
+     </a>
+ 
+     <button
+      class="navbar-toggler collapsed" aria-expanded="false"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+     >
+      <span class="navbar-toggler-icon"></span>
+     </button>
+ 
+     <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarNav"
+     >
+      <ul class="navbar-nav align-items-center">
+       <li class="nav-item dropdown">
+        <a class="nav-link" href="#" data-bs-toggle="dropdown"
+         >About <i class="bi bi-chevron-down"></i
+        ></a>
+        <ul class="dropdown-menu">
+         <li>
+          <a class="dropdown-item" href="aboutus.html">About Us</a>
+         </li>
+         <li>
+          <a class="dropdown-item" href="ourteam.html">Our Team</a>
+         </li>
         </ul>
-      </section>
-
-      <section>
-        <h2>Seamless Post-Transaction Support</h2>
-        <p>
-          The work doesn't stop once the deal is closed. After the merger or
-          acquisition, there may be post-transaction tasks that require legal
-          attention, such as transitioning employees, integrating new systems or
-          handling ongoing compliance. We offer continued legal support to make
-          sure the transition is as smooth as possible. Whether it's managing
-          the details of integration or addressing any issues that arise after
-          the transaction, we're here to ensure that your business thrives long
-          after the deal is finalized.
-        </p>
-        <h2>A Small Firm for Your Big Dreams</h2>
-        <p>
-          At Bend Law Group, we intentionally keep our firm small to give you
-          the personal attention your business deserves. Unlike larger firms
-          where your project can get lost in the shuffle, we focus on providing
-          dedicated, one-on-one support for every client. Our boutique size
-          enables us to build closer relationships and gain a deeper
-          understanding of the unique details of your business. When you work
-          with us, you're not just another file - you're a priority.
-        </p>
-        <h2>Why Legal Support for M&A is Critical</h2>
-        <p>
-          Without proper legal guidance, a merger or acquisition can become a
-          legal and financial headache. For example, you might miss important
-          details in the contract that put your company at risk or you could end
-          up with unexpected liabilities from the business you're acquiring. At
-          Bend Law Group, we make sure that every part of the process is
-          thoroughly reviewed, so you don't run into surprises after the deal is
-          done.
-        </p>
-        <h2>Ready to Expand or Sell Your Business? We're Here to Help.</h2>
-        <p>
-          If you're planning a merger, acquisition or sale, Bend Law Group is
-          here to guide you through the process.
-          <strong> Contact us </strong> today to schedule your consultation and
-          ensure your business is in the best hands as you take the next step.
-          Let us help you close your deal with confidence.
-        </p>
-      </section>
+       </li>
+       <li class="nav-item dropdown">
+        <a class="nav-link" href="#" data-bs-toggle="dropdown"
+         >Practice Areas <i class="bi bi-chevron-down"></i
+        ></a>
+        <ul class="dropdown-menu">
+         <li>
+          <a class="dropdown-item" href="generalcouncel.html"
+           >General Counsel Services</a
+          >
+         </li>
+         <li>
+          <a class="dropdown-item" href="fundingandinvestlaw.html"
+           >Funding & Investment Law</a
+          >
+         </li>
+         <li>
+          <a class="dropdown-item" href="mergersandaccuqirtes.html"
+           >Mergers & Acquisitions</a
+          >
+         </li>
+         <li>
+          <a class="dropdown-item" href="intellectuallaw.html"
+           >Intellectual Property Law</a
+          >
+         </li>
+         <li>
+          <a class="dropdown-item" href="employmentlaw.html"
+           >Employment Law</a
+          >
+         </li>
+         <li>
+          <a class="dropdown-item" href="realproperty.html"
+           >Real Property Law</a
+          >
+         </li>
+        </ul>
+       </li>
+       <li class="nav-item">
+        <a
+         class="nav-link nav-link-bold-hover"
+         href="blog.html"
+         data-text="Blog"
+         >Blog</a
+        >
+       </li>
+       <li class="nav-item">
+        <a
+         class="nav-link nav-link-bold-hover"
+         href="contact.html"
+         data-text="Contact"
+         >Contact</a
+        >
+       </li>
+       <li class="nav-item ms-lg-3">
+        <a class="nav-link contact-btn" href="tel:+923224217137"
+         >+92 322 4217137</a
+        >
+       </li>
+      </ul>
+     </div>
+    </div>
+   </nav>
+ 
+   <!-- HERO SECTION -->
+   <section
+    class="hero-section practice-hero"
+    id="home"
+    style="
+     background-image: linear-gradient(
+       rgba(1, 0, 0, 0.4),
+       rgba(0, 0, 0, 0.5)
+      ),
+      url('../images/6720a08ba1f23d578e026dac_big-BEND-6.jpg');
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+    "
+   >
+    <div class="container">
+     <div
+      class="hero-content"
+      style="padding: 0; margin: 0; text-align: center; max-width: 100%"
+     >
+      <h1
+       class="hero-heading"
+       style="
+        font-family: var(--font-heading) !important;
+        font-weight: var(--font-weight-bold) !important;
+        font-size: 48px !important;
+        color: #e6e2e0 !important;
+        text-transform: uppercase;
+       "
+      >
+       MERGERS AND <br />
+       ACQUISITIONS
+      </h1>
+     </div>
+    </div>
+   </section>
+ 
+   <!-- LEGAL SERVICES SECTION -->
+   <section class="legal-services">
+    <section>
+     <p style="margin-top: 5px">
+      When you're ready to grow your business or sell it, having the right
+      legal support can make all the difference for your success. At Bend
+      Law Group, we help businesses get through mergers and acquisitions
+      (M&A) smoothly. Whether you're acquiring a company, merging with
+      another business or selling your own, our attorneys can guide you
+      every step of the way to make sure the process is efficient and your
+      interests are protected.
+     </p>
+     <h2>M&A for Small and Growing California Businesses</h2>
+     <p>
+      We focus on providing tailored legal services to small businesses. We
+      believe in giving personal attention to every client. When you work
+      with us, you get more than just a lawyer you get a
+      <strong>trusted partner</strong> who will support your goals. And if
+      we aren't the right fit for your needs, we'll connect you with someone
+      who is. Let's work together to help your business grow. Whether you're
+      negotiating the purchase of a competitor, merging with another company
+      to expand your reach or selling your business to move on to the next
+      chapter, we're here to ensure you get the best possible outcome.
+     </p>
     </section>
-    <!-- bar hero section -->
-    <section class="bar-hero">
-      <div class="bar-hero-content">
-        <h1 class="bar-hero-title">
-          Back Your Business Strategy <br />
-          With Experienced Legal <br />
-          Guidance
-        </h1>
-
-        <p class="bar-hero-text">
-          Protect your business and make strategic decisions with confidence.
-          Our attorneys are ready to guide you through contracts, compliance,
-          investments and more. Contact us today to learn how we can support
-          your goals.
-        </p>
-
-        <a href="contact.html" class="bar-hero-btn">
-          Contact Us Today
-          <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
-        </a>
-      </div>
+ 
+    <section>
+     <h2>Our Mergers & Acquisitions Services:</h2>
+ 
+     <ul>
+      <li>
+       <strong>Deal Structuring:</strong> We can help you decide the best
+       way to structure your deal, whether it's an asset purchase, stock
+       purchase or merger. Our goal is to minimize your risk and maximize
+       value.
+      </li>
+      <li>
+       <strong>Due Diligence:</strong> We carefully review all aspects of
+       the transaction, making sure there are no hidden liabilities or
+       issues that could create problems down the road. Afterall, sometimes
+       no deal is the best deal.
+      </li>
+      <li>
+       <strong>Contract Drafting and Negotiation:</strong> From the initial
+       term sheet to the final purchase agreement, we draft and negotiate
+       contracts legal structure for your business, whether it's an LLC,
+       corporation or a sole proprietorship.
+      </li>
+      <li>
+       <strong>Regulatory Issues:</strong> Failing to comply with
+       regulations, whether it's in setting up your business or in your
+       daily operations, could lead to fines or shutdowns.
+      </li>
+     </ul>
     </section>
-    <!-- footer -->
-    <footer class="footer">
-      <div class="footer-top">
-        <!-- Column 1 -->
-        <div class="footer-column footer-brand">
-          <!-- FOOTER LOGO START -->
-          <div class="footer-logo-container">
-            <a href="../index.html" class="footer-logo-link">
-              <div class="footer-logo-icon-box">
-                <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
-              </div>
-              <div class="footer-logo-text-group">
-                <span class="footer-logo-main">BAR LAW</span>
-                <span class="footer-logo-sub">GROUP</span>
-              </div>
-            </a>
-          </div>
-          <!-- FOOTER LOGO END -->
-          <h6>COMPANY</h6>
-          <ul>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="ourteam.html">Our Team</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+ 
+    <section>
+     <h2>Seamless Post-Transaction Support</h2>
+     <p>
+      The work doesn't stop once the deal is closed. After the merger or
+      acquisition, there may be post-transaction tasks that require legal
+      attention, such as transitioning employees, integrating new systems or
+      handling ongoing compliance. We offer continued legal support to make
+      sure the transition is as smooth as possible. Whether it's managing
+      the details of integration or addressing any issues that arise after
+      the transaction, we're here to ensure that your business thrives long
+      after the deal is finalized.
+     </p>
+     <h2>A Small Firm for Your Big Dreams</h2>
+     <p>
+      At Bend Law Group, we intentionally keep our firm small to give you
+      the personal attention your business deserves. Unlike larger firms
+      where your project can get lost in the shuffle, we focus on providing
+      dedicated, one-on-one support for every client. Our boutique size
+      enables us to build closer relationships and gain a deeper
+      understanding of the unique details of your business. When you work
+      with us, you're not just another file - you're a priority.
+     </p>
+     <h2>Why Legal Support for M&A is Critical</h2>
+     <p>
+      Without proper legal guidance, a merger or acquisition can become a
+      legal and financial headache. For example, you might miss important
+      details in the contract that put your company at risk or you could end
+      up with unexpected liabilities from the business you're acquiring. At
+      Bend Law Group, we make sure that every part of the process is
+      thoroughly reviewed, so you don't run into surprises after the deal is
+      done.
+     </p>
+     <h2>Ready to Expand or Sell Your Business? We're Here to Help.</h2>
+     <p>
+      If you're planning a merger, acquisition or sale, Bend Law Group is
+      here to guide you through the process.
+      <strong> Contact us </strong> today to schedule your consultation and
+      ensure your business is in the best hands as you take the next step.
+      Let us help you close your deal with confidence.
+     </p>
+    </section>
+   </section>
+   <!-- bar hero section -->
+   <section class="bar-hero">
+    <div class="bar-hero-content">
+     <h1 class="bar-hero-title">
+      Back Your Business Strategy <br />
+      With Experienced Legal <br />
+      Guidance
+     </h1>
+ 
+     <p class="bar-hero-text">
+      Protect your business and make strategic decisions with confidence.
+      Our attorneys are ready to guide you through contracts, compliance,
+      investments and more. Contact us today to learn how we can support
+      your goals.
+     </p>
+ 
+     <a href="contact.html" class="bar-hero-btn">
+      Contact Us Today
+      <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
+     </a>
+    </div>
+   </section>
+   <!-- footer -->
+   <footer class="footer">
+    <div class="footer-top">
+     <!-- Column 1 -->
+     <div class="footer-column footer-brand">
+      <!-- FOOTER LOGO START -->
+      <div class="footer-logo-container">
+       <a href="../index.html" class="footer-logo-link">
+        <div class="footer-logo-icon-box">
+         <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
         </div>
-
-        <!-- Column 2 -->
-        <div class="footer-column">
-          <h6>PRACTICE AREAS</h6>
-          <ul>
-            <li><a href="generalcouncel.html">General Counsel</a></li>
-            <li>
-              <a href="fundingandinvestlaw.html">Funding and Investment</a>
-            </li>
-            <li>
-              <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
-            </li>
-            <li><a href="intellectuallaw.html">Intellectual Property</a></li>
-            <li><a href="employmentlaw.html">Employment Law</a></li>
-            <li><a href="bussniess.html">Business Dispute Services</a></li>
-            <li><a href="realproperty.html">Real Estate Law</a></li>
-          </ul>
+        <div class="footer-logo-text-group">
+         <span class="footer-logo-main">BAR LAW</span>
+         <span class="footer-logo-sub">GROUP</span>
         </div>
-
-        <!-- Column 3 -->
-        <div class="footer-column">
-          <h6>SUBSCRIBE FOR UPDATES</h6>
-          <div class="subscribe-box" id="subscribe-form-container">
-            <input
-              type="email"
-              id="subscribe-input"
-              placeholder="name@email.com"
-            />
-            <button id="subscribe-btn">
-              <i class="bi bi-arrow-up-right"></i>
-            </button>
-          </div>
-
-          <h6>FOLLOW US:</h6>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-          </div>
-        </div>
+       </a>
       </div>
-
-      <div class="footer-bottom">
-        <div class="footer-copyright">
-          Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
-        </div>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Disclaimer</a>
-        </div>
+      <!-- FOOTER LOGO END -->
+      <h6>COMPANY</h6>
+      <ul>
+       <li><a href="aboutus.html">About Us</a></li>
+       <li><a href="ourteam.html">Our Team</a></li>
+       <li><a href="blog.html">Blog</a></li>
+       <li><a href="contact.html">Contact</a></li>
+      </ul>
+     </div>
+ 
+     <!-- Column 2 -->
+     <div class="footer-column">
+      <h6>PRACTICE AREAS</h6>
+      <ul>
+       <li><a href="generalcouncel.html">General Counsel</a></li>
+       <li>
+        <a href="fundingandinvestlaw.html">Funding and Investment</a>
+       </li>
+       <li>
+        <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
+       </li>
+       <li><a href="intellectuallaw.html">Intellectual Property</a></li>
+       <li><a href="employmentlaw.html">Employment Law</a></li>
+       <li><a href="bussniess.html">Business Dispute Services</a></li>
+       <li><a href="realproperty.html">Real Estate Law</a></li>
+      </ul>
+     </div>
+ 
+     <!-- Column 3 -->
+     <div class="footer-column">
+      <h6>SUBSCRIBE FOR UPDATES</h6>
+      <div class="subscribe-box" id="subscribe-form-container">
+       <input
+        type="email"
+        id="subscribe-input"
+        placeholder="name@email.com"
+       />
+       <button id="subscribe-btn">
+        <i class="bi bi-arrow-up-right"></i>
+       </button>
       </div>
-    </footer>
-
-    <!-- SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/index.js" defer></script>
+ 
+      <h6>FOLLOW US:</h6>
+      <div class="social-icons">
+       <a href="#"><i class="fab fa-facebook-f"></i></a>
+       <a href="#"><i class="fab fa-linkedin-in"></i></a>
+       <a href="#"><i class="fab fa-instagram"></i></a>
+       <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+     </div>
+    </div>
+ 
+    <div class="footer-bottom">
+     <div class="footer-copyright">
+      Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
+     </div>
+     <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Disclaimer</a>
+     </div>
+    </div>
+   </footer>
+ 
+   <!-- SCRIPTS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../js/index.js" defer></script>
   </body>
-</html>
+ </html

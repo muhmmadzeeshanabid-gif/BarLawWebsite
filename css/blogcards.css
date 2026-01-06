@@ -14,7 +14,7 @@
 }
 
 .blog-container {
-  max-width: 1200px;
+  max-width: 1000px !important;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -191,9 +191,9 @@
 }
 
 .faq-container {
-  width: 95%;
+  width: 80%;
   /* Ensures equal gaps on small screens */
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0;
   /* Removing fixed side padding to ensure perfect centering */
@@ -226,7 +226,7 @@
 /* FAQ ITEM – GAP KAM */
 .faq-item {
   border-bottom: 3px solid rgba(0, 0, 0, 0.01);
-  padding: 14px 0;
+  padding: 7px 0;
 }
 
 .faq-question {
@@ -239,7 +239,7 @@
 .faq-question h6 {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-bold);
-  font-size: 22px;
+  font-size: 20px;
   color: var(--accent-gold);
   text-transform: uppercase;
   margin: 10px 0;
@@ -254,7 +254,7 @@
   font-size: 24px;
   color: #252525;
   font-weight: var(--font-weight-bold);
-  min-width: 26px;
+  min-width: 24px;
   text-align: center;
   font-family: var(--font-main);
 }
@@ -268,7 +268,7 @@
 
 /* PARAGRAPH AUR CHHOTA */
 .faq-answer p {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-dark);
   line-height: 1.5;
   margin: 0;

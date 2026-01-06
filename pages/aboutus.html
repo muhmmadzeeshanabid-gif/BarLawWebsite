@@ -1,856 +1,856 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+ <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bar Law Group</title>
-
-    <!-- Icons & Fonts -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?v=3"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?v=3"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css?v=3"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../avenir-next/font.css?v=3" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- CSS FILES -->
-    <link rel="stylesheet" href="../css/variables.css?v=3" />
-    <link rel="stylesheet" href="../css/navbar.css?v=3" />
-    <link rel="stylesheet" href="../css/herosection.css?v=3" />
-    <link rel="stylesheet" href="../css/contactnav.css?v=3" />
-    <link rel="stylesheet" href="../css/footer.css?v=3" />
-    <link rel="stylesheet" href="../css/about.css?v=3" />
-
-    <style>
-      /* --- EMPOWER SECTION STYLES --- */
-      .about-empower-section {
-        padding: 80px 15px;
-        background-color: var(--bg-light);
-        text-align: center;
-      }
-
-      .about-empower-section h2 {
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Bar Law Group</title>
+ 
+   <!-- Icons & Fonts -->
+   <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+   />
+   <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+   />
+   <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+   />
+   <link rel="stylesheet" href="../avenir-next/font.css" />
+   <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet"
+   />
+ 
+   <!-- CSS FILES -->
+   <link rel="stylesheet" href="../css/variables.css" />
+   <link rel="stylesheet" href="../css/navbar.css" />
+   <link rel="stylesheet" href="../css/herosection.css" />
+   <link rel="stylesheet" href="../css/contactnav.css" />
+   <link rel="stylesheet" href="../css/footer.css" />
+   <link rel="stylesheet" href="../css/about.css" />
+ 
+   <style>
+    /* --- EMPOWER SECTION STYLES --- */
+    .about-empower-section {
+     padding: 80px 15px;
+     background-color: var(--bg-light);
+     text-align: center;
+    }
+ 
+    .about-empower-section h2 {
+     font-family: var(--font-heading) !important;
+     font-weight: var(--font-weight-bold) !important;
+     font-size: 28px;
+     color: var(--primary-blue);
+     text-transform: uppercase;
+     letter-spacing: 1.5px;
+     margin-bottom: 35px;
+    }
+ 
+    .about-empower-section .empower-text-container {
+     max-width: 1050px;
+     margin: 0 auto;
+    }
+ 
+    .about-empower-section p {
+     font-family: var(--font-main);
+     font-size: 14px;
+     color: #272727;
+     line-height: 1.8;
+     margin-bottom: 22px;
+     font-weight: 400;
+     letter-spacing: 0.1px;
+    }
+ 
+    .about-empower-section .tagline {
+     font-size: 14px;
+     font-weight: 500;
+     margin-top: 35px;
+     margin-bottom: 40px;
+     color: #272727;
+    }
+ 
+    .contact-red-btn {
+     display: inline-block;
+     background-color: var(--primary-red);
+     color: var(--bg-white) !important;
+     font-family: var(--font-main);
+     font-weight: 400;
+     font-size: 15px;
+     padding: 13px 35px;
+     text-decoration: none;
+     text-transform: uppercase;
+     transition: background-color 0.3s ease;
+    }
+ 
+    .contact-red-btn:hover {
+     background-color: var(--primary-blue);
+     color: var(--text-white);
+    }
+ 
+    /* --- LOGO SLIDER STYLES --- */
+    .logo-bar-section {
+     padding: 30px 0 80px;
+     background-color: var(--bg-light);
+     overflow: hidden;
+    }
+ 
+    .logo-slider-overflow {
+     width: 100%;
+     overflow: hidden;
+     position: relative;
+    }
+ 
+    .logo-track {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 80px;
+     padding: 0 15px;
+     margin: 0 auto;
+     max-width: 1200px;
+    }
+ 
+    .logo-item {
+     font-family: "Playfair Display", serif;
+     font-size: 24px;
+     font-weight: 700;
+     color: #000;
+     opacity: 0.6;
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     white-space: nowrap;
+     flex-shrink: 0;
+     transition: opacity 0.3s ease;
+     cursor: pointer;
+    }
+ 
+    .logo-item:hover {
+     opacity: 1;
+    }
+ 
+    .logo-duplicate {
+     display: none !important;
+    }
+ 
+    .logo-super-lawyers {
+     border: 2px solid var(--accent-gold);
+     padding: 5px 10px;
+     color: var(--accent-gold);
+     font-family: var(--font-main);
+     font-size: 16px;
+     text-transform: uppercase;
+     text-align: center;
+     line-height: 1;
+    }
+ 
+    .logo-super-lawyers span {
+     display: block;
+     font-size: 9px;
+    }
+ 
+    @keyframes scroll-logo {
+     0% {
+      transform: translateX(0);
+     }
+ 
+     100% {
+      transform: translateX(-50%);
+     }
+    }
+ 
+    @media (max-width: 768px) {
+     .hero-heading {
+      font-size: 32px !important;
+     }
+ 
+     .hero-content p {
+      font-size: 14px;
+      padding: 0 10px;
+     }
+ 
+     .about-empower-section {
+      padding: 50px 15px;
+     }
+ 
+     .about-empower-section h2 {
+      font-size: 20px;
+      margin-bottom: 25px;
+     }
+ 
+     .about-empower-section p {
+      font-size: 14px;
+      margin-bottom: 18px;
+     }
+ 
+     .about-empower-section .tagline {
+      font-size: 15px;
+      margin-top: 25px;
+      margin-bottom: 30px;
+     }
+ 
+     .contact-red-btn {
+      padding: 12px 28px;
+      font-size: 13.5px;
+     }
+ 
+     .logo-bar-section {
+      padding: 20px 0 60px;
+     }
+ 
+     .logo-track {
+      justify-content: flex-start;
+      width: max-content;
+      gap: 60px;
+      animation: scroll-logo 25s linear infinite;
+      padding: 0;
+     }
+ 
+     .logo-item {
+      font-size: 18px;
+      opacity: 1;
+      /* Ensure visibility on mobile */
+     }
+ 
+     .logo-duplicate {
+      display: flex !important;
+     }
+ 
+     .logo-super-lawyers {
+      font-size: 14px;
+     }
+    }
+ 
+    @media (max-width: 576px) {
+     .hero-heading {
+      font-size: 26px !important;
+     }
+    }
+ 
+    /* Reduce gap between value cards */
+    .values-row {
+     gap: 16px;
+    }
+   </style>
+   <link rel="stylesheet" href="../css/style.css" />
+  </head>
+ 
+  <body>
+   <!-- NAVBAR -->
+   <nav class="main-navbar navbar navbar-expand-lg">
+    <div class="container">
+     <a class="navbar-brand" href="../index.html">
+      <div class="logo-wrapper">
+       <div class="logo-icon-container">
+        <i
+         class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"
+        ></i>
+        <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
+       </div>
+       <div class="logo-text-group">
+        <span class="logo-name-main">BAR LAW</span>
+        <span class="logo-name-sub">GROUP</span>
+       </div>
+      </div>
+     </a>
+ 
+     <button
+      class="navbar-toggler collapsed" aria-expanded="false"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+     >
+      <span class="navbar-toggler-icon"></span>
+     </button>
+ 
+     <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarNav"
+     >
+      <ul class="navbar-nav align-items-center">
+       <li class="nav-item dropdown">
+        <a class="nav-link" href="#" data-bs-toggle="dropdown"
+         >About <i class="bi bi-chevron-down"></i
+        ></a>
+        <ul class="dropdown-menu">
+         <li>
+          <a class="dropdown-item" href="aboutus.html">About Us</a>
+         </li>
+         <li>
+          <a class="dropdown-item" href="ourteam.html">Our Team</a>
+         </li>
+        </ul>
+       </li>
+       <li class="nav-item dropdown">
+        <a class="nav-link" href="#" data-bs-toggle="dropdown"
+         >Practice Areas <i class="bi bi-chevron-down"></i
+        ></a>
+        <ul class="dropdown-menu">
+         <li>
+          <a class="dropdown-item" href="generalcouncel.html"
+           >General Counsel Services</a
+          >
+         </li>
+         <li>
+          <a class="dropdown-item" href="fundingandinvestlaw.html"
+           >Funding & Investment Law</a
+          >
+         </li>
+         <li>
+          <a class="dropdown-item" href="mergersandaccuqirtes.html"
+           >Mergers & Acquisitions</a
+          >
+         </li>
+         <li>
+          <a class="dropdown-item" href="intellectuallaw.html"
+           >Intellectual Property Law</a
+          >
+         </li>
+         <li>
+          <a class="dropdown-item" href="employmentlaw.html"
+           >Employment Law</a
+          >
+         </li>
+         <li>
+          <a class="dropdown-item" href="realproperty.html"
+           >Real Property Law</a
+          >
+         </li>
+        </ul>
+       </li>
+       <li class="nav-item">
+        <a
+         class="nav-link nav-link-bold-hover"
+         href="blog.html"
+         data-text="Blog"
+         >Blog</a
+        >
+       </li>
+       <li class="nav-item">
+        <a
+         class="nav-link nav-link-bold-hover"
+         href="contact.html"
+         data-text="Contact"
+         >Contact</a
+        >
+       </li>
+       <li class="nav-item ms-lg-3">
+        <a class="nav-link contact-btn" href="tel:+923224217137"
+         >+92 322 4217137</a
+        >
+       </li>
+      </ul>
+     </div>
+    </div>
+   </nav>
+ 
+   <!-- HERO SECTION -->
+   <section
+    class="hero-section"
+    id="home"
+    style="
+     background-image: linear-gradient(
+       rgba(1, 0, 0, 0.4),
+       rgba(0, 0, 0, 0.5)
+      ),
+      url('../images/66df8e894d890ef9ac072f08_pexels-kehn-hermano-3584437-scaled.webp');
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+    "
+   >
+    <div class="container">
+     <div
+      class="hero-content"
+      style="padding: 0; margin: 0; text-align: center; max-width: 100%"
+     >
+      <h1
+       class="hero-heading"
+       style="
         font-family: var(--font-heading) !important;
         font-weight: var(--font-weight-bold) !important;
-        font-size: 28px;
-        color: var(--primary-blue);
+        font-size: 48px !important;
+        color: #e6e2e0 !important;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
-        margin-bottom: 35px;
-      }
-
-      .about-empower-section .empower-text-container {
-        max-width: 1050px;
-        margin: 0 auto;
-      }
-
-      .about-empower-section p {
-        font-family: var(--font-main);
+       "
+      >
+       ABOUT US
+      </h1>
+      <p
+       class="hero-description"
+       style="
+        font-family: var(--font-main) !important;
+        font-size: 22px !important;
+        color: #e6e2e0 !important;
+        max-width: 800px;
+        margin: 20px auto 0;
+       "
+      >
+       We are more than just a law firm  we are your strategic partners in
+       navigating the legal landscape of Pakistan.
+      </p>
+     </div>
+    </div>
+   </section>
+ 
+   <!-- EMPOWERING ENTREPRENEURS SECTION -->
+   <section class="about-empower-section">
+    <div class="container">
+     <h2>EMPOWERING ENTREPRENEURS SINCE 2010</h2>
+     <div class="empower-text-container">
+      <p>
+       At Bend Law Group, we're passionate about helping small business
+       owners and startups succeed. Since 2010, we've been committed to
+       delivering high-quality legal services that are practical,
+       transparent and tailored to the unique needs of entrepreneurs.
+      </p>
+      <p>
+       We leverage technology to work smarter and faster, reducing costs,
+       minimizing our environmental impact and streamlining the legal
+       process for our clients. Our goal isn't just to provide legal
+       answers, but to be trusted partners in your growth.
+      </p>
+      <p>
+       Whether you're forming a company, negotiating a contract, raising
+       funding or resolving a dispute, we're here to help you move forward
+       with clarity and confidence.
+      </p>
+      <div class="tagline">Let's build something great - together.</div>
+      <a href="contact.html" class="contact-red-btn">CONTACT US TODAY</a>
+     </div>
+    </div>
+   </section>
+ 
+   <!-- LOGO BAR SECTION -->
+   <section class="logo-bar-section">
+    <div class="logo-slider-overflow">
+     <div class="logo-track">
+      <!-- First Set -->
+      <div class="logo-item" style="font-family: serif; font-weight: 900">
+       Forbes
+      </div>
+      <div
+       class="logo-item"
+       style="
         font-size: 14px;
-        color: #272727;
-        line-height: 1.8;
-        margin-bottom: 22px;
-        font-weight: 400;
-        letter-spacing: 0.1px;
-      }
-
-      .about-empower-section .tagline {
-        font-size: 14px;
-        font-weight: 500;
-        margin-top: 35px;
-        margin-bottom: 40px;
-        color: #272727;
-      }
-
-      .contact-red-btn {
-        display: inline-block;
-        background-color: var(--primary-red);
-        color: var(--bg-white) !important;
-        font-family: var(--font-main);
-        font-weight: 400;
-        font-size: 15px;
-        padding: 13px 35px;
-        text-decoration: none;
         text-transform: uppercase;
-        transition: background-color 0.3s ease;
-      }
-
-      .contact-red-btn:hover {
-        background-color: var(--primary-blue);
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        text-align: center;
+       "
+      >
+       THE<br />HUFFINGTON<br />POST
+      </div>
+      <div class="logo-item logo-super-lawyers">
+       <span>RATED BY</span>
+       Super<br />Lawyers
+      </div>
+      <div
+       class="logo-item"
+       style="font-family: 'Playfair Display', serif; font-style: italic"
+      >
+       The Washington Post
+      </div>
+      <div
+       class="logo-item"
+       style="
+        background: #000;
         color: var(--text-white);
-      }
-
-      /* --- LOGO SLIDER STYLES --- */
-      .logo-bar-section {
-        padding: 30px 0 80px;
-        background-color: var(--bg-light);
-        overflow: hidden;
-      }
-
-      .logo-slider-overflow {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-      }
-
-      .logo-track {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 80px;
-        padding: 0 15px;
-        margin: 0 auto;
-        max-width: 1200px;
-      }
-
-      .logo-item {
-        font-family: "Playfair Display", serif;
-        font-size: 24px;
-        font-weight: 700;
-        color: #000;
-        opacity: 0.6;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        white-space: nowrap;
-        flex-shrink: 0;
-        transition: opacity 0.3s ease;
-        cursor: pointer;
-      }
-
-      .logo-item:hover {
-        opacity: 1;
-      }
-
-      .logo-duplicate {
-        display: none !important;
-      }
-
-      .logo-super-lawyers {
-        border: 2px solid var(--accent-gold);
         padding: 5px 10px;
-        color: var(--accent-gold);
-        font-family: var(--font-main);
-        font-size: 16px;
+        font-family: sans-serif;
+        font-weight: 900;
+        letter-spacing: -1px;
         text-transform: uppercase;
+       "
+      >
+       BUSINESS<br />INSIDER
+      </div>
+      <!-- Duplicate Set -->
+      <div
+       class="logo-item logo-duplicate"
+       style="font-family: serif; font-weight: 900"
+      >
+       Forbes
+      </div>
+      <div
+       class="logo-item logo-duplicate"
+       style="
+        font-size: 14px;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        letter-spacing: 1px;
         text-align: center;
-        line-height: 1;
-      }
-
-      .logo-super-lawyers span {
-        display: block;
-        font-size: 9px;
-      }
-
-      @keyframes scroll-logo {
-        0% {
-          transform: translateX(0);
-        }
-
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .hero-heading {
-          font-size: 32px !important;
-        }
-
-        .hero-content p {
-          font-size: 14px;
-          padding: 0 10px;
-        }
-
-        .about-empower-section {
-          padding: 50px 15px;
-        }
-
-        .about-empower-section h2 {
-          font-size: 20px;
-          margin-bottom: 25px;
-        }
-
-        .about-empower-section p {
-          font-size: 14px;
-          margin-bottom: 18px;
-        }
-
-        .about-empower-section .tagline {
-          font-size: 15px;
-          margin-top: 25px;
-          margin-bottom: 30px;
-        }
-
-        .contact-red-btn {
-          padding: 12px 28px;
-          font-size: 13.5px;
-        }
-
-        .logo-bar-section {
-          padding: 20px 0 60px;
-        }
-
-        .logo-track {
-          justify-content: flex-start;
-          width: max-content;
-          gap: 60px;
-          animation: scroll-logo 25s linear infinite;
-          padding: 0;
-        }
-
-        .logo-item {
-          font-size: 18px;
-          opacity: 1;
-          /* Ensure visibility on mobile */
-        }
-
-        .logo-duplicate {
-          display: flex !important;
-        }
-
-        .logo-super-lawyers {
-          font-size: 14px;
-        }
-      }
-
-      @media (max-width: 576px) {
-        .hero-heading {
-          font-size: 26px !important;
-        }
-      }
-
-      /* Reduce gap between value cards */
-      .values-row {
-        gap: 16px;
-      }
-    </style>
-    <link rel="stylesheet" href="../css/style.css?v=3" />
-  </head>
-
-  <body>
-    <!-- NAVBAR -->
-    <nav class="main-navbar navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="../index.html">
-          <div class="logo-wrapper">
-            <div class="logo-icon-container">
-              <i
-                class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"
-              ></i>
-              <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
-            </div>
-            <div class="logo-text-group">
-              <span class="logo-name-main">BAR LAW</span>
-              <span class="logo-name-sub">GROUP</span>
-            </div>
-          </div>
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav align-items-center">
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
-                >About <i class="bi bi-chevron-down"></i
-              ></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="aboutus.html">About Us</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="ourteam.html">Our Team</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" data-bs-toggle="dropdown"
-                >Practice Areas <i class="bi bi-chevron-down"></i
-              ></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="generalcouncel.html"
-                    >General Counsel Services</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="fundingandinvestlaw.html"
-                    >Funding & Investment Law</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="mergersandaccuqirtes.html"
-                    >Mergers & Acquisitions</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="intellectuallaw.html"
-                    >Intellectual Property Law</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="employmentlaw.html"
-                    >Employment Law</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="realproperty.html"
-                    >Real Property Law</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link nav-link-bold-hover"
-                href="blog.html"
-                data-text="Blog"
-                >Blog</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link nav-link-bold-hover"
-                href="contact.html"
-                data-text="Contact"
-                >Contact</a
-              >
-            </li>
-            <li class="nav-item ms-lg-3">
-              <a class="nav-link contact-btn" href="tel:+923224217137"
-                >+92 322 4217137</a
-              >
-            </li>
-          </ul>
-        </div>
+       "
+      >
+       THE<br />HUFFINGTON<br />POST
       </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section
-      class="hero-section"
-      id="home"
-      style="
-        background-image: linear-gradient(
-            rgba(1, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.5)
-          ),
-          url('../images/66df8e894d890ef9ac072f08_pexels-kehn-hermano-3584437-scaled.webp');
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      "
-    >
-      <div class="container">
-        <div
-          class="hero-content"
-          style="padding: 0; margin: 0; text-align: center; max-width: 100%"
-        >
-          <h1
-            class="hero-heading"
-            style="
-              font-family: var(--font-heading) !important;
-              font-weight: var(--font-weight-bold) !important;
-              font-size: 48px !important;
-              color: #e6e2e0 !important;
-              text-transform: uppercase;
-            "
-          >
-            ABOUT US
-          </h1>
-          <p
-            class="hero-description"
-            style="
-              font-family: var(--font-main) !important;
-              font-size: 22px !important;
-              color: #e6e2e0 !important;
-              max-width: 800px;
-              margin: 20px auto 0;
-            "
-          >
-            We are more than just a law firm – we are your strategic partners in
-            navigating the legal landscape of Pakistan.
-          </p>
-        </div>
+      <div class="logo-item logo-super-lawyers logo-duplicate">
+       <span>RATED BY</span>
+       Super<br />Lawyers
       </div>
-    </section>
-
-    <!-- EMPOWERING ENTREPRENEURS SECTION -->
-    <section class="about-empower-section">
-      <div class="container">
-        <h2>EMPOWERING ENTREPRENEURS SINCE 2010</h2>
-        <div class="empower-text-container">
-          <p>
-            At Bend Law Group, we're passionate about helping small business
-            owners and startups succeed. Since 2010, we've been committed to
-            delivering high-quality legal services that are practical,
-            transparent and tailored to the unique needs of entrepreneurs.
-          </p>
-          <p>
-            We leverage technology to work smarter and faster, reducing costs,
-            minimizing our environmental impact and streamlining the legal
-            process for our clients. Our goal isn't just to provide legal
-            answers, but to be trusted partners in your growth.
-          </p>
-          <p>
-            Whether you're forming a company, negotiating a contract, raising
-            funding or resolving a dispute, we're here to help you move forward
-            with clarity and confidence.
-          </p>
-          <div class="tagline">Let's build something great - together.</div>
-          <a href="contact.html" class="contact-red-btn">CONTACT US TODAY</a>
-        </div>
+      <div
+       class="logo-item logo-duplicate"
+       style="font-family: 'Playfair Display', serif; font-style: italic"
+      >
+       The FBR Post
       </div>
-    </section>
-
-    <!-- LOGO BAR SECTION -->
-    <section class="logo-bar-section">
-      <div class="logo-slider-overflow">
-        <div class="logo-track">
-          <!-- First Set -->
-          <div class="logo-item" style="font-family: serif; font-weight: 900">
-            Forbes
-          </div>
-          <div
-            class="logo-item"
-            style="
-              font-size: 14px;
-              text-transform: uppercase;
-              font-family: sans-serif;
-              letter-spacing: 1px;
-              text-align: center;
-            "
-          >
-            THE<br />HUFFINGTON<br />POST
-          </div>
-          <div class="logo-item logo-super-lawyers">
-            <span>RATED BY</span>
-            Super<br />Lawyers
-          </div>
-          <div
-            class="logo-item"
-            style="font-family: 'Playfair Display', serif; font-style: italic"
-          >
-            The Washington Post
-          </div>
-          <div
-            class="logo-item"
-            style="
-              background: #000;
-              color: var(--text-white);
-              padding: 5px 10px;
-              font-family: sans-serif;
-              font-weight: 900;
-              letter-spacing: -1px;
-              text-transform: uppercase;
-            "
-          >
-            BUSINESS<br />INSIDER
-          </div>
-          <!-- Duplicate Set -->
-          <div
-            class="logo-item logo-duplicate"
-            style="font-family: serif; font-weight: 900"
-          >
-            Forbes
-          </div>
-          <div
-            class="logo-item logo-duplicate"
-            style="
-              font-size: 14px;
-              text-transform: uppercase;
-              font-family: sans-serif;
-              letter-spacing: 1px;
-              text-align: center;
-            "
-          >
-            THE<br />HUFFINGTON<br />POST
-          </div>
-          <div class="logo-item logo-super-lawyers logo-duplicate">
-            <span>RATED BY</span>
-            Super<br />Lawyers
-          </div>
-          <div
-            class="logo-item logo-duplicate"
-            style="font-family: 'Playfair Display', serif; font-style: italic"
-          >
-            The FBR Post
-          </div>
-          <div
-            class="logo-item logo-super-insider logo-duplicate"
-            style="
-              background: #000;
-              color: var(--text-white);
-              padding: 5px 10px;
-              font-family: sans-serif;
-              font-weight: 900;
-              letter-spacing: -1px;
-              text-transform: uppercase;
-              font-size: 14px;
-            "
-          >
-            BUSINESS<br />INSIDER
-          </div>
-        </div>
+      <div
+       class="logo-item logo-super-insider logo-duplicate"
+       style="
+        background: #000;
+        color: var(--text-white);
+        padding: 5px 10px;
+        font-family: sans-serif;
+        font-weight: 900;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        font-size: 14px;
+       "
+      >
+       BUSINESS<br />INSIDER
       </div>
-    </section>
-
-    <!-- PARTNER WITH US SECTION -->
-    <section class="law-firm-hero">
-      <div class="container law-firm-container">
-        <div class="row">
-          <!-- Left Side - Image -->
-          <div class="col-lg-6 image-column">
-            <div class="image-wrapper">
-              <img
-                src="../images/WhatsApp Image 2025-12-14 at 5.58.52 PM (1).jpeg"
-                alt="Partner With Us"
-                class="lawyer-image"
-              />
-            </div>
-          </div>
-
-          <!-- Right Side - Content Card -->
-          <div class="col-lg-6 content-column">
-            <div class="content-card">
-              <h2 class="content-heading">
-                PARTNER WITH A TEAM WHO CARES ABOUT YOUR SUCCESS
-              </h2>
-              <p class="content-description">
-                Meet the highly skilled and focused team that make up one of
-                California's top business law firms. We all work together to
-                create a healthy, supportive and open environment for our
-                clients to achieve their goals.
-              </p>
-              <a href="ourteam.html" class="btn learn-more-btn"
-                >MEET OUR TEAM</a
-              >
-            </div>
-          </div>
-        </div>
+     </div>
+    </div>
+   </section>
+ 
+   <!-- PARTNER WITH US SECTION -->
+   <section class="law-firm-hero">
+    <div class="container law-firm-container">
+     <div class="row">
+      <!-- Left Side - Image -->
+      <div class="col-lg-6 image-column">
+       <div class="image-wrapper">
+        <img
+         src="../images/WhatsApp Image 2025-12-14 at 5.58.52 PM (1).jpeg"
+         alt="Partner With Us"
+         class="lawyer-image"
+        />
+       </div>
       </div>
-    </section>
-
-    <!-- OUR VALUES SECTION -->
-    <section class="values-section">
-      <div class="container">
-        <h2 class="values-main-title">OUR VALUES</h2>
-        <div class="row values-row justify-content-center">
-          <!-- Card 1 -->
-          <div class="col-lg-4 col-md-6">
-            <div class="value-card">
-              <h3 class="value-title">WE TRULY ENJOY WHAT WE DO</h3>
-              <p class="value-text">
-                We look back on a typical month and it feels good to reflect on
-                the work we've done to help our clients build jobs and
-                companies. We're helping people achieve their dreams and we
-                think that's a pretty great thing.
-              </p>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="col-lg-4 col-md-6">
-            <div class="value-card">
-              <h3 class="value-title">HONESTY AND EXCELLENCE</h3>
-              <p class="value-text">
-                We don't take on your matter just because we can get it done. We
-                ask ourselves if we're the very best attorneys we know to get
-                your job done, and will get you in touch with them if we're not
-                the best fit.
-              </p>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col-lg-4 col-md-6">
-            <div class="value-card">
-              <h3 class="value-title">PERSONABLE, PERSONALIZED SERVICE</h3>
-              <p class="value-text">
-                Let's face it. Some lawyers are hard to work with. But our law
-                firm is on the lowest end of the "law firm jerkiness bell
-                curve." And, we give you the same legal advice we would give to
-                our families and friends.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLIENT SPOTLIGHT SECTION -->
-    <section class="client-spotlight-section">
-      <div class="container">
-        <h2 class="spotlight-heading">CLIENT SPOTLIGHT</h2>
-        <p class="spotlight-subtitle">
-          We support Pakistani entrepreneurs and companies in all kinds of
-          industries.
+ 
+      <!-- Right Side - Content Card -->
+      <div class="col-lg-6 content-column">
+       <div class="content-card">
+        <h2 class="content-heading">
+         PARTNER WITH A TEAM WHO CARES ABOUT YOUR SUCCESS
+        </h2>
+        <p class="content-description">
+         Meet the highly skilled and focused team that make up one of
+         California's top business law firms. We all work together to
+         create a healthy, supportive and open environment for our
+         clients to achieve their goals.
         </p>
-
-        <div class="logo-marquee-wrapper">
-          <div class="logo-grid">
-            <!-- First Set -->
-            <div
-              class="client-logo-item"
-              style="font-family: sans-serif; font-weight: 900; color: #000"
-            >
-              AIRLIFT
-            </div>
-            <div
-              class="client-logo-item"
-              style="
-                font-family: 'Playfair Display', serif;
-                font-weight: 700;
-                color: var(--primary-red);
-              "
-            >
-              Daraz
-            </div>
-            <div
-              class="client-logo-item"
-              style="
-                font-family: sans-serif;
-                font-weight: 800;
-                color: var(--primary-blue);
-              "
-            >
-              ZAMEEN
-            </div>
-            <div
-              class="client-logo-item"
-              style="
-                font-family: var(--font-main);
-                font-weight: 900;
-                color: #00b140;
-              "
-            >
-              Careem
-            </div>
-            <div
-              class="client-logo-item"
-              style="
-                font-family: serif;
-                font-weight: 900;
-                color: #000;
-                font-style: italic;
-              "
-            >
-              BYKEA
-            </div>
-            <div
-              class="client-logo-item"
-              style="font-family: sans-serif; font-weight: 900; color: #d71921"
-            >
-              Jazz
-            </div>
-            <div
-              class="client-logo-item"
-              style="
-                font-family: var(--font-main);
-                font-weight: 700;
-                color: #d70150;
-              "
-            >
-              foodpanda
-            </div>
-
-            <!-- Duplicate Set for Infinite Scroll -->
-            <div
-              class="client-logo-item"
-              style="font-family: sans-serif; font-weight: 900; color: #000"
-            >
-              AIRLIFT
-            </div>
-            <div
-              class="client-logo-item"
-              style="
-                font-family: 'Playfair Display', serif;
-                font-weight: 700;
-                color: var(--primary-red);
-              "
-            >
-              Daraz
-            </div>
-            <div
-              class="client-logo-item"
-              style="
-                font-family: sans-serif;
-                font-weight: 800;
-                color: var(--primary-blue);
-              "
-            >
-              ZAMEEN
-            </div>
-            <div
-              class="client-logo-item"
-              style="
-                font-family: var(--font-main);
-                font-weight: 900;
-                color: #00b140;
-              "
-            >
-              Careem
-            </div>
-            <div
-              class="client-logo-item"
-              style="
-                font-family: serif;
-                font-weight: 900;
-                color: #000;
-                font-style: italic;
-              "
-            >
-              BYKEA
-            </div>
-            <div
-              class="client-logo-item"
-              style="font-family: sans-serif; font-weight: 900; color: #d71921"
-            >
-              Jazz
-            </div>
-            <div
-              class="client-logo-item"
-              style="
-                font-family: var(--font-main);
-                font-weight: 700;
-                color: #d70150;
-              "
-            >
-              foodpanda
-            </div>
-          </div>
-        </div>
+        <a href="ourteam.html" class="btn learn-more-btn"
+         >MEET OUR TEAM</a
+        >
+       </div>
       </div>
-    </section>
-
-    <!-- ================= BAR HERO SECTION ================= -->
-    <section class="bar-hero">
-      <div class="bar-hero-content">
-        <h1 class="bar-hero-title">
-          Strengthen Your Business Strategy <br />
-          with Expert Legal <br />
-          Guidance
-        </h1>
-
-        <p class="bar-hero-text">
-          Protect your business and make confident decisions—our attorneys guide
-          you through contracts, compliance, investments, and critical legal
-          matters.
+     </div>
+    </div>
+   </section>
+ 
+   <!-- OUR VALUES SECTION -->
+   <section class="values-section">
+    <div class="container">
+     <h2 class="values-main-title">OUR VALUES</h2>
+     <div class="row values-row justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6">
+       <div class="value-card">
+        <h3 class="value-title">WE TRULY ENJOY WHAT WE DO</h3>
+        <p class="value-text">
+         We look back on a typical month and it feels good to reflect on
+         the work we've done to help our clients build jobs and
+         companies. We're helping people achieve their dreams and we
+         think that's a pretty great thing.
         </p>
-
-        <a href="contact.html" class="bar-hero-btn">
-          CONTACT US TODAY
-          <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
-        </a>
+       </div>
       </div>
-    </section>
-
-    <!-- footer -->
-    <footer class="footer">
-      <div class="footer-top">
-        <!-- Column 1 -->
-        <div class="footer-column footer-brand">
-          <!-- FOOTER LOGO START -->
-          <div class="footer-logo-container">
-            <a href="../index.html" class="footer-logo-link">
-              <div class="footer-logo-icon-box">
-                <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
-              </div>
-              <div class="footer-logo-text-group">
-                <span class="footer-logo-main">BAR LAW</span>
-                <span class="footer-logo-sub">GROUP</span>
-              </div>
-            </a>
-          </div>
-          <!-- FOOTER LOGO END -->
-          <h6>COMPANY</h6>
-          <ul>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="ourteam.html">Our Team</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 2 -->
-        <div class="footer-column">
-          <h6>PRACTICE AREAS</h6>
-          <ul>
-            <li><a href="generalcouncel.html">General Counsel</a></li>
-            <li>
-              <a href="fundingandinvestlaw.html">Funding and Investment</a>
-            </li>
-            <li>
-              <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
-            </li>
-            <li><a href="intellectuallaw.html">Intellectual Property</a></li>
-            <li><a href="employmentlaw.html">Employment Law</a></li>
-            <li>
-              <a href="bussniess.html">Business Dispute Services</a>
-            </li>
-            <li><a href="realproperty.html">Real Estate Law</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 3 -->
-        <div class="footer-column">
-          <h6>SUBSCRIBE FOR UPDATES</h6>
-          <div class="subscribe-box" id="subscribe-form-container">
-            <input
-              type="email"
-              id="subscribe-input"
-              placeholder="name@email.com"
-            />
-            <button id="subscribe-btn">
-              <i class="bi bi-arrow-up-right"></i>
-            </button>
-          </div>
-
-          <h6>FOLLOW US:</h6>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-          </div>
-        </div>
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6">
+       <div class="value-card">
+        <h3 class="value-title">HONESTY AND EXCELLENCE</h3>
+        <p class="value-text">
+         We don't take on your matter just because we can get it done. We
+         ask ourselves if we're the very best attorneys we know to get
+         your job done, and will get you in touch with them if we're not
+         the best fit.
+        </p>
+       </div>
       </div>
-
-      <div class="footer-bottom">
-        <div class="footer-copyright">
-          Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
-        </div>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Disclaimer</a>
-        </div>
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6">
+       <div class="value-card">
+        <h3 class="value-title">PERSONABLE, PERSONALIZED SERVICE</h3>
+        <p class="value-text">
+         Let's face it. Some lawyers are hard to work with. But our law
+         firm is on the lowest end of the "law firm jerkiness bell
+         curve." And, we give you the same legal advice we would give to
+         our families and friends.
+        </p>
+       </div>
       </div>
-    </footer>
-
-    <!-- SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/index.js" defer></script>
+     </div>
+    </div>
+   </section>
+ 
+   <!-- CLIENT SPOTLIGHT SECTION -->
+   <section class="client-spotlight-section">
+    <div class="container">
+     <h2 class="spotlight-heading">CLIENT SPOTLIGHT</h2>
+     <p class="spotlight-subtitle">
+      We support Pakistani entrepreneurs and companies in all kinds of
+      industries.
+     </p>
+ 
+     <div class="logo-marquee-wrapper">
+      <div class="logo-grid">
+       <!-- First Set -->
+       <div
+        class="client-logo-item"
+        style="font-family: sans-serif; font-weight: 900; color: #000"
+       >
+        AIRLIFT
+       </div>
+       <div
+        class="client-logo-item"
+        style="
+         font-family: 'Playfair Display', serif;
+         font-weight: 700;
+         color: var(--primary-red);
+        "
+       >
+        Daraz
+       </div>
+       <div
+        class="client-logo-item"
+        style="
+         font-family: sans-serif;
+         font-weight: 800;
+         color: var(--primary-blue);
+        "
+       >
+        ZAMEEN
+       </div>
+       <div
+        class="client-logo-item"
+        style="
+         font-family: var(--font-main);
+         font-weight: 900;
+         color: #00b140;
+        "
+       >
+        Careem
+       </div>
+       <div
+        class="client-logo-item"
+        style="
+         font-family: serif;
+         font-weight: 900;
+         color: #000;
+         font-style: italic;
+        "
+       >
+        BYKEA
+       </div>
+       <div
+        class="client-logo-item"
+        style="font-family: sans-serif; font-weight: 900; color: #d71921"
+       >
+        Jazz
+       </div>
+       <div
+        class="client-logo-item"
+        style="
+         font-family: var(--font-main);
+         font-weight: 700;
+         color: #d70150;
+        "
+       >
+        foodpanda
+       </div>
+ 
+       <!-- Duplicate Set for Infinite Scroll -->
+       <div
+        class="client-logo-item"
+        style="font-family: sans-serif; font-weight: 900; color: #000"
+       >
+        AIRLIFT
+       </div>
+       <div
+        class="client-logo-item"
+        style="
+         font-family: 'Playfair Display', serif;
+         font-weight: 700;
+         color: var(--primary-red);
+        "
+       >
+        Daraz
+       </div>
+       <div
+        class="client-logo-item"
+        style="
+         font-family: sans-serif;
+         font-weight: 800;
+         color: var(--primary-blue);
+        "
+       >
+        ZAMEEN
+       </div>
+       <div
+        class="client-logo-item"
+        style="
+         font-family: var(--font-main);
+         font-weight: 900;
+         color: #00b140;
+        "
+       >
+        Careem
+       </div>
+       <div
+        class="client-logo-item"
+        style="
+         font-family: serif;
+         font-weight: 900;
+         color: #000;
+         font-style: italic;
+        "
+       >
+        BYKEA
+       </div>
+       <div
+        class="client-logo-item"
+        style="font-family: sans-serif; font-weight: 900; color: #d71921"
+       >
+        Jazz
+       </div>
+       <div
+        class="client-logo-item"
+        style="
+         font-family: var(--font-main);
+         font-weight: 700;
+         color: #d70150;
+        "
+       >
+        foodpanda
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+ 
+   <!-- ================= BAR HERO SECTION ================= -->
+   <section class="bar-hero">
+    <div class="bar-hero-content">
+     <h1 class="bar-hero-title">
+      Strengthen Your Business Strategy <br />
+      with Expert Legal <br />
+      Guidance
+     </h1>
+ 
+     <p class="bar-hero-text">
+      Protect your business and make confident decisions our attorneys guide
+      you through contracts, compliance, investments, and critical legal
+      matters.
+     </p>
+ 
+     <a href="contact.html" class="bar-hero-btn">
+      CONTACT US TODAY
+      <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
+     </a>
+    </div>
+   </section>
+ 
+   <!-- footer -->
+   <footer class="footer">
+    <div class="footer-top">
+     <!-- Column 1 -->
+     <div class="footer-column footer-brand">
+      <!-- FOOTER LOGO START -->
+      <div class="footer-logo-container">
+       <a href="../index.html" class="footer-logo-link">
+        <div class="footer-logo-icon-box">
+         <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
+        </div>
+        <div class="footer-logo-text-group">
+         <span class="footer-logo-main">BAR LAW</span>
+         <span class="footer-logo-sub">GROUP</span>
+        </div>
+       </a>
+      </div>
+      <!-- FOOTER LOGO END -->
+      <h6>COMPANY</h6>
+      <ul>
+       <li><a href="aboutus.html">About Us</a></li>
+       <li><a href="ourteam.html">Our Team</a></li>
+       <li><a href="blog.html">Blog</a></li>
+       <li><a href="contact.html">Contact</a></li>
+      </ul>
+     </div>
+ 
+     <!-- Column 2 -->
+     <div class="footer-column">
+      <h6>PRACTICE AREAS</h6>
+      <ul>
+       <li><a href="generalcouncel.html">General Counsel</a></li>
+       <li>
+        <a href="fundingandinvestlaw.html">Funding and Investment</a>
+       </li>
+       <li>
+        <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
+       </li>
+       <li><a href="intellectuallaw.html">Intellectual Property</a></li>
+       <li><a href="employmentlaw.html">Employment Law</a></li>
+       <li>
+        <a href="bussniess.html">Business Dispute Services</a>
+       </li>
+       <li><a href="realproperty.html">Real Estate Law</a></li>
+      </ul>
+     </div>
+ 
+     <!-- Column 3 -->
+     <div class="footer-column">
+      <h6>SUBSCRIBE FOR UPDATES</h6>
+      <div class="subscribe-box" id="subscribe-form-container">
+       <input
+        type="email"
+        id="subscribe-input"
+        placeholder="name@email.com"
+       />
+       <button id="subscribe-btn">
+        <i class="bi bi-arrow-up-right"></i>
+       </button>
+      </div>
+ 
+      <h6>FOLLOW US:</h6>
+      <div class="social-icons">
+       <a href="#"><i class="fab fa-facebook-f"></i></a>
+       <a href="#"><i class="fab fa-linkedin-in"></i></a>
+       <a href="#"><i class="fab fa-instagram"></i></a>
+       <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+     </div>
+    </div>
+ 
+    <div class="footer-bottom">
+     <div class="footer-copyright">
+      Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
+     </div>
+     <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Disclaimer</a>
+     </div>
+    </div>
+   </footer>
+ 
+   <!-- SCRIPTS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../js/index.js" defer></script>
   </body>
-</html>
+ </html

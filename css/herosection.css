@@ -1,8 +1,7 @@
 /* ===== HERO SECTION ===== */
 .hero-section {
-  height: 111.11vh !important;
-  min-height: 111.11vh !important;
-  min-height: 600px;
+  min-height: 100vh;
+  /* Standard Height for Desktop */
   padding-bottom: 60px;
   background-size: cover;
   background-position: center top;
@@ -90,8 +89,8 @@
 /* ===== MOBILE & TABLET STYLES ===== */
 @media (max-width: 991px) {
   .hero-section {
-    height: 111.11vh !important;
-    min-height: 111.11vh !important;
+    min-height: 100vh !important;
+    /* Adjusted for Tablets */
     background-attachment: scroll !important;
     /* Better performance on mobile */
     background-position: center top !important;
@@ -133,6 +132,10 @@
 }
 
 @media (max-width: 576px) {
+  .hero-section {
+    min-height: 100vh !important;
+  }
+
   .hero-heading {
     font-size: 28px !important;
   }
@@ -227,7 +230,7 @@
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .bar-hero {
-    min-height: 60vh !important;
+    min-height: 75vh !important;
   }
 
   .bar-hero-title {
@@ -245,5 +248,11 @@
     line-height: 1.6;
     padding: 0 15px;
     opacity: 0.95;
+  }
+}
+
+@media (min-width: 1400px) {
+  .bar-hero {
+    min-height: 80vh !important;
   }
 }

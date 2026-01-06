@@ -5,11 +5,13 @@
 }
 
 .reviews-container {
-  max-width: 1300px;
-  /* Increased to fit 3 large cards */
+  max-width: 1300px !important;
+  /* Centered width for 3 cards */
   margin: 0 auto;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  position: relative;
+  /* For absolute positioning of navigation buttons */
 }
 
 .reviews-heading {
@@ -21,6 +23,8 @@
   text-transform: uppercase;
   text-align: left;
   margin-bottom: 45px;
+  margin-left: 10px;
+  /* Aligns with the card boxes */
 }
 
 .slider-wrapper {
@@ -106,6 +110,16 @@
   display: flex;
   gap: 13px;
   justify-content: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 1025px) {
+  .review-nav {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    margin-top: 0;
+  }
 }
 
 .review-nav button {

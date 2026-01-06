@@ -1,493 +1,576 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar Law Group</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bar Law Group</title>
+    <!-- Icons & Fonts -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?v=3"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?v=3"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css?v=3"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../avenir-next/font.css?v=3" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Icons & Fonts -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?v=3" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?v=3" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css?v=3" rel="stylesheet" />
-  <link rel="stylesheet" href="../avenir-next/font.css?v=3" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
-    rel="stylesheet" />
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/navbar.css?v=3" />
+    <link rel="stylesheet" href="../css/herosection.css?v=3" />
+    <link rel="stylesheet" href="../css/footer.css?v=3" />
 
-  <!-- CSS FILES -->
-  <link rel='stylesheet' href='../css/variables.css' />
-  <link rel="stylesheet" href="../css/navbar.css?v=3" />
-  <link rel="stylesheet" href="../css/herosection.css?v=3" />
-  <link rel="stylesheet" href="../css/footer.css?v=3" />
+    <style>
+      /* LEGAL SERVICES SECTION */
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  <style>
-    /* LEGAL SERVICES SECTION */
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+      .legal-services {
+        max-width: 1022px;
+        width: 100%;
+        font-family: var(--font-main);
+        background-color: var(--bg-white);
+        color: #333333;
+        padding: 0 15px;
+        margin: 60px auto;
+      }
 
-    .legal-services {
-      max-width: 1022px;
-      width: 100%;
-      font-family: var(--font-main);
-      background-color: var(--bg-white);
-      color: #333333;
-      padding: 0 15px;
-      margin: 60px auto;
-    }
-
-    /* H2 Headings */
-    .legal-services h2 {
-      font-size: 30px;
-      line-height: 40px;
-      font-weight: var(--font-weight-bold);
-      color: var(--primary-blue);
-      font-family: var(--font-heading);
-      margin-bottom: 20px;
-    }
-
-    /* Paragraphs */
-    .legal-services p {
-      font-family: var(--font-main);
-      font-size: 13px;
-      color: #333333;
-      line-height: 1.6;
-      letter-spacing: normal;
-      margin-bottom: 20px;
-      font-weight: 400;
-    }
-
-    /* Lists */
-    .legal-services ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
-    }
-
-    .legal-services li {
-      font-family: var(--font-main);
-      font-size: 13px;
-      color: #333333;
-      line-height: 1.6;
-      margin-bottom: 8px;
-      font-weight: 400;
-    }
-
-    /* Specific style for Outside Counsel section strong tags */
-    .legal-services section:nth-of-type(2) ul li strong {}
-
-    @media (max-width: 1024px) {
+      /* H2 Headings */
       .legal-services h2 {
-        font-size: 28px;
-        line-height: 36px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .legal-services h2 {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: var(--font-weight-bold);
+        color: var(--primary-blue);
+        font-family: var(--font-heading);
+        margin-bottom: 20px;
       }
 
-      .legal-services p,
-      .legal-services li {
-        font-size: 12px;
-        line-height: 1.5;
-      }
-    }
-
-    /* ================= BAR HERO SECTION ================= */
-    .bar-hero {
-      position: relative;
-      width: 100%;
-      min-height: 75vh;
-      background-image: url("../images/66df668bb4bddf2553c9bb42_68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Dark overlay */
-    .bar-hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-    }
-
-    .bar-hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 800px;
-      padding: 20px;
-    }
-
-    /* ================= HEADING ================= */
-    .bar-hero-title {
-      font-family: var(--font-heading);
-      font-size: 36px;
-      font-weight: 700;
-      color: var(--bg-white);
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-
-    /* ================= TEXT ================= */
-    .bar-hero-text {
-      font-size: 16px;
-      color: var(--bg-white);
-      opacity: 0.9;
-      margin-bottom: 25px;
-    }
-
-    /* ================= BUTTON ================= */
-    .bar-hero-btn {
-      background-color: var(--primary-red);
-      padding: 14px 45px;
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--bg-white);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.3s ease;
-      margin-top: 15px;
-    }
-
-    .bar-arrow {
-      font-size: 16px;
-      transition: transform 0.3s ease;
-    }
-
-    .bar-hero-btn:hover {
-      background-color: white;
-      color: #292929;
-    }
-
-    .bar-hero-btn:hover .bar-arrow {
-      transform: translateX(4px);
-    }
-
-    /* ================= MOBILE ================= */
-    @media (max-width: 768px) {
-      .bar-hero {
-        min-height: 75vh;
-      }
-
-      .bar-hero-title {
-        font-size: 25px;
-        max-width: 320px;
-        margin: 0 auto 15px;
-        line-height: 1.4;
-      }
-
-      .bar-hero-text {
-        font-size: 14px;
-        max-width: 340px;
-        margin: 0 auto 25px;
+      /* Paragraphs */
+      .legal-services p {
+        font-family: var(--font-main);
+        font-size: 13px;
+        color: #333333;
         line-height: 1.6;
+        letter-spacing: normal;
+        margin-bottom: 20px;
+        font-weight: 400;
       }
-    }
-  </style>
-  <link rel="stylesheet" href="../css/style.css?v=3" />
-</head>
 
-<body>
-  <!-- NAVBAR -->
-  <nav class="main-navbar navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="../index.html">
-        <div class="logo-wrapper">
-          <div class="logo-icon-container">
-            <i class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"></i>
-            <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
+      /* Lists */
+      .legal-services ul {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .legal-services li {
+        font-family: var(--font-main);
+        font-size: 13px;
+        color: #333333;
+        line-height: 1.6;
+        margin-bottom: 8px;
+        font-weight: 400;
+      }
+
+      /* Specific style for Outside Counsel section strong tags */
+      .legal-services section:nth-of-type(2) ul li strong {
+      }
+
+      @media (max-width: 1024px) {
+        .legal-services h2 {
+          font-size: 28px;
+          line-height: 36px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .legal-services h2 {
+          font-size: 24px;
+          line-height: 30px;
+        }
+
+        .legal-services p,
+        .legal-services li {
+          font-size: 12px;
+          line-height: 1.5;
+        }
+      }
+
+      /* ================= BAR HERO SECTION ================= */
+      .bar-hero {
+        position: relative;
+        width: 100%;
+        min-height: 75vh;
+        background-image: url("../images/66df668bb4bddf2553c9bb42_68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Dark overlay */
+      .bar-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+      }
+
+      .bar-hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 800px;
+        padding: 20px;
+      }
+
+      /* ================= HEADING ================= */
+      .bar-hero-title {
+        font-family: var(--font-heading);
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--bg-white);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      /* ================= TEXT ================= */
+      .bar-hero-text {
+        font-size: 16px;
+        color: var(--bg-white);
+        opacity: 0.9;
+        margin-bottom: 25px;
+      }
+
+      /* ================= BUTTON ================= */
+      .bar-hero-btn {
+        background-color: var(--primary-red);
+        padding: 14px 45px;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--bg-white);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        margin-top: 15px;
+      }
+
+      .bar-arrow {
+        font-size: 16px;
+        transition: transform 0.3s ease;
+      }
+
+      .bar-hero-btn:hover {
+        background-color: white;
+        color: #292929;
+      }
+
+      .bar-hero-btn:hover .bar-arrow {
+        transform: translateX(4px);
+      }
+
+      /* ================= MOBILE ================= */
+      @media (max-width: 768px) {
+        .bar-hero {
+          min-height: 75vh;
+        }
+
+        .bar-hero-title {
+          font-size: 25px;
+          max-width: 320px;
+          margin: 0 auto 15px;
+          line-height: 1.4;
+        }
+
+        .bar-hero-text {
+          font-size: 14px;
+          max-width: 340px;
+          margin: 0 auto 25px;
+          line-height: 1.6;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="../css/style.css?v=3" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="main-navbar navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <div class="logo-wrapper">
+            <div class="logo-icon-container">
+              <i
+                class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"
+              ></i>
+              <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-name-main">BAR LAW</span>
+              <span class="logo-name-sub">GROUP</span>
+            </div>
           </div>
-          <div class="logo-text-group">
-            <span class="logo-name-main">BAR LAW</span>
-            <span class="logo-name-sub">GROUP</span>
-          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" data-bs-toggle="dropdown"
+                >About <i class="bi bi-chevron-down"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="aboutus.html">About Us</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="ourteam.html">Our Team</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" data-bs-toggle="dropdown"
+                >Practice Areas <i class="bi bi-chevron-down"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="generalcouncel.html"
+                    >General Counsel Services</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="fundingandinvestlaw.html"
+                    >Funding & Investment Law</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="mergersandaccuqirtes.html"
+                    >Mergers & Acquisitions</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="intellectuallaw.html"
+                    >Intellectual Property Law</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="employmentlaw.html"
+                    >Employment Law</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="realproperty.html"
+                    >Real Property Law</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-bold-hover"
+                href="blog.html"
+                data-text="Blog"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-bold-hover"
+                href="contact.html"
+                data-text="Contact"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="nav-link contact-btn" href="tel:+923224217137"
+                >+92 322 4217137</a
+              >
+            </li>
+          </ul>
         </div>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav align-items-center">
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#" data-bs-toggle="dropdown">About <i class="bi bi-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="aboutus.html">About Us</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="ourteam.html">Our Team</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#" data-bs-toggle="dropdown">Practice Areas <i class="bi bi-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="generalcouncel.html">General Counsel Services</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="fundingandinvestlaw.html">Funding & Investment Law</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="intellectuallaw.html">Intellectual Property Law</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="employmentlaw.html">Employment Law</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="realproperty.html">Real Property Law</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold-hover" href="blog.html" data-text="Blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold-hover" href="contact.html" data-text="Contact">Contact</a>
-          </li>
-          <li class="nav-item ms-lg-3">
-            <a class="nav-link contact-btn" href="tel:+923224217137">+92 322 4217137</a>
-          </li>
-        </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero-section practice-hero" id="home"
-    style="background-image: linear-gradient(rgba(1, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('../images/6720a0bfdc6d83c8dfe043c7_big-BEND-2.jpg'); display: flex; align-items: center; justify-content: center; text-align: center;">
-    <div class="container">
-      <div class="hero-content" style="padding: 0; margin: 0; text-align: center; max-width: 100%;">
-        <h1 class="hero-heading"
-          style="font-family: var(--font-heading) !important; font-weight: var(--font-weight-bold) !important; font-size: 48px !important; color: #e6e2e0 !important; text-transform: uppercase;">
-          FUNDING AND <br /> INVESTMENT LAW
-        </h1>
+    <!-- HERO SECTION -->
+    <section
+      class="hero-section practice-hero"
+      id="home"
+      style="
+        background-image: linear-gradient(
+            rgba(1, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('../images/6720a0bfdc6d83c8dfe043c7_big-BEND-2.jpg');
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      "
+    >
+      <div class="container">
+        <div
+          class="hero-content"
+          style="padding: 0; margin: 0; text-align: center; max-width: 100%"
+        >
+          <h1
+            class="hero-heading"
+            style="
+              font-family: var(--font-heading) !important;
+              font-weight: var(--font-weight-bold) !important;
+              font-size: 48px !important;
+              color: #e6e2e0 !important;
+              text-transform: uppercase;
+            "
+          >
+            FUNDING AND <br />
+            INVESTMENT LAW
+          </h1>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- LEGAL SERVICES SECTION -->
-  <section class="legal-services">
-    <section>
-      <p style="margin-top: 5px">
-        At Bend Law Group, we help business owners like you manage every stage
-        of your company, from starting up to selling. We help launch over 50
-        new businesses every year and support countless others through complex
-        legal situations. Our legal team is here to guide and support you
-        because your success is our success.
-      </p>
-      <h2>Legal Guidance for Every Stage of Business Funding
-      </h2>
-      <p>
-        Making smart financial choices is essential for the success of your business. We help business owners manage
-        their investment and finance needs with personalized legal strategies. Whether you're launching your first
-        funding round or exploring new avenues of investment, we're here to help you get through it with confidence.
-      </p>
     </section>
 
-    <section>
-      <h2>Our Funding and Investment Services
-      </h2>
-      <p>
-        We offer a range of legal services to help your business manage its financial future:
+    <!-- LEGAL SERVICES SECTION -->
+    <section class="legal-services">
+      <section>
+        <p style="margin-top: 5px">
+          At Bend Law Group, we help business owners like you manage every stage
+          of your company, from starting up to selling. We help launch over 50
+          new businesses every year and support countless others through complex
+          legal situations. Our legal team is here to guide and support you
+          because your success is our success.
+        </p>
+        <h2>Legal Guidance for Every Stage of Business Funding</h2>
+        <p>
+          Making smart financial choices is essential for the success of your
+          business. We help business owners manage their investment and finance
+          needs with personalized legal strategies. Whether you're launching
+          your first funding round or exploring new avenues of investment, we're
+          here to help you get through it with confidence.
+        </p>
+      </section>
 
+      <section>
+        <h2>Our Funding and Investment Services</h2>
+        <p>
+          We offer a range of legal services to help your business manage its
+          financial future:
+        </p>
+        <ul>
+          <li>
+            <strong>Due Diligence:</strong> We thoroughly review financial
+            opportunities to ensure you're making informed decisions.
+          </li>
+          <li>
+            <strong>Intrastate Offerings:</strong> Assistance with
+            state-specific securities offerings to raise capital locally.
+          </li>
+          <li>
+            <strong>Convertible Promissory Notes: </strong>Structuring notes
+            that can convert into equity during financing rounds.
+          </li>
+          <li>
+            <strong>SAFEs </strong> Simplifying your startup's financing with
+            secure agreements for future equity.
+          </li>
+          <li>
+            <strong>Emerging Business Finance Options: </strong>Stay ahead with
+            the latest and most effective funding strategies.
+          </li>
+          <li>
+            <strong>Series Seed, A, B and C Financing Rounds: </strong>Full
+            legal support through every stage of your business's growth.
+          </li>
+          <li>
+            <strong>Crowdfunding: </strong> Guidance through the legal aspects
+            of crowdfunding campaigns to secure funds.
+          </li>
+          <li>
+            <strong>Private Placement Memorandums: </strong> Clear and
+            comprehensive documentation to protect your business during private
+            placement offerings.
+          </li>
+        </ul>
 
-      </p>
-      <ul>
-        <li>
-          <strong>Due Diligence:</strong> We thoroughly review financial opportunities to ensure you're making informed
-          decisions.
+        <h2>Legal Support for Crowdfunding and Emerging Finance Options</h2>
 
-        </li>
-        <li>
-          <strong>Intrastate Offerings:</strong> Assistance with state-specific securities offerings to raise capital
-          locally.
-
-        </li>
-        <li>
-          <strong>Convertible Promissory Notes: </strong>Structuring notes that can convert into equity during financing
-          rounds.
-        </li>
-        <li>
-          <strong>SAFEs </strong> Simplifying your startup's financing with secure agreements for future equity.
-        </li>
-        <li>
-          <strong>Emerging Business Finance Options: </strong>Stay ahead with the latest and most effective funding
+        <p>
+          Crowdfunding and other emerging finance options offer exciting
+          opportunities for businesses to raise capital, but they come with
+          their own set of legal challenges. We can help you navigate
+          crowdfunding regulations, so your campaigns comply with state and
+          federal laws. Whether you're using crowdfunding to launch a new
+          product or attract investment, we provide the legal know-how you need
+          to protect your business and make the most of these innovative funding
           strategies.
-        </li>
-        <li>
-          <strong>Series Seed, A, B and C Financing Rounds: </strong>Full legal support through every stage of your
-          business's growth.
+        </p>
+      </section>
 
-        </li>
-        <li>
-          <strong>Crowdfunding: </strong> Guidance through the legal aspects of crowdfunding campaigns to secure funds.
-
-        </li>
-        <li>
-          <strong>Private Placement Memorandums: </strong> Clear and comprehensive documentation to protect your
-          business during private placement offerings.
-        </li>
-      </ul>
-
-      <h2>Legal Support for Crowdfunding and Emerging Finance Options</h2>
-
-      <p>
-        Crowdfunding and other emerging finance options offer exciting opportunities for businesses to raise capital,
-        but they come with their own set of legal challenges. We can help you navigate crowdfunding regulations, so your
-        campaigns comply with state and federal laws. Whether you're using crowdfunding to launch a new product or
-        attract investment, we provide the legal know-how you need to protect your business and make the most of these
-        innovative funding strategies.
-      </p>
+      <section>
+        <h2>Convertible Promissory Notes and SAFEs</h2>
+        <p>
+          For startups and growing businesses, convertible promissory notes and
+          SAFEs can be effective ways to secure early investment. However, these
+          agreements can be complex. We can give you guidance on structuring
+          these deals, so they protect your business's long-term interests. From
+          reviewing investor terms to advising on conversion triggers, we can
+          help you through these agreements with confidence and clarity.
+        </p>
+        <h2>
+          The Pitfalls of Going Without Skilled Finance and Investment Counsel
+        </h2>
+        <p>
+          Making finance and investment decisions without legal guidance can
+          expose your business to serious risks. Without proper due diligence,
+          you could end up with unfavorable agreements, costly mistakes or
+          regulatory violations. For example, failing to structure investment
+          rounds correctly can overly dilute your ownership stake or leave you
+          with hidden liabilities. By working with Bend Law Group, we can help
+          ensure that every financial decision is legally sound and protects
+          your long-term interests.
+        </p>
+        <h2>Let's Turn Your Vision into Reality – Start Today</h2>
+        <p>
+          Ready to secure your business's financial future? We provide the legal
+          expertise you need to make informed finance and investment decisions.
+          Contact us today to schedule a consultation and learn how our team can
+          protect your financial interests and fuel your business's growth.
+        </p>
+      </section>
     </section>
+    <!-- bar hero section -->
+    <section class="bar-hero">
+      <div class="bar-hero-content">
+        <h1 class="bar-hero-title">
+          Back Your Business Strategy <br />
+          With Experienced Legal <br />
+          Guidance
+        </h1>
 
-    <section>
-      <h2>Convertible Promissory Notes and SAFEs
-      </h2>
-      <p>
-        For startups and growing businesses, convertible promissory notes and SAFEs can be effective ways to secure
-        early investment. However, these agreements can be complex. We can give you guidance on structuring these deals,
-        so they protect your business's long-term interests. From reviewing investor terms to advising on conversion
-        triggers, we can help you through these agreements with confidence and clarity.
-      </p>
-      <h2>The Pitfalls of Going Without Skilled Finance and Investment Counsel
-      </h2>
-      <p>
-        Making finance and investment decisions without legal guidance can expose your business to serious risks.
-        Without proper due diligence, you could end up with unfavorable agreements, costly mistakes or regulatory
-        violations. For example, failing to structure investment rounds correctly can overly dilute your ownership stake
-        or leave you with hidden liabilities. By working with Bend Law Group, we can help ensure that every financial
-        decision is legally sound and protects your long-term interests.
-      </p>
-      <h2>Let's Turn Your Vision into Reality – Start Today
+        <p class="bar-hero-text">
+          Protect your business and make strategic decisions with confidence.
+          Our attorneys are ready to guide you through contracts, compliance,
+          investments and more. Contact us today to learn how we can support
+          your goals.
+        </p>
 
-      </h2>
-      <p>
-        Ready to secure your business's financial future? We provide the legal expertise you need to make informed
-        finance and investment decisions. Contact us today to schedule a consultation and learn how our team can protect
-        your financial interests and fuel your business's growth.
-      </p>
+        <a href="contact.html" class="bar-hero-btn">
+          Contact Us Today
+          <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
     </section>
-  </section>
-  <!-- bar hero section -->
-  <section class="bar-hero">
-    <div class="bar-hero-content">
-      <h1 class="bar-hero-title">
-        Back Your Business Strategy With Experienced Legal Guidance
-      </h1>
-
-      <p class="bar-hero-text">
-        Protect your business and make strategic decisions with confidence.
-        Our attorneys are ready to guide you through contracts, compliance,
-        investments and more. Contact us today to learn how we can support
-        your goals.
-      </p>
-
-      <a href="contact.html" class="bar-hero-btn">
-        Contact Us Today <span class="bar-arrow"><i class="bi bi-arrow-right"></i></span>
-      </a>
-    </div>
-  </section>
-  <!-- footer -->
-  <footer class="footer">
-    <div class="footer-top">
-      <!-- Column 1 -->
-      <div class="footer-column footer-brand">
-        <!-- FOOTER LOGO START -->
-        <div class="footer-logo-container">
-          <a href="../index.html" class="footer-logo-link">
-            <div class="footer-logo-icon-box">
-              <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
-            </div>
-            <div class="footer-logo-text-group">
-              <span class="footer-logo-main">BAR LAW</span>
-              <span class="footer-logo-sub">GROUP</span>
-            </div>
-          </a>
-        </div>
-        <!-- FOOTER LOGO END -->
-        <h6>COMPANY</h6>
-        <ul>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="#">Our Team</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="#">We're Hiring</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 2 -->
-      <div class="footer-column">
-        <h6>PRACTICE AREAS</h6>
-        <ul>
-          <li><a href="generalcouncel.html">General Counsel</a></li>
-          <li>
-            <a href="fundingandinvestlaw.html">Funding and Investment</a>
-          </li>
-          <li>
-            <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
-          </li>
-          <li><a href="intellectuallaw.html">Intellectual Property</a></li>
-          <li><a href="#">Employment Law</a></li>
-          <li><a href="#">Business Dispute Services</a></li>
-          <li><a href="#">Real Estate Law</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3 -->
-      <div class="footer-column">
-        <h6>SUBSCRIBE FOR UPDATES</h6>
-        <div class="subscribe-box" id="subscribe-form-container">
-          <input type="email" id="subscribe-input" placeholder="name@email.com" />
-          <button id="subscribe-btn">
-            <i class="bi bi-arrow-up-right"></i>
-          </button>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <!-- Column 1 -->
+        <div class="footer-column footer-brand">
+          <!-- FOOTER LOGO START -->
+          <div class="footer-logo-container">
+            <a href="../index.html" class="footer-logo-link">
+              <div class="footer-logo-icon-box">
+                <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
+              </div>
+              <div class="footer-logo-text-group">
+                <span class="footer-logo-main">BAR LAW</span>
+                <span class="footer-logo-sub">GROUP</span>
+              </div>
+            </a>
+          </div>
+          <!-- FOOTER LOGO END -->
+          <h6>COMPANY</h6>
+          <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="ourteam.html">Our Team</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
 
-        <h6>FOLLOW US:</h6>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <h6>PRACTICE AREAS</h6>
+          <ul>
+            <li><a href="generalcouncel.html">General Counsel</a></li>
+            <li>
+              <a href="fundingandinvestlaw.html">Funding and Investment</a>
+            </li>
+            <li>
+              <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
+            </li>
+            <li><a href="intellectuallaw.html">Intellectual Property</a></li>
+            <li><a href="employmentlaw.html">Employment Law</a></li>
+            <li><a href="bussniess.html">Business Dispute Services</a></li>
+            <li><a href="realproperty.html">Real Estate Law</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h6>SUBSCRIBE FOR UPDATES</h6>
+          <div class="subscribe-box" id="subscribe-form-container">
+            <input
+              type="email"
+              id="subscribe-input"
+              placeholder="name@email.com"
+            />
+            <button id="subscribe-btn">
+              <i class="bi bi-arrow-up-right"></i>
+            </button>
+          </div>
+
+          <h6>FOLLOW US:</h6>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <div class="footer-copyright">
-        Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Disclaimer</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Disclaimer</a>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-
-  <!-- SCRIPTS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../js/index.js" defer></script>
-</body>
-
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/index.js" defer></script>
+  </body>
 </html>

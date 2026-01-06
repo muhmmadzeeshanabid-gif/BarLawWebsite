@@ -68,7 +68,8 @@ if (slider) {
       }
     } else {
       visible = 3;
-      const cardWidth = 420;
+      // Calculate width such that exactly 3 cards fit in the wrapper
+      const cardWidth = Math.floor(wrapperWidth / 3);
       for (let c of cards) {
         c.style.width = cardWidth + "px";
         c.style.minWidth = cardWidth + "px";
@@ -79,15 +80,15 @@ if (slider) {
   }
 
   function setupInfinite() {
-    const maxVisible = 3;
+    const totalOriginal = slider.children.length;
     const clonesBefore = [];
     const clonesAfter = [];
-    // Clone all if small set, or just enough for sliding
-    const totalOriginal = slider.children.length;
-    for (let i = 0; i < maxVisible; i++) {
+
+    // Clone EVERYTHING twice to create a perfectly seamless track
+    for (let i = 0; i < totalOriginal; i++) {
       clonesAfter.push(slider.children[i % totalOriginal].cloneNode(true));
     }
-    for (let i = 0; i < maxVisible; i++) {
+    for (let i = 0; i < totalOriginal; i++) {
       clonesBefore.push(slider.children[(totalOriginal - 1 - i) % totalOriginal].cloneNode(true));
     }
 
@@ -95,15 +96,13 @@ if (slider) {
     clonesBefore.forEach((c) => slider.insertBefore(c, slider.firstChild));
 
     cards = slider.children;
-    index = maxVisible; // Start at first real card
+    index = totalOriginal; // Start at first real card
     updateSlider();
   }
 
   function updateSlider() {
     if (!cards[0]) return;
-    const isMobile = window.innerWidth <= 1024;
-    const gap = isMobile ? 0 : 25;
-    const cardWidth = cards[0].offsetWidth + gap;
+    const cardWidth = cards[0].offsetWidth;
     slider.style.transition = "none";
     slider.style.transform = `translateX(-${cardWidth * index}px)`;
   }
@@ -114,9 +113,7 @@ if (slider) {
     if (isMoving) return;
     if (!cards[0]) return;
 
-    const isMobile = window.innerWidth <= 1024;
-    const gap = isMobile ? 0 : 25;
-    const cardWidth = cards[0].offsetWidth + gap;
+    const cardWidth = cards[0].offsetWidth;
 
     isMoving = true;
     index += dir;
@@ -127,16 +124,15 @@ if (slider) {
       "transitionend",
       () => {
         isMoving = false;
-        const maxVisible = 3;
-        const totalOriginal = cards.length - (maxVisible * 2);
+        const totalOriginal = cards.length / 3;
 
-        if (index >= cards.length - (isMobile ? 1 : 3)) {
+        if (index >= totalOriginal * 2) {
           slider.style.transition = "none";
-          index = maxVisible;
+          index = totalOriginal;
           updateSlider();
-        } else if (index < maxVisible) {
+        } else if (index < totalOriginal) {
           slider.style.transition = "none";
-          index = totalOriginal + maxVisible - 1;
+          index = totalOriginal * 2 - 1;
           updateSlider();
         }
       },

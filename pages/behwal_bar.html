@@ -1,295 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Behwal Bar - Managing Attorney | Bar Law Group</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Behwal Bar - Managing Attorney | Bar Law Group</title>
+    <!-- Icons & Fonts -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?v=3"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?v=3"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css?v=3"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../avenir-next/font.css?v=3" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Icons & Fonts -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?v=3" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css?v=3" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css?v=3" rel="stylesheet" />
-  <link rel="stylesheet" href="../avenir-next/font.css?v=3" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="../css/variables.css?v=3" />
+    <link rel="stylesheet" href="../css/navbar.css?v=3" />
+    <link rel="stylesheet" href="../css/herosection.css?v=3" />
+    <link rel="stylesheet" href="../css/footer.css?v=3" />
 
-  <!-- CSS FILES -->
-  <link rel="stylesheet" href="../css/variables.css?v=3" />
-  <link rel="stylesheet" href="../css/navbar.css?v=3" />
-  <link rel="stylesheet" href="../css/herosection.css?v=3" />
-  <link rel="stylesheet" href="../css/footer.css?v=3" />
+    <style>
+      /* --- BIO SECTION STYLES --- */
+      .bio-section {
+        padding: 100px 0;
+        background-color: #fff;
+      }
 
-  <style>
-    /* --- BIO SECTION STYLES --- */
-    .bio-section {
-      padding: 100px 0;
-      background-color: #fff;
-    }
-
-    .bio-container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .bio-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 60px;
-      align-items: flex-start;
-    }
-
-    .bio-image-col {
-      flex: 0 0 calc(40% - 30px);
-      max-width: 40%;
-    }
-
-    .bio-content-col {
-      flex: 0 0 calc(60% - 30px);
-      max-width: 60%;
-    }
-
-    .bio-image-wrapper {
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-      border: 15px solid #e6e2e0;
-      height: 520px;
-    }
-
-    .bio-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-
-    .bio-image-wrapper:hover .bio-image {
-      transform: scale(1.05);
-    }
-
-    .bio-name {
-      font-family: var(--font-heading);
-      font-size: 42px;
-      font-weight: 700;
-      color: var(--accent-gold);
-      margin-bottom: 10px;
-      text-transform: capitalize;
-    }
-
-    .bio-title-text {
-      font-family: var(--font-heading);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--primary-blue);
-      margin-bottom: 30px;
-      line-height: 1.4;
-      letter-spacing: 0.5px;
-    }
-
-    .bio-text {
-      font-family: var(--font-main);
-      font-size: 14px;
-      line-height: 1.8;
-      color: #444;
-      margin-bottom: 25px;
-      max-width: 550px;
-    }
-
-    /* --- BACK BUTTON --- */
-    .back-btn-container {
-      text-align: center;
-      margin-top: 60px;
-      padding-top: 40px;
-      border-top: 1px solid #eee;
-    }
-
-    .back-team-btn {
-      font-family: var(--font-main);
-      background-color: var(--primary-red);
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 16px;
-      font-weight: 400;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 2px;
-      display: inline-block;
-      transition: all 0.3s ease;
-    }
-
-    .back-team-btn:hover {
-      background-color: var(--primary-blue);
-      color: #fff;
-    }
-
-    /* --- BAR HERO SECTION --- */
-    .bar-hero {
-      position: relative;
-      width: 100%;
-      min-height: 75vh;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0.5)),
-        url("../images/66df668bb4bddf2553c9bb42_68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .bar-hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 800px;
-      padding: 20px;
-    }
-
-    .bar-hero-title {
-      font-family: var(--font-heading);
-      font-size: 36px;
-      font-weight: var(--font-weight-bold);
-      color: var(--text-white);
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-
-    .bar-hero-text {
-      font-family: var(--font-main);
-      font-size: 16px;
-      color: var(--text-white);
-      opacity: 0.9;
-      margin-bottom: 25px;
-    }
-
-    .bar-hero-btn {
-      background-color: var(--primary-red);
-      padding: 14px 45px;
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--text-white);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.3s ease;
-    }
-
-    .bar-hero-btn:hover {
-      background-color: #fff;
-      color: #222;
-    }
-
-    /* --- RESPONSIVE --- */
-    @media (max-width: 991px) {
-
-      .bio-image-col,
-      .bio-content-col {
-        flex: 0 0 100%;
-        max-width: 100%;
+      .bio-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
       }
 
       .bio-row {
-        gap: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        align-items: flex-start;
+      }
+
+      .bio-image-col {
+        flex: 0 0 calc(40% - 30px);
+        max-width: 40%;
+      }
+
+      .bio-content-col {
+        flex: 0 0 calc(60% - 30px);
+        max-width: 60%;
+      }
+
+      .bio-image-wrapper {
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        border: 15px solid #e6e2e0;
+        height: 520px;
+      }
+
+      .bio-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .bio-image-wrapper:hover .bio-image {
+        transform: scale(1.05);
       }
 
       .bio-name {
-        font-size: 34px;
+        font-family: var(--font-heading);
+        font-size: 42px;
+        font-weight: 700;
+        color: var(--accent-gold);
+        margin-bottom: 10px;
+        text-transform: capitalize;
       }
-    }
 
-    @media (max-width: 768px) {
-      .bio-section {
-        padding: 60px 0;
+      .bio-title-text {
+        font-family: var(--font-heading);
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--primary-blue);
+        margin-bottom: 30px;
+        line-height: 1.4;
+        letter-spacing: 0.5px;
+      }
+
+      .bio-text {
+        font-family: var(--font-main);
+        font-size: 14px;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 25px;
+        max-width: 550px;
+      }
+
+      /* --- BACK BUTTON --- */
+      .back-btn-container {
+        text-align: center;
+        margin-top: 60px;
+        padding-top: 40px;
+        border-top: 1px solid #eee;
+      }
+
+      .back-team-btn {
+        font-family: var(--font-main);
+        background-color: var(--primary-red);
+        color: #fff;
+        padding: 15px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+
+      .back-team-btn:hover {
+        background-color: var(--primary-blue);
+        color: #fff;
+      }
+
+      /* --- BAR HERO SECTION --- */
+      .bar-hero {
+        position: relative;
+        width: 100%;
+        min-height: 75vh;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("../images/66df668bb4bddf2553c9bb42_68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .bar-hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 800px;
+        padding: 20px;
       }
 
       .bar-hero-title {
-        font-size: 28px;
+        font-family: var(--font-heading);
+        font-size: 36px;
+        font-weight: var(--font-weight-bold);
+        color: var(--text-white);
+        text-transform: uppercase;
+        margin-bottom: 15px;
       }
-    }
-  </style>
-  <link rel="stylesheet" href="../css/style.css?v=3" />
-</head>
 
-<body>
-  <!-- NAVBAR -->
-  <nav class="main-navbar navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="../index.html">
-        <div class="logo-wrapper">
-          <div class="logo-icon-container">
-            <i class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"></i>
-            <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
+      .bar-hero-text {
+        font-family: var(--font-main);
+        font-size: 16px;
+        color: var(--text-white);
+        opacity: 0.9;
+        margin-bottom: 25px;
+      }
+
+      .bar-hero-btn {
+        background-color: var(--primary-red);
+        padding: 14px 45px;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--text-white);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .bar-hero-btn:hover {
+        background-color: #fff;
+        color: #222;
+      }
+
+      /* --- RESPONSIVE --- */
+      @media (max-width: 991px) {
+        .bio-image-col,
+        .bio-content-col {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        .bio-row {
+          gap: 40px;
+        }
+
+        .bio-name {
+          font-size: 34px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .bio-section {
+          padding: 60px 0;
+        }
+
+        .bar-hero-title {
+          font-size: 28px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="../css/style.css?v=3" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="main-navbar navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <div class="logo-wrapper">
+            <div class="logo-icon-container">
+              <i
+                class="fa-solid fa-scale-balanced logo-icon-premium icon-scale"
+              ></i>
+              <i class="fa-solid fa-gavel logo-icon-premium icon-gavel"></i>
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-name-main">BAR LAW</span>
+              <span class="logo-name-sub">GROUP</span>
+            </div>
           </div>
-          <div class="logo-text-group">
-            <span class="logo-name-main">BAR LAW</span>
-            <span class="logo-name-sub">GROUP</span>
-          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" data-bs-toggle="dropdown"
+                >About <i class="bi bi-chevron-down"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="aboutus.html">About Us</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="ourteam.html">Our Team</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" data-bs-toggle="dropdown"
+                >Practice Areas <i class="bi bi-chevron-down"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="generalcouncel.html"
+                    >General Counsel Services</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="fundingandinvestlaw.html"
+                    >Funding & Investment Law</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="mergersandaccuqirtes.html"
+                    >Mergers & Acquisitions</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="intellectuallaw.html"
+                    >Intellectual Property Law</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="employmentlaw.html"
+                    >Employment Law</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="realproperty.html"
+                    >Real Property Law</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-bold-hover"
+                href="blog.html"
+                data-text="Blog"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-bold-hover"
+                href="contact.html"
+                data-text="Contact"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="nav-link contact-btn" href="tel:+923224217137"
+                >+92 322 4217137</a
+              >
+            </li>
+          </ul>
         </div>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav align-items-center">
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#" data-bs-toggle="dropdown">About <i class="bi bi-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="aboutus.html">About Us</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="ourteam.html">Our Team</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#" data-bs-toggle="dropdown">Practice Areas <i class="bi bi-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="generalcouncel.html">General Counsel Services</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="fundingandinvestlaw.html">Funding & Investment Law</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="intellectuallaw.html">Intellectual Property Law</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="employmentlaw.html">Employment Law</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="realproperty.html">Real Property Law</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold-hover" href="blog.html" data-text="Blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold-hover" href="contact.html" data-text="Contact">Contact</a>
-          </li>
-          <li class="nav-item ms-lg-3">
-            <a class="nav-link contact-btn" href="tel:+923224217137">+92 322 4217137</a>
-          </li>
-        </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero-section" id="home" style="
+    <!-- HERO SECTION -->
+    <section
+      class="hero-section"
+      id="home"
+      style="
         background-image: linear-gradient(
             rgba(1, 0, 0, 0.4),
             rgba(0, 0, 0, 0.5)
@@ -300,154 +355,175 @@
         justify-content: center;
         text-align: center;
         height: 111.11vh !important;
-      ">
-    <div class="container">
-      <div class="hero-content" style="padding: 0; margin: 0; text-align: center; max-width: 100%">
-        <h1 class="hero-heading" style="
+      "
+    >
+      <div class="container">
+        <div
+          class="hero-content"
+          style="padding: 0; margin: 0; text-align: center; max-width: 100%"
+        >
+          <h1
+            class="hero-heading"
+            style="
               font-family: var(--font-heading) !important;
               font-weight: var(--font-weight-bold) !important;
               font-size: 48px !important;
               color: #e6e2e0 !important;
               text-transform: uppercase;
-            ">
-          OUR TEAM
+            "
+          >
+            OUR TEAM
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIO SECTION -->
+    <section class="bio-section">
+      <div class="bio-container">
+        <div class="bio-row">
+          <!-- Image Column -->
+          <div class="bio-image-col">
+            <div class="bio-image-wrapper">
+              <img
+                src="../images/WhatsApp Image 2025-12-14 at 5.58.52 PM (1).jpeg"
+                alt="Doug Bend"
+                class="bio-image"
+              />
+            </div>
+          </div>
+          <!-- Content Column -->
+          <div class="bio-content-col">
+            <h2 class="bio-name">Behwal Asad Rasul</h2>
+            <p class="bio-title-text">
+              Managing Attorney | Strategic Legal Counsel for Entrepreneurs
+            </p>
+
+            <div class="bio-text">
+              <p>
+                Behwal Asad Rasul is a distinguished legal professional and a
+                high-achieving Advocate of the High Court. With a deep passion
+                for the law and a commitment to excellence, he has established
+                himself as a trusted advisor for entrepreneurs and businesses
+                navigating complex legal landscapes.
+              </p>
+              <p>
+                His educational journey is a testament to his academic
+                brilliance. Behwal was an exceptional student, completing his
+                legal education at the prestigious
+                <strong>University of London</strong>. His academic background
+                is truly international, spanning both Lahore and London,
+                providing him with a unique global perspective on legal
+                challenges.
+              </p>
+              <p>
+                As the managing force at Bar Law Group, Behwal combines his
+                rigorous legal training with a practical, client-focused
+                approach. Whether representing clients in the High Court or
+                advising startups on formation and growth, he brings a level of
+                clarity and strategic insight that is rare in the field.
+              </p>
+              <p>
+                Clients trust Behwal Asad Rasul not just for his extensive legal
+                knowledge, but also for his unwavering integrity and dedication.
+                He believes in building long-term partnerships with his clients,
+                ensuring their interests are protected at every turn.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back Button -->
+        <div class="back-btn-container">
+          <a href="ourteam.html" class="back-team-btn">BACK TO OUR TEAM</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BAR HERO SECTION -->
+    <section class="bar-hero">
+      <div class="bar-hero-content">
+        <h1 class="bar-hero-title">
+          Back Your Business Strategy With Experienced Legal Guidance
         </h1>
+        <p class="bar-hero-text">
+          Protect your business and make strategic decisions with confidence.
+          Our attorneys are ready to guide you through contracts, compliance,
+          investments and more.
+        </p>
+        <a href="contact.html" class="bar-hero-btn">
+          CONTACT US TODAY
+          <span class="ms-2"><i class="bi bi-arrow-right"></i></span>
+        </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- BIO SECTION -->
-  <section class="bio-section">
-    <div class="bio-container">
-      <div class="bio-row">
-        <!-- Image Column -->
-        <div class="bio-image-col">
-          <div class="bio-image-wrapper">
-            <img src="../images/WhatsApp Image 2025-12-14 at 5.58.52 PM (1).jpeg" alt="Doug Bend" class="bio-image" />
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-column footer-brand">
+          <div class="footer-logo-container">
+            <a href="../index.html" class="footer-logo-link">
+              <div class="footer-logo-icon-box">
+                <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
+              </div>
+              <div class="logo-text-group">
+                <span class="footer-logo-main">BAR LAW</span>
+                <span class="footer-logo-sub">GROUP</span>
+              </div>
+            </a>
+          </div>
+          <h6>COMPANY</h6>
+          <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="ourteam.html">Our Team</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>PRACTICE AREAS</h6>
+          <ul>
+            <li><a href="generalcouncel.html">General Counsel</a></li>
+            <li>
+              <a href="fundingandinvestlaw.html">Funding and Investment</a>
+            </li>
+            <li>
+              <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
+            </li>
+            <li><a href="intellectuallaw.html">Intellectual Property</a></li>
+            <li><a href="employmentlaw.html">Employment Law</a></li>
+            <li>
+              <a href="bussniess.html">Business Dispute Services</a>
+            </li>
+            <li><a href="realproperty.html">Real Estate Law</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>SUBSCRIBE FOR UPDATES</h6>
+          <div class="subscribe-box">
+            <input type="email" placeholder="name@email.com" />
+            <button><i class="bi bi-arrow-up-right"></i></button>
+          </div>
+          <h6>FOLLOW US:</h6>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
           </div>
         </div>
-        <!-- Content Column -->
-        <div class="bio-content-col">
-          <h2 class="bio-name">Behwal Asad Rasul</h2>
-          <p class="bio-title-text">
-            Managing Attorney | Strategic Legal Counsel for Entrepreneurs
-          </p>
-
-          <div class="bio-text">
-            <p>
-              Behwal Asad Rasul is a distinguished legal professional and a high-achieving Advocate of the High Court.
-              With a deep passion for the law and a commitment to excellence, he has established himself as a trusted
-              advisor for entrepreneurs and businesses navigating complex legal landscapes.
-            </p>
-            <p>
-              His educational journey is a testament to his academic brilliance. Behwal was an exceptional student,
-              completing his legal education at the prestigious <strong>University of London</strong>. His academic
-              background is truly international, spanning both Lahore and London, providing him with a unique global
-              perspective on legal challenges.
-            </p>
-            <p>
-              As the managing force at Bar Law Group, Behwal combines his rigorous legal training with a practical,
-              client-focused approach. Whether representing clients in the High Court or advising startups on formation
-              and growth, he brings a level of clarity and strategic insight that is rare in the field.
-            </p>
-            <p>
-              Clients trust Behwal Asad Rasul not just for his extensive legal knowledge, but also for his unwavering
-              integrity and dedication. He believes in building long-term partnerships with his clients, ensuring their
-              interests are protected at every turn.
-            </p>
-          </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
         </div>
       </div>
+    </footer>
 
-      <!-- Back Button -->
-      <div class="back-btn-container">
-        <a href="ourteam.html" class="back-team-btn">BACK TO OUR TEAM</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- BAR HERO SECTION -->
-  <section class="bar-hero">
-    <div class="bar-hero-content">
-      <h1 class="bar-hero-title">
-        Back Your Business Strategy With Experienced Legal Guidance
-      </h1>
-      <p class="bar-hero-text">
-        Protect your business and make strategic decisions with confidence.
-        Our attorneys are ready to guide you through contracts, compliance,
-        investments and more.
-      </p>
-      <a href="contact.html" class="bar-hero-btn">
-        CONTACT US TODAY
-        <span class="ms-2"><i class="bi bi-arrow-right"></i></span>
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-column footer-brand">
-        <div class="footer-logo-container">
-          <a href="../index.html" class="footer-logo-link">
-            <div class="footer-logo-icon-box">
-              <i class="fa-solid fa-scale-balanced footer-logo-icon"></i>
-            </div>
-            <div class="logo-text-group">
-              <span class="footer-logo-main">BAR LAW</span>
-              <span class="footer-logo-sub">GROUP</span>
-            </div>
-          </a>
-        </div>
-        <h6>COMPANY</h6>
-        <ul>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="ourteam.html">Our Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h6>PRACTICE AREAS</h6>
-        <ul>
-          <li><a href="generalcouncel.html">General Counsel</a></li>
-          <li>
-            <a href="fundingandinvestlaw.html">Funding and Investment</a>
-          </li>
-          <li>
-            <a href="mergersandaccuqirtes.html">Mergers & Acquisitions</a>
-          </li>
-          <li><a href="intellectuallaw.html">Intellectual Property</a></li>
-          <li><a href="employmentlaw.html">Employment Law</a></li>
-          <li><a href="realproperty.html">Real Estate Law</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h6>SUBSCRIBE FOR UPDATES</h6>
-        <div class="subscribe-box">
-          <input type="email" placeholder="name@email.com" />
-          <button><i class="bi bi-arrow-up-right"></i></button>
-        </div>
-        <h6>FOLLOW US:</h6>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-copyright">
-        Copyright Bar Law Group &copy; 2026. Website by Behwal Asad Rasul.
-      </div>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../js/index.js"></script>
-</body>
-
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/index.js"></script>
+  </body>
 </html>

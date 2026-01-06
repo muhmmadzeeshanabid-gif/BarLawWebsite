@@ -19,7 +19,7 @@
   color: var(--primary-blue);
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   margin-bottom: 45px;
 }
 
@@ -38,7 +38,6 @@
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  width: 420px;
   padding: 0 10px;
   box-sizing: border-box;
 }
@@ -208,105 +207,3 @@
 /*  */
 /*  */
 /* ================= RESET (REMOVE ALL GAPS) ================= */
-
-/* ================= BAR HERO SECTION ================= */
-.bar-hero {
-  position: relative;
-  width: 100%;
-  min-height: 75vh;
-  background-image: url("../images/66df668bb4bddf2553c9bb42_68636149f1229478b2dd9005_coverr-golden-gate-bridge-4635-1080p-poster-00001.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Dark overlay */
-.bar-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-}
-
-.bar-hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 800px;
-  padding: 20px;
-}
-
-/* ================= HEADING ================= */
-.bar-hero-title {
-  font-family: var(--font-heading);
-  font-size: 36px;
-  font-weight: var(--font-weight-bold);
-  color: var(--bg-white);
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-
-/* ================= TEXT ================= */
-.bar-hero-text {
-  font-size: 16px;
-  color: var(--bg-white);
-  opacity: 0.9;
-  margin-bottom: 25px;
-}
-
-/* ================= BUTTON ================= */
-.bar-hero-btn {
-  background-color: var(--primary-red);
-  padding: 14px 45px;
-  font-size: 16px;
-  font-weight: var(--font-weight-regular);
-  color: var(--bg-white);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-  margin-top: 15px;
-}
-
-.bar-arrow {
-  font-size: 16px;
-  transition: transform 0.3s ease;
-}
-
-.bar-hero-btn:hover {
-  background-color: white;
-  color: #292929;
-}
-
-.bar-hero-btn:hover .bar-arrow {
-  transform: translateX(4px);
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .bar-hero {
-    min-height: 75vh;
-  }
-
-  .bar-hero-title {
-    font-size: 30px;
-    max-width: 100%;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    padding: 0 10px;
-  }
-
-  .bar-hero-text {
-    font-size: 15px;
-    max-width: 100%;
-    margin: 0 auto 30px;
-    line-height: 1.6;
-    padding: 0 15px;
-    opacity: 0.95;
-  }
-}
